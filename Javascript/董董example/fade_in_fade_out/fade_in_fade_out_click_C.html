@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>Fade in, Fade out(onclick)</title>
+    </head>
+    <body>
+        <center>
+            <input type="button" id="btnInOut" value="淡出" /><br />
+            <img src="melon.gif" alt="小玉" id="img1" style="opacity: 1" />
+        </center>
+
+        <script>
+            var opacity = 1;
+            var timerId;
+            let btnInOut;
+
+            //點下去做淡入/淡出的切換
+            function fadeOut() {
+                opacity = opacity - 0.05; //0.90 -> 0.9 ->0.85
+                document.getElementById("img1").style.opacity = opacity;
+                if (opacity < 0) {
+                    clearInterval(timerId);
+                    btnInOut.value = "淡入";
+                    btnInOut.disabled = false; //讓按鈕可以被點按
+                }
+                console.log(opacity);
+            }
+
+            function fadeIn() {
+                opacity = opacity + 0.05; //0.90 -> 0.9 ->0.85
+                document.getElementById("img1").style.opacity = opacity;
+                if (opacity > 1) {
+                    clearInterval(timerId);
+                    btnInOut.value = "淡出";
+                    btnInOut.disabled = false; //讓按鈕可以被點按
+                }
+                console.log(opacity);
+            }
+
+            function changeOpacity() {
+                //不是瞬間變不見，而是使用計時器，每經過一小段時間就去改變它的透明度
+                if (btnInOut.value == "淡出") {
+                    timerId = setInterval(fadeOut, 100); //執行淡出的工作
+                } else {
+                    //淡入
+                    timerId = setInterval(fadeIn, 100); //執行淡入的工作
+                }
+                btnInOut.disabled = true; //先讓按鈕無法被狂按
+            }
+
+            function init() {
+                btnInOut = document.getElementById("btnInOut");
+                btnInOut.onclick = changeOpacity;
+            }
+
+            window.addEventListener("load", init, false);
+        </script>
+    </body>
+</html>

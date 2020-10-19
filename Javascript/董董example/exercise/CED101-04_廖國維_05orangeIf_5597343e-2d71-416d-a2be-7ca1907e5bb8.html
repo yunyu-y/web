@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05orangeIf</title>
+</head>
+<body>
+    <script>
+        let grade = '1'       
+        let jin = '20';
+        let total ;
+        if(grade == '1'){
+            if(jin >= 100){
+                total=jin*20;
+            }else if(jin > 40){
+                total=jin*25;
+            }else if(jin <= 40){
+                total=jin*30;
+            }
+        }else if(grade == '2'){
+            if(jin >= 100){
+                total=jin*15;
+            }else if(jin > 40){
+                total=jin*20;
+            }else if(jin <= 40){
+                total=jin*25;
+            }
+        }else if(grade == '3'){
+            if(jin >= 100){
+                total=jin*10;
+            }else if(jin > 40){
+                total=jin*15;
+            }else if(jin <= 40){
+                total=jin*20;
+            }
+        }
+        document.write('購買',jin,'公斤等級',grade,'的橘子總共:',total,'元');
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <title>作業二</title>
+  </head>
+  <body>
+    <script>
+
+
+      var level = 3;
+      var kg = 50;
+      var total;
+
+      if (level == 1 && kg >= 100){
+        total = kg*20;
+      }else if (level == 1 && kg >= 40) {
+        total = kg*25;
+      }else if (level == 1 && kg < 40 && kg > 0) {
+        total = kg*30;
+      }
+
+      if (level == 2 && kg >= 100){
+        total = kg*15;
+      }else if (level == 2 && kg >= 40) {
+        total = kg*20;
+      }else if (level == 2 && kg < 40 && kg > 0) {
+        total = kg*25;
+      }
+
+      if (level == 3 && kg >= 100){
+        total = kg*10;
+      }else if (level == 3 && kg >= 40) {
+        total = kg*15;
+      }else if (level == 3 && kg < 40 && kg > 0) {
+        total = kg*20;
+      }
+
+      document.write("小計", total);
+
+
+
+    </script>
+  </body>
+</html>

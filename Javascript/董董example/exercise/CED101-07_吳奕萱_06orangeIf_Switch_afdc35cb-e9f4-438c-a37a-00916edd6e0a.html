@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>06_orangeIfSwitch</title>
+  </head>
+
+  <body>
+    <script>
+      var grade = 3;
+      var weight = 20;  //公斤數
+      var price;  //單價
+      // var total = weight * price;
+
+      switch(grade){
+        case 1:
+          if(weight > 100){
+            total = weight * 20;
+          }else if(weight > 40){
+            total = weight * 25;
+          }else if(weight <= 40){
+            total = weight * 30;
+          }
+          break;
+
+        case 2:
+          if(weight > 100){
+            total = weight * 15;
+          }else if(weight > 40){
+            total = weight * 20;
+          }else if(weight <= 40){
+            total = weight * 25;
+          }
+          break;
+
+        case 3:
+          if(weight > 100){
+            total = weight * 10;
+          }else if(weight > 40){
+            total = weight * 15;
+          }else if(weight <= 40){
+            total = weight * 20;
+          }
+          break;
+      }
+
+      document.write("總計: ", total, "元<br>");
+
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var totalSec = 8000
+        var nowHour = Math.floor(totalSec / 3600) 
+        var nowMin = Math.floor((totalSec - nowHour * 3600) / 60)
+        var nowSec = totalSec - nowHour * 3600 - nowMin * 60
+        document.write(totalSec,"秒","=",nowHour,"時",nowMin,"分",nowSec,"秒")
+    </script>
+</body>
+</html>

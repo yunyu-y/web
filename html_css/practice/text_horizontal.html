@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>text_horizontal</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            article.card {
+                border: 1px solid black;
+                width: 500px;
+                padding: 10px;
+            }
+            article.card::after {
+                content: "";
+                border: 1px solid blue;
+                display: block;
+                clear: both;
+            }
+
+            article.card > a.img_block {
+                border: 1px solid red;
+                width: 240px;
+                float: left;
+                display: block;
+                font-size: 0;
+            }
+            article.card a.img_block span.img_text {
+                border: 1px solid #999;
+                font-size: 0.8rem;
+                color: #999;
+                display: inline-block;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                width: 200px;
+            }
+            article.card > a.img_block > img {
+                max-width: 100%;
+            }
+            div.h1 {
+                margin: 0 0 5px 0;
+                font-size: 1.2rem;
+            }
+            div.p {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <article class="card">
+            <a href="https://tw.yahoo.com/" target="_blank" class="img_block">
+                <img src="https://picsum.photos/id/729/500/300" />
+                <span class="img_text">圖片簡述圖片簡述圖片簡述圖片簡述圖片簡述圖片簡述</span>
+            </a>
+
+            <div class="content_block">
+                <h1>農夫耕種的照片</h1>
+
+                <p>
+                    這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字
+                </p>
+            </div>
+        </article>
+    </body>
+</html>

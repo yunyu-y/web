@@ -1,0 +1,106 @@
+@import "./common/all.css";
+@import "./common/header.css";
+@import "./common/footer.css";
+
+.designers {
+    background-color: #d19c64;
+}
+.designersOut {
+    display: flex;
+    justify-content: center;
+    min-width: 1200px;
+}
+.designersTop {
+    width: 1200px;
+    min-width: 1200px;
+    margin: auto auto auto 10rem;
+    display: flex;
+    justify-content: space-around;
+}
+.designersTopL {
+    height: 567px;
+}
+.designerTit {
+    font-size: 28px;
+    margin: 30px auto 16px auto;
+}
+.designerMid {
+    font-size: 20px;
+    margin: 0 auto 50px auto;
+}
+.MidLine {
+    border-bottom: 5px dotted gray;
+    width: 1400px;
+    height: 10px;
+    margin: 2rem auto;
+}
+.designersBottomTit {
+    font-size: 4rem;
+    text-align: center;
+    margin: 1.5rem auto;
+}
+.designerCon {
+    line-height: 1.2;
+}
+
+.designersBottomIn {
+    /* border: 1px solid red; */
+    width: 1200px;
+    min-width: 1200px;
+    margin: auto auto auto 10rem;
+    display: flex;
+    flex-direction: column;
+}
+.dessBottom_Area {
+    /* border: 1px solid green; */
+    margin: 16px 0;
+    width: 1200px;
+}
+.desBottom_AreaIn {
+    display: flex;
+}
+.desBottom_AreaInL img {
+    cursor: pointer;
+}
+.desBottom_AreaInR {
+    /* border: 1px solid blue; */
+    width: 900px;
+    height: 330px;
+    background-color: #81501c31;
+    margin: 3rem 0 0 -2rem;
+}
+.desB_AreaRtitle {
+    font-size: 28px;
+    margin: 30px auto 16px auto;
+    padding-left: 3rem;
+}
+.desB_AreaRcon {
+    line-height: 1.3;
+    padding-left: 3rem;
+}
+
+.pageInCon {
+    /* border: 1px solid red; */
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    color: #231815;
+}
+.pages > a {
+    /* border: 1px solid blue; */
+    font-size: 38px;
+    text-decoration: none;
+    color: #231815;
+}
+.pages > a:hover {
+    opacity: 0.5;
+}
+.pagesN {
+    font-size: 38px;
+    text-decoration: none;
+    color: #231815;
+}
+.pagesN > a:hover {
+    opacity: 0.5;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox排版</title>
+    <style>
+      /* ul=contaner/li=items */
+      ul{
+        border: 1px solid red;
+        padding: 0;
+        margin: 0;
+
+        display: flex;
+
+        /* row：這是預設，由左至右。/column：由上至下。/row-reverse：row 的相反。/column-reverse：column 的相反。 */
+        flex-direction: row;
+
+        /* no-wrap(default) | wrap | wrap-reverse */
+       flex-wrap: wrap;
+
+        /* 可設定的有：flex-start(預設) | flex-end | center | space-between | space-around; */
+        /* justify-content: flex-start; */
+  
+
+        /* height: 100px; */
+        height: 300px;
+
+
+         /* flex-start | flex-end | center | space-between | space-around | stretch(預設) */
+        /* align-content: flex-start; */
+        
+      }
+      
+      ul > li{
+        list-style: none;
+        border: 1px solid blue;
+        width: 300px;
+      }
+    </style>
+</head>
+<body>
+    <!-- <div class="first">
+        <img src="./images/apple.png">
+        這是內容這是內容這是內容這是內容這是內容這是內容這是內容這是內容這是內容這是內容這是內容這是
+      </div> -->
+      <ul>
+        <li>第一項</li>
+        <li>第二項</li>
+        <li>第三項</li>
+        <li>第四項</li>
+        <li>第五項</li>
+      
+      </ul>
+</body>
+</html>

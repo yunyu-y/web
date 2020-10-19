@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+<style>
+	h2{color:deeppink;}
+</style>
+</head>
+<body>
+<h2>sort()</h2>
+<script>
+var arr = [40, 20, 50, 70, 30, 80, 7];
+arr.sort();
+document.write( arr, "<br>");	
+</script>	
+
+<h2>陣列</h2>
+<script>
+var arr = new Array("This is a book", true, 33);
+for(var i=0; i<=3; i++){
+	document.write( arr[i], "<br>");	
+}
+</script> 
+
+<h2>array.length</h2>
+<script>
+var arr = new Array(11, 22);
+var len = arr.length;
+for(var i=0; i<len; i++){
+	document.write( arr[i], "<br>");	
+}
+</script> 
+
+<h2>for( i in arr)</h2>
+<script>
+var arr = new Array(11, 22);
+arr[0] = 100;
+arr[6] = 200;
+
+for(var i in arr){
+	document.write( i, " : ", arr[i], "<br>");	
+}
+</script> 
+
+
+<h2>將陣列轉字串</h2>
+<script>
+var arr = new Array(11, 22, 33);
+var str = "";
+var len = arr.length-1;
+for( var i=0; i<len; i++){
+	str = str + arr[i] + ","; 
+}
+str = str + arr[i];
+
+document.write( str, "<br>");
+</script>
+
+
+<h2>將資料100, 200 insert到陣列的最後面</h2>
+<script>
+var arr = new Array(11, 22, 33);
+arr[arr.length] = 100;
+arr[arr.length] = 200;	
+for(var i in arr){
+	document.write( i, " : ", arr[i], "<br>");	
+}
+</script>
+
+
+<h2>如何將data : 100資料insert到陣列中的特定位置(索引值為2的位置)?</h2>
+<script>
+var arr = new Array(11, 22, 33, 44, 55, 66, 77, 88, 99);
+//insert
+for(var i=arr.length-1; i>=2; i--){
+	arr[i+1] = arr[i];
+}
+arr[2] = 100;
+//輸出
+for(var i in arr){
+	document.write( i, " : ", arr[i], "<br>");	
+}	
+</script>
+
+
+<h2>toString()</h2>
+<script>
+var arr = new Array(11, 22, 33, 44, 55, 66, 77, 88, 99);
+var str = arr.toString();
+document.write( str, "<br>");
+document.write( arr[3], "<br>");//4
+document.write( arr, "<br>");//自動呼叫arr.toString()	
+</script>
+
+<h2>push(),pop()</h2>
+<script>
+var arr = new Array(11, 22, 33);
+arr.push(100);
+document.write( "push(100)之後 : ", arr, "<br>");	
+
+var data = arr.pop();
+document.write( "pop出資料 : ", data, "<br>");
+document.write( "pop()之後 : ", arr, "<br>");
+</script>
+
+<h2>reverse(), join()</h2>
+<script>
+var arr = new Array(11, 22, 33);
+arr.reverse();
+document.write( arr.join("@@"), "<br>");
+</script>
+
+
+<h2>concat()</h2>
+<script type="text/javascript">
+var arr = new Array(11,22,33);
+var arr2 = new Array(44, 55);
+var arr3 = arr.concat(arr2);	
+document.write( arr, "<br>");
+document.write( arr2, "<br>");
+document.write( arr3, "<br>");
+</script>
+
+
+<h2>slice()</h2>
+<script>
+var arr = new Array(11, 22, 33, 44, 55, 66, 77, 88, 99);
+var arr2 = arr.slice(3, 5); //從索引值3到4
+document.write( arr, "<br>"); //11, 22, 33, 44, 55, 66, 77, 88, 99
+document.write( arr2, "<br>");//44, 55
+</script>
+
+
+<h2>splice()</h2>
+<script>
+var arr = new Array(11, 22, 33, 44, 55, 66, 77, 88, 99);
+var arr2 = arr.splice(3, 5, 100, 200); 
+//從索引值3取出5個元素:44, 55, 66, 77, 88, 再插入資料100, 200
+document.write( arr, "<br>"); //11, 22, 33, 100, 200, 99
+document.write( arr2, "<br>");//44, 55, 66, 77, 88
+</script>
+
+<h2>使用splice()來模擬insert資料100到陣列中特定的位置(如:索引值3)</h2>
+<script>
+var arr = new Array(11, 22, 33, 44, 55, 66, 77, 88, 99);
+var arr2 = arr.splice(3, 0, 100); 
+document.write( arr, "<br>"); //11, 22, 33, 100,44, 55, 66, 77, 88, 99
+document.write( arr2, "<br>");//44, 55, 66, 77, 88
+</script>
+
+<h2>使用splice()來模擬自到陣列中刪除特定位置的資料(如:索引值3)</h2>
+<script>
+var arr = new Array(11, 22, 33, 44, 55, 66, 77, 88, 99);
+var arr2 = arr.splice(3, 1); 
+document.write( arr, "<br>"); //11, 22, 33, 55, 66, 77, 88, 99
+document.write( arr2, "<br>");//44	
+</script>
+
+<h2>indexOf()</h2>
+<script>
+var arr = new Array(11, 22, 33, 44, 55, 66, 77, 88, 99, 33);
+document.write( "arr.indexOf(33) :", arr.indexOf(33), "<br>"); //2
+document.write( "arr.indexOf(333) :", arr.indexOf(333), "<br>");//-1 
+document.write( "arr.indexOf(33, 5) :", arr.indexOf(33, 5), "<br>");//9
+</script>
+
+<h2>陣列變數的操作</h2>
+<script>
+var arrA = new Array(11,22,33);
+var arrB = arrA;
+arrB[2] = 300;
+document.write( arrA[2] ); //印出300
+	
+</script>
+
+
+
+</body>
+</html>

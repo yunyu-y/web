@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="./vendors/hamburgers-master/dist/hamburgers.css" rel="stylesheet" />
+        <title>套用 hamburger icon 的外掛</title>
+    </head>
+    <body>
+        <button class="hamburger hamburger--stand is-active" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <script src="../rwd/vendors/jquery/jquery-3.4.1.min.js"></script>
+        <script>
+            $(function () {
+                // hamburger icon 的切換
+                $("button.hamburger").on("click", function () {
+                    $(this).toggleClass("is-active");
+                });
+            });
+        </script>
+    </body>
+</html>

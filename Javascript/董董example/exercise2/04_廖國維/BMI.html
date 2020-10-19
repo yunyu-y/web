@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        身高 :
+        <input type="number" class="tall" /><span>cm</span>
+        <br />
+        體重 :
+        <input type="number" class="weight" /><span>kg</span>
+        <br />
+        <input type="submit" value="計算BMI" class="bmibtn" />
+        <input type="submit" class="reset" value="清除所有" />
+        <br />
+        <div>你的BMI值:</div>
+        <div class="bmi">0</div>
+        <div class="bmitxt"></div>
+
+        <script>
+            let btn = document.querySelector(".bmibtn");
+            let reset = document.querySelector(".reset");
+            function getBMI(tall, weight) {
+                let t = parseInt(tall) / 100;
+                let w = parseInt(weight);
+                let bmi = (w / (t * t)).toFixed(2);
+                return bmi;
+            }
+            function textBMI() {
+                let talltxt = document.querySelector(".tall").value;
+                let weighttxt = document.querySelector(".weight").value;
+                let obmi = document.querySelector(".bmi");
+                let bmiText = document.querySelector(".bmitxt");
+
+                obmi.innerHTML = getBMI(talltxt, weighttxt);
+                bmiText.innerHTML = bmiLv(getBMI(talltxt, weighttxt));
+            }
+
+            function bmiLv(bmi) {
+                if (bmi < 18.5) {
+                    return "體重過輕";
+                } else if (bmi >= 18.5 && bmi < 24) {
+                    return "正常範圍";
+                } else if (bmi >= 24 && bmi < 27) {
+                    return "過重";
+                } else if (bmi >= 27 && bmi < 30) {
+                    return "輕度肥胖";
+                } else if (bmi >= 30 && bmi < 35) {
+                    return "中度肥胖";
+                } else if (bmi >= 35) {
+                    return "重度肥胖";
+                }
+            }
+            function clear() {
+                document.querySelector(".tall").value = "";
+                document.querySelector(".weight").value = "";
+                document.querySelector(".bmi").innerHTML = 0;
+                document.querySelector(".bmitxt").innerHTML = "";
+            }
+            btn.addEventListener("click", textBMI);
+            reset.addEventListener("click", clear);
+        </script>
+    </body>
+</html>

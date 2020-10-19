@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>if練習</title>
+    </head>
+    <body>
+        <script>
+            // var price = parseInt("30");
+            var kg = parseInt("120");
+            var level = parseInt("2");
+            var subTotal;
+
+            switch (level) {
+                case 1:
+                    if (kg <= 40) {
+                        subTotal = 30 * kg;
+                    } else if (kg > 100) {
+                        subTotal = 20 * kg;
+                    } else if (kg > 40) {
+                        subTotal = 25 * kg;
+                    }
+                    break;
+                case 2:
+                    if (kg <= 40) {
+                        subTotal = 25 * kg;
+                    } else if (kg > 100) {
+                        subTotal = 15 * kg;
+                    } else if (kg > 40) {
+                        subTotal = 20 * kg;
+                    }
+                    break;
+                case 3:
+                    if (kg <= 40) {
+                        subTotal = 30 * kg;
+                    } else if (kg > 100) {
+                        subTotal = 10 * kg;
+                    } else if (kg > 40) {
+                        subTotal = 15 * kg;
+                    }
+                    break;
+            }
+
+            document.write("等級 : ", level, "<br>");
+            document.write("橘子總購買金額為 : ", subTotal, "<br>");
+        </script>
+    </body>
+</html>

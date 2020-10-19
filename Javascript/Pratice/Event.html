@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Event</title>
+
+        <script type="text/javascript">
+            function showAns() {
+                var a = 10;
+                var b = 20;
+                window.alert(a + b);
+            }
+            function showFun() {
+                window.alert("^_________^");
+                btns[2].removeEventListener("click", showFun, false);
+                btns[2].addEventListener("click", showAngry, false);
+            }
+
+            function showAngry() {
+                window.alert("><....");
+            }
+            function noAns() {
+                window.alert("才不告訴逆雷~~~");
+            }
+            var btns;
+            function init() {
+                //第二代事件處理器
+                btns = document.getElementsByName("btn");
+                btns[1].onclick = showAns;
+                btns[1].onclick = noAns; //後寫覆蓋前寫
+
+                //第三代事件處理器
+                btns[2].addEventListener("click", showAns, false);
+                btns[2].addEventListener("click", showFun, false);
+            }
+            window.onload = init;
+        </script>
+    </head>
+    <body>
+        <input type="button" name="btn" value="10+20=?[0]" onclick="showAns();" />
+        <input type="button" name="btn" value="10+20=?[1]" />
+        <input type="button" name="btn" value="10+20=?[2]" />
+    </body>
+</html>

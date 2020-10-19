@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>練習2：圖片編排 - 文字蓋在圖片上方及滑動</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            a.card {
+                border: 1px solid red;
+                border-radius: 5px;
+                width: 30px;
+                position: relative;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 0;
+            }
+
+            /* a.card div.other_notes:hover {
+                transform: scaleY(100%);
+            } */
+
+            a.card span.hint_text {
+                color: #fff;
+                background-color: hsla(0, 0%, 0%, 0.5);
+                position: absolute;
+                top: 10px;
+                left: 0px;
+                font-size: 16px;
+                padding: 5px 20px;
+            }
+            div.other_notes {
+                color: #fff;
+                background-color: hsla(0, 0%, 0%, 0.5);
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                font-size: 16px;
+                padding: 5px 20px;
+
+                transform: translateY(100%);
+
+                transition: transform 0.5s;
+            }
+            a.card:hover div.other_notes {
+                transform: translateY(0%);
+            }
+        </style>
+    </head>
+    <body>
+        <a href="http://tw.yahoo.com" target="_blank" class="card">
+            <img src="https://picsum.photos/id/774/500/300" />
+            <span class="hint_text">美麗的風景</span>
+            <div class="other_notes">次要說明次要說明次要說明</div>
+        </a>
+    </body>
+</html>

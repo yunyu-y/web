@@ -1,0 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+div.logo {
+    border: 1px solid blue;
+    position: relative;
+    margin-left: 10%;
+    /* width: 100%; */
+}

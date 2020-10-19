@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>作業8 : (迴圈 for…, Math練習)</title>
+    </head>
+    <body>
+        <!-- 摸彩金 : 有11顆彩球, 彩球面額為0-10之間, 可以摸彩10次, 印出其每次的摸彩金額及彩金總金額(單位:佰元) -->
+        <script>
+            var i;
+            var lottary;
+            var sum = 0;
+
+            for (var i = 0; i < 10; i++) {
+                lottary = parseInt(Math.random() * 11) * 100;
+                document.write("第", i + 1, "次摸彩金額為 :", lottary, "元<br>");
+                sum = sum + lottary;
+            }
+            document.write("摸彩總金額 :", sum, "元");
+        </script>
+    </body>
+</html>

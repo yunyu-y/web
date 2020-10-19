@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+<style>
+	h2{color:deeppink;}
+</style>
+</head>
+<body>
+<h2>var 有hoist的現象</h2>
+<script>
+//hoist指提昇
+document.write("a : ", a, "<br>");
+var a = 10;  //給值的動作，在此才做
+document.write("a : ", a, "<br>");
+</script> 
+
+<h2>var 可重覆宣告</h2>
+<script>
+var a = 100;	
+document.write("a : ", a, "<br>");	
+</script>
+
+<h2>var 没有區塊作用域</h2>
+<script>
+var avg = 66;
+if( avg >= 60){
+	var msg = "通過";
+}	
+document.write("msg : ", msg, "<br>");	
+</script>
+
+
+
+<h2>let 没有hoist的現象</h2>
+<script>
+//hoist指提昇
+// document.write("b : ", b, "<br>"); //error
+let b = 10;  //給值的動作，在此才做
+document.write("b : ", b, "<br>");
+</script> 
+
+<h2>let 不可重覆宣告</h2>
+<script>
+let bb = 100;
+// let bb = 1000;	
+document.write("bb : ", bb, "<br>");	
+</script>
+
+<h2>let有區塊作用域</h2>
+<script>
+var avg = 66;
+if( avg >= 60){
+	let msg222 = "通過"; //在此區塊才能使用
+	document.write("--msg222 : ", msg222, "<br>");
+}	
+document.write("msg222 : ", msg222, "<br>");	//error
+</script>
+
+<h2>未宣告</h2>
+<script>
+// document.write("QQQ : ", QQQ, "<br>"); //error
+amount = 100;
+document.write("amount : ", amount, "<br>");	
+</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>作業14：(一維array練習)</title>
+    </head>
+    <body>
+        <script>
+            document.write("<table border='1' align='center' cellspacing='0'>");
+            var stu = ["學號", "94951001", "94951002", "94951003"];
+            var stu2 = ["姓名", "黃一丁", "劉二毛", "張大化"];
+            var stu3 = ["電話", "0911000333", "0922999887", "0933555779"];
+            var stu4 = ["地址", "中壢市中大路1號", "高雄市中山路2號", "台北市師大路3號"];
+
+            for (i = 0; i <= 3; i++) {
+                document.write("<tr>");
+                document.write("<td>", stu[i], "</td>");
+                document.write("<td>", stu2[i], "</td>");
+                document.write("<td>", stu3[i], "</td>");
+                document.write("<td>", stu4[i], "</td>");
+            }
+            document.write("</tr>");
+            document.write("</table>");
+        </script>
+    </body>
+</html>

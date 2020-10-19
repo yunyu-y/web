@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>變數與運算式</title>
+    </head>
+    <body>
+        <script>
+            var time = 9000;
+            var sec = time % 60;
+            var min = parseInt((time % 3600) / 60);
+            var hour = parseInt(time / 3600);
+            document.write("至今天到目前為止所經過的秒數  ", time, "秒:", hour, "小時", min, "分鐘", sec, "秒", "<br>");
+        </script>
+    </body>
+</html>

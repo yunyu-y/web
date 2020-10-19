@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+        var level = "3";
+        var amount = 100;
+        var price ;
+        var total ;
+
+        switch (level) {
+          case "1":
+          if(amount > 0 && amount < 40){
+              price = 30;
+          }else if(amount >= 40 && amount < 100){
+              price = 25;
+          }else if(amount >= 100){
+              price = 20;
+          }else{
+              price = 0;
+          }
+            break;
+
+          case "2":
+          if(amount > 0 &&amount < 40) {
+              price = 25;
+          }else if(amount >= 40 && amount < 100){
+              price = 20;
+          } else if(amount >= 100){
+              price = 15;
+          }else{
+              price = 0;
+          }
+            break;
+
+          case "3":
+          if(amount > 0 &&amount < 40) {
+              price = 20;
+          }else if(amount >= 40 && amount < 100){
+              price = 15;
+          }else if(amount >= 100){
+              price = 10;
+          }else{
+              price = 0;
+          }
+            break;
+        }
+
+        total = price*amount;
+
+        document.write("<h3>等級:",level," 公斤數:",amount," 單價:",price," 小計:",total,"</h3>");
+
+
+    </script>
+</body>
+</html>

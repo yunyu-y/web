@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <title>js</title>
+  </head>
+  <body>
+  	<p>作業 05　：(if練習)</p>
+  	<script>
+      var level = 1;
+      var amount = 50;
+      var price = 30;
+
+      if(amount >= 100){
+        price = 20;
+      }else if(amount >= 40){
+        price = 25;
+      } else {
+        price = 30;
+      }
+
+      var subtotal = price * amount;
+      document.write("總計:", subtotal, "元" ,"<br>");
+    </script>
+  </body>
+</html>

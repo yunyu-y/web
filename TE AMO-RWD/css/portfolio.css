@@ -1,0 +1,86 @@
+@import "./common/all.css";
+@import "./common/header.css";
+@import "./common/footer.css";
+
+header {
+    background-color: #81501c31;
+}
+
+.nav_portfolio {
+    background-color: #d19c64;
+}
+.pf_out {
+    /* border-top: 2px solid black; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.pf_top {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    min-width: 230px;
+    min-width: 1515px;
+}
+.pf_text {
+    border-top: 3px solid rgba(128, 128, 128, 0.6);
+    border-bottom: 3px solid rgba(128, 128, 128, 0.6);
+    color: rgba(128, 128, 128, 0.6);
+    text-align: center;
+    font-size: 30px;
+    padding: 25px 25px 20px 25px;
+}
+.pf_bottom {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 1500px;
+    /* justify-content: center;
+    align-items: center; */
+}
+.pf_bottomInRow01,
+.pf_bottomInRow02 {
+    display: flex;
+    justify-content: center;
+}
+.pf_bottomIn {
+    /* width: 433px; */
+    position: relative;
+    padding: 10px;
+}
+.pf_bottomIn img {
+    /* margin: 10px 25px 0 25px; */
+    width: 383px;
+    height: 213px;
+}
+.pf_bottomInTop {
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+    width: 342px;
+    height: 167px;
+    top: 50%;
+    left: -35%;
+    transform: translate(50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pf_bottomInTop:hover {
+    opacity: 1;
+}
+.pf_bottomInTopText {
+    /* border: 1px solid blue; */
+    font-size: 30px;
+}
+.pf_bottomInTop a {
+    text-decoration: none;
+    color: #231815;
+}

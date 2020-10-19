@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      var price = 30;
+      var amount = 50;
+      var subtotal = price*amount;
+
+      if(subtotal >= 1000){
+        subtotal *= 0.7;
+      }else if(subtotal >= 500){
+          subtotal *= 0.9;
+      }
+
+
+    document.write("小計：", subtotal,);
+
+
+    </script>
+
+  </body>
+</html>

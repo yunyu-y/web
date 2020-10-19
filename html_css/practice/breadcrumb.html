@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breadcrumb</title>
+    <style>
+
+        div.breadcrumb{
+            background-color: #aaa;
+            margin: 5px 10px;
+            border-radius: 5px;
+            
+        }
+
+        div.breadcrumb > ol.breadcrumb_list> li{
+            display: inline-block;
+        }
+
+        div.breadcrumb > ol.breadcrumb_list > li > a{
+            color: #007bff;
+            text-decoration: none;            
+        }
+
+        div.breadcrumb > ol.breadcrumb_list > li > a:hover{
+            color: #0056b3;
+          }
+
+          div.breadcrumb > ol.breadcrumb_list > li > a::before {
+             content: "/";
+             color: gray;
+        }
+
+        div.breadcrumb > ol.breadcrumb_list > li:first-child > a::before {
+             content: " ";
+        }          
+
+    </style>
+</head>
+<body>
+    <div class="breadcrumb">
+        <ol class="breadcrumb_list">
+          <li><a href="#">首頁</a></li>
+          <li><a href="#">分類頁</a></li>
+          <li><a href="#">商品頁</a></li>
+        </ol>
+      </div>
+    
+</body>
+</html>

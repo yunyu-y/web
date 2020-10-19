@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h2>作業05</h2>
+        <script>
+            var level = 3
+            var kg = 120
+            var price_2
+
+            if (level == 1) {
+                if (kg > 100) {
+                    var price_2 = 20
+                } else if (kg > 40) {
+                    var price_2 = 25
+                } else {
+                    var price_2 = 30
+                }
+            } else if (level == 2) {
+                if (kg > 100) {
+                    var price_2 = 15
+                } else if (kg > 40) {
+                    var price_2 = 20
+                } else {
+                    var price_2 = 25
+                }
+            } else if (level == 3) {
+                if (kg > 100) {
+                    var price_2 = 10
+                } else if (kg > 40) {
+                    var price_2 = 15
+                } else {
+                    var price_2 = 20
+                }
+            }
+            var pay_2 = price_2 * kg
+            document.write('購買等級', level, '的橘子，', kg, '公斤，共計', pay_2, '元。<br><br><br>')
+        </script>
+    </body>
+</html>

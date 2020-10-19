@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-hang">
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+
+  </head>
+  <body>
+  <h1>06橘子</h1>
+  <script>
+  var level="1";
+  var price ;
+  var kg=50 ;
+  var subTotal;
+
+  switch (level){
+    case"1":
+    if (kg > 100){price = 20;
+    } else if (kg > 40){price = 25;
+    }else{price= 30;}
+
+    break;
+
+    case"2":
+    if (kg > 100){price = 15;
+    } else if (kg > 40){price = 20;
+    }else {price= 25;}
+    
+    break;
+    case"3":
+    if (kg > 100){price = 10;
+    } else if (kg > 40){price = 15;
+    }else{price= 20;}
+    break;
+    }
+    subTotal = price * kg;
+    document.write(subTotal , "元");
+
+
+  </script>
+  </body>
+</html>

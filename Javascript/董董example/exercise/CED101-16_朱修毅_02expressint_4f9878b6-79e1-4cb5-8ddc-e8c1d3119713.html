@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+    <h3>秒數轉換時分秒</h3>
+
+    <script type="text/javascript">
+
+    var a = "8000";
+    var sec = a%60;
+    var min = (a-a%60)/60%60;
+    var hr = [(a-a%60)/60-(a-a%60)/60%60]/60;
+
+    document.write("8000秒＝", hr, "時", min, "分", sec, "秒");
+
+
+    </script>
+  </body>
+</html>

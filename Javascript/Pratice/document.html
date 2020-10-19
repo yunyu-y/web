@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>document物件_2</title>
+    </head>
+    <body>
+        <div>現在位置 : <span id="curPos">A<i>A</i>A</span></div>
+
+        搜尋<input type="text" name="sData" /> <br />
+
+        <script>
+            var curPos = document.getElementById("curPos");
+            // console.log( curPos.innerText);
+            // console.log( curPos.innerHTML);
+            curPos.innerText = "首頁>>會員專區";
+            curPos.innerHTML = "首頁>><b>會員專區</b>";
+
+            var objs = document.getElementsByName("sData");
+            objs[0].value = "輸入類別名稱";
+
+            curPos.style.color = "deeppink";
+            curPos.style.borderBottomStyle = "dotted";
+
+            document.getElementsByTagName("div")[0].style.display = "";
+        </script>
+    </body>
+</html>

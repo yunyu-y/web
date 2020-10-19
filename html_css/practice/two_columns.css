@@ -1,0 +1,43 @@
+*{
+  box-sizing: border-box;
+}
+
+.header{
+  border: 1px solid black;
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+}
+
+div.parent_container{
+  border: 1px solid red;
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+  font-size: 0px;
+}
+
+aside.aside{
+  border: 1px solid blue;
+  display: inline-block;
+  width: 200px;
+  margin-right: 20px;
+  vertical-align: top;
+  font-size: 16px;
+}
+
+main.main{
+  border: 1px solid green;
+  display: inline-block;
+  width: calc(100% - 200px - 20px);
+  font-size: 16px;
+}
+
+footer.footer{
+  border: 1px solid black;
+  display: block;
+  width: 95%;
+  margin: 20px auto 0 auto;
+}

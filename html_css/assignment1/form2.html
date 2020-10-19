@@ -1,0 +1,54 @@
+<!Doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <title>2.33作業一</title>
+
+</head>
+
+  <body>
+    <form class="" action="http://notes.carlos-studio.com/ex_post.php" method="post">
+
+      <label>帳號:</label>
+      <input type="text" name="username" >
+      <br>
+      <label for="password">密碼:</label>
+      <input type="password"  name="password">
+      <br>
+      <label for="food_type">飲食:</label>
+      <input type="radio" name="food_type" id=option1 value="葷" checked>
+      <label for="option1">葷</label>
+      <input type="radio" name="food_type" id=option2 value="素">
+      <label for="option2">素</label>
+      <br>
+      <label for="num">人數:</label>
+      <select name="num">
+        <option value="1" selected>1位</option>
+        <option value="2">2位</option>
+        <option value="3">3位</option>
+      </select>
+      <br>
+      <label for="habits[]">興趣:</label>
+      <input type="checkbox" name="habits[]" id=excrise value="運動">
+      <label for="excrise">運動</label>
+      <input type="checkbox" name="habits[]" id=travel value="旅遊">
+      <label for="travel">旅遊</label>
+      <input type="checkbox" name="habits[]" id=movie value="電影">
+      <label for="movie">電影</label>
+      <br>
+      <label>其他事項:</label>
+      <input type="text" name="notes" >
+      <br>
+      <button type="submit">資料送出</button>
+
+
+    </form>
+    <form action="http://notes.carlos-studio.com/ex_form_file.php" method="post" enctype="multipart/form-data">
+      <label>一般文字：</label><input type="text" name="the_text">
+      <br>
+      <input type="file" name="the_file">
+      <button type="submit">資料送出</button>
+    </form>
+
+  </body>
+</html>

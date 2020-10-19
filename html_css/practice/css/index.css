@@ -1,0 +1,52 @@
+/* a[target]{
+  color: red;
+} */
+
+/* div.test1{
+  border: 1px solid black;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+
+div.test2{
+  border: 1px solid red;
+  display: inline-block;
+   width: 100px;
+  height: 100px;
+} */
+/* *{
+    box-sizing: border-box;
+} */
+
+/* div.div1{
+  border: 1px solid red;
+  padding: 10px;
+  display: inline-block;
+  font-size: 16px;
+}
+div.div1.-block1{
+  border: 1px solid black;
+  margin-bottom: 30px;
+  margin-right: 30px;
+  width: 100px;
+  height: 100px;
+
+  box-sizing: border-box;
+
+}
+div.div1.-block2{
+  border: 1px solid red;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+div.parent_block{
+  font-size: 0;
+} */
+
+<style>
+      ul li{
+        display: inline-block;
+        border:1px solid red;
+      }
+    </style>

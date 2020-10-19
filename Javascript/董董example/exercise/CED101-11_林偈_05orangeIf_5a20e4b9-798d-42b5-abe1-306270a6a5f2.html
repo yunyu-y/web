@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-hant" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var vip = parseInt ("3")
+    var num = parseInt ("50")
+    if (vip == 1) {
+      if(num <= 40){
+      var price =30;
+    } else if ( num >= 40){
+      var price =25;
+      }else if ( num >= 100){
+      var price =20;
+    }}
+    else if (vip == 2) {
+      if(num <= 40){
+      var price =25;
+    } else if ( num >= 40){
+      var price =20;
+    } else if ( num >= 100){
+     var price =15;
+    }}
+    else if (vip == 3) {
+      if(num <= 40){
+      var price =20;
+    } else if ( num >= 40){
+      var price =15;
+    } else if ( num >= 100){
+     var price =10;
+    }}
+document.write(price*num,"元");
+    </script>
+
+  </body>
+</html>

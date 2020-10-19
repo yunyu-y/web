@@ -1,0 +1,88 @@
+@import "./common/all.css";
+@import "./common/header.css";
+@import "./common/footer.css";
+
+header {
+    background-color: #81501c31;
+}
+.nav_portfolio {
+    background-color: #d19c64;
+}
+.pfNext_Top {
+    width: 1519.2px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.pfNext_TopText {
+    border-top: 3px solid rgba(128, 128, 128, 0.6);
+    border-bottom: 3px solid rgba(128, 128, 128, 0.6);
+    color: rgba(128, 128, 128, 0.6);
+    text-align: center;
+    font-size: 30px;
+    padding: 25px 25px 20px 25px;
+    margin: 0 auto;
+    width: 420px;
+}
+.pfNext_Bottom {
+    min-width: 1200px;
+}
+.name {
+    font-size: 20px;
+    margin-top: 2px;
+    /* align-content: center; */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* force scrollbar */
+html {
+    overflow-y: scroll;
+    /* background-color: #81501c31; */
+}
+
+/* ---- grid ---- */
+
+.grid {
+    margin-bottom: 3rem;
+    /* background: #ddd; */
+    width: 1500px;
+    margin: 0 auto;
+}
+
+/* clear fix */
+.grid:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+    width: 33.3%;
+    padding: 10px;
+}
+
+.grid-item {
+    float: left;
+}
+
+.grid-item img {
+    display: block;
+    max-width: 100%;
+    transform: scale(1, 1);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+.grid-item img:hover {
+    opacity: 0.7;
+    transform: scale(0.9, 0.9);
+}
+
+/* .pic img{transform:scale(1,1);transition: all 1s ease-out;}
+.pic img:hover{transform:scale(1.2,1.2);} */

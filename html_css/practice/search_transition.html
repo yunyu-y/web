@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>練習1：搜尋框 :focus 狀態的轉場效果</title>
+        <style>
+            input.search {
+                box-sizing: border-box;
+                /* border: 1px solid red; */
+                background-image: url("https://alldata.sgp1.digitaloceanspaces.com/images/searchicon.png");
+                background-size: 14px;
+                background-repeat: no-repeat;
+                background-position: 5px center;
+                width: 100px;
+                font-size: 16px;
+                padding-left: 20px;
+
+                transition: width 1s ease-in-out;
+            }
+            input.search:focus {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" class="search" placeholder="搜尋.." />
+    </body>
+</html>

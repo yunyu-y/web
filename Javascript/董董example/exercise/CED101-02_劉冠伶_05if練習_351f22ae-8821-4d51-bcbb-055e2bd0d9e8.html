@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h2>05orangeIf</h2>
+  <script>
+
+  var type = 3;
+  var quantity = 150;
+  var amount ;
+
+  if(type == 1){
+    if(quantity <= 40){
+       amount = 30 * quantity ;
+    }else if(100 >= quantity > 40){
+       amount = 25 * quantity;
+    }else if(quantity > 100){
+       amount = 20 * quantity;
+    }else{
+      amount=0;
+    }
+  }
+
+  if(type == 2){
+    if(quantity <= 40){
+      amount = 25 * quantity ;
+    }else if(100 >= quantity > 40){
+      amount = 20 * quantity ;
+    }else if(quantity > 100){
+      amount = 15 * quantity;
+    }else{
+      amount=0;
+    }
+  }
+
+  if(type == 3){
+    if(quantity <= 40){
+      amount = 20 * quantity ;
+    }else if(100 >= quantity > 40){
+      amount = 15 * quantity ;
+    }else if(quantity > 100){
+      amount = 10 * quantity;
+    }else{
+      amount=0;
+    }
+  }
+
+
+
+  document.write("購買等級:" , type , "<br>");
+  document.write("公斤數:" , quantity , "公斤<br>");
+  document.write("小計:" , amount , "元<br>");
+
+  </script>
+	
+</body>
+</html>

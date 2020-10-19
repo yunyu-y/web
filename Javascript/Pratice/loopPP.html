@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>迴圈練習</title>
+        <style>
+            h2 {
+                color: cornflowerblue;
+            }
+            td {
+                width: 80px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>For巢狀迴圈</h2>
+        <script>
+            for (i = 1; i <= 9; i++) {
+                for (j = 1; j <= 9; j++) {
+                    document.write(j, " ");
+                }
+                document.write("<br>");
+            }
+        </script>
+
+        <h2>For巢狀迴圈----while</h2>
+        <script>
+            for (i = 1; i <= 9; i++) {
+                var j = 1;
+                while (j <= 9) {
+                    document.write(j, " ");
+                    j++;
+                }
+                document.write("<br>");
+            }
+        </script>
+        <h2>9X9表格表示</h2>
+        <script>
+            document.write("<table border='1' align='center' cellspacing='0'>");
+            for (var i = 1; i <= 9; i++) {
+                document.write("<tr>");
+                for (var j = 1; j <= 9; j++) {
+                    document.write("<td>", i * j, "</td>");
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        </script>
+        <h2>9X9表格表示-------2</h2>
+        <script>
+            document.write("<table border='1' align='center'>");
+            for (var i = 1; i <= 9; i++) {
+                document.write("<tr>");
+                for (var j = 1; j <= 9; j++) {
+                    // document.write("<td>", i, "*", j, "=", i * j, "</td>");較繁瑣
+                    document.write(`<td>${i}*${j}=${i * j}</td>`);
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        </script>
+
+        <h2>Math.ceil(X)</h2>
+        <script>
+            document.write(Math.ceil(12 / 6), "<br>"); //2
+            document.write(Math.ceil(12 / 10), "<br>"); //2(無條件進位)
+            document.write(Math.floor(12 / 10), "<br>"); //1(無條件捨去)
+        </script>
+
+        <h2>陣列</h2>
+        <script>
+            var arr = new Array(11, 22, 33);
+            for (i = 0; i <= 3; i++) {
+                document.write(arr[i], "<br>"); //僅宣告陣列0-2,i=3印出值為undefined
+            }
+        </script>
+        <h2>array.length</h2>
+        <script>
+            var arr = new Array(11, 22, 33, 44, 55, 66, 77);
+            for (i = 0; i < arr.length; i++) {
+                //若陣列長度未來不變,可於for前先宣告避免每次判斷影響效能
+                document.write(arr[i], "<br>");
+            }
+        </script>
+
+        <h2>for(i in Array)</h2>
+        <script>
+            var arr = new Array(11, 22, 33);
+            arr[0] = 100;
+            arr[6] = 200;
+
+            for (i in arr) {
+                //僅印出有值的陣列位置&其值
+                document.write(i, ":", arr[i], "<br>");
+            }
+        </script>
+
+        <h2>陣列轉字串</h2>
+        <script>
+            var arr = new Array(11, 22, 33);
+            var str = "";
+            var len = arr.length - 1;
+
+            for (i = 0; i < len; i++) {
+                str = str + arr[i] + ",";
+            }
+            str = str + arr[i];
+            document.write(str, "<br>");
+        </script>
+
+        <h2>將資料100,200 insert到陣列的最後面</h2>
+        <script>
+            var arr = new Array(11, 22, 33);
+            arr[arr.length] = 100;
+            arr[arr.length] = 200; //每次arr.length皆會重新計算
+            for (var i in arr) {
+                //僅印出有值的陣列位置&其值
+                document.write(i, ":", arr[i], "<br>");
+            }
+        </script>
+
+        <h2>將data: 100 insert到陣列中的特定位置(特定位置為2的位置)</h2>
+        <script>
+            var arr = new Array(11, 22, 33, 44, 55, 66);
+            for (var i = arr.length - 1; i >= 2; i--) {
+                //arr.length - 1等於 arr[arr.length],arr.length為總長度6
+                // for (var i = arr[arr.length]; i >= 2; i--)
+                arr[i + 1] = arr[i];
+            }
+            arr[2] = 100;
+            for (var i in arr) {
+                //僅印出有值的陣列位置&其值
+                document.write(i, ":", arr[i], "<br>");
+            }
+        </script>
+        <h2>array.toString()</h2>
+        <script>
+            var arr = new Array(11, 22, 33, 44, 55, 66, 77, 88, 99);
+            var str = arr.toString();
+            document.write(str, "<br>");
+            document.write(arr[3], "<br>");
+            document.write(arr, "<br>");
+        </script>
+        <h2>push(),pop()</h2>
+        <script>
+            var arr = new Array(11, 22, 33);
+            arr.push(100);
+            document.write("push(100):之後", arr, "<br>");
+            var data = arr.pop();
+            document.write("pop():之後", arr, "需接被移除值 :", data, "<br>");
+        </script>
+        <h2>reverse(),join()</h2>
+        <script>
+            var arr = new Array(11, 22, 33);
+            arr.reverse();
+            document.write(arr.join("&&"), "<br>");
+        </script>
+        <h2>concat()</h2>
+        <script>
+            var arr = new Array(11, 22, 33);
+            var arr2 = new Array(44, 55);
+            var arr3 = arr.concat(arr2);
+            document.write(arr, "<br>");
+            document.write(arr2, "<br>");
+            document.write(arr3, "<br>");
+        </script>
+
+        <h2>slice()</h2>
+        <script>
+            var arr = new Array(11, 22, 33, 44, 55, 66);
+            var arr2 = arr.slice(3, 5);
+
+            document.write(arr, "<br>");
+            document.write(arr2, "<br>");
+        </script>
+
+        <h2>splice()</h2>
+        <script>
+            var arr = new Array(11, 22, 33, 44, 55, 66, 77, 88, 99);
+            var arr2 = arr.splice(3, 5); //取出並回傳第三開始五個元素
+
+            document.write(arr, "<br>");
+            document.write(arr2, "<br>");
+        </script>
+        <h2>splice()---------2</h2>
+        <script>
+            var arr = new Array(11, 22, 33, 44, 55, 66, 77, 88, 99);
+            var arr2 = arr.splice(3, 5, 100, 200); //取出並回傳第三開始五個元素,並從取出處插入兩個值
+
+            document.write(arr, "<br>");
+            document.write(arr2, "<br>");
+        </script>
+
+        <h2>使用splice()來模擬insert資料100到陣列中特定的位置(如:索引值3)</h2>
+        <script>
+            var arr = new Array(11, 22, 33, 44, 55, 66, 77, 88, 99);
+            var arr2 = arr.splice(3, 0, 100); //從索引值3取出0個值並於取出位置插入100
+
+            document.write(arr, "<br>");
+            document.write(arr2, "<br>");
+        </script>
+        <h2>使用splice()來模擬insert資料刪除陣列中特定的位置(如:索引值3)</h2>
+        <script>
+            var arr = new Array(11, 22, 33, 44, 55, 66, 77, 88, 99);
+            var arr2 = arr.splice(3, 1); //從索引值3取出1個值並回傳
+
+            document.write(arr, "<br>");
+            document.write(arr2, "<br>");
+        </script>
+        <h2>indexOf()</h2>
+        <script>
+            var arr = new Array(11, 22, 33, 44, 55, 66, 77, 88, 99, 33);
+
+            document.write("arr.indexOf(33):", arr.indexOf(33), "<br>");
+            document.write("arr.indexOf(333):", arr.indexOf(333), "<br>"); //沒有值預設回傳-1
+            document.write("arr.indexOf(33,5):", arr.indexOf(33, 5), "<br>"); //9
+        </script>
+
+        <h2>二維陣列</h2>
+        <script>
+            var arr = new Array(new Array(1, 2, 3, 4), new Array(11, 12, 13, 14), new Array(21, 22, 23, 24));
+            for (var i = 0; i < 3; i++) {
+                document.write("arr[".i, "]:", arr[i], "<br>");
+            }
+        </script>
+        <h2>二維陣列-表格</h2>
+        <script>
+            var arr = new Array(new Array(1, 2, 3, 4), new Array(11, 12, 13, 14), new Array(21, 22, 23, 24));
+            document.write("<table border='1' align='center' cellspacing='0'>");
+            for (var i = 0; i < 3; i++) {
+                document.write("<tr>");
+                for (var j = 0; j < 4; j++) {
+                    document.write("<td>", arr[i][j], "</td>");
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        </script>
+
+        <h2>二維陣列-練習</h2>
+        <script>
+            var arr = new Array(new Array(1, 2, 3, 4), new Array(11, 12, 13, 14), new Array(21, 22, 23, 24));
+            document.write("<table border='1' align='center' cellspacing='0'>");
+            for (var i = 0; i < 3; i++) {
+                var sum = 0; //i=0時,每個Array算完總和需歸0
+                document.write("<tr>");
+                for (var j = 0; j < 4; j++) {
+                    document.write("<td>", arr[i][j], "</td>");
+                    var sum = sum + arr[i][j]; //每個Array總和
+                }
+                document.write("<td>", sum, "</td>");
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        </script>
+
+        <h2>字面值表示法</h2>
+        <script>
+            var arr = [1, 2, 3, 4];
+            var arr2 = [
+                [1, 2, 3, 4],
+                [11, 12, 13, 14],
+                [21, 22, 23, 24],
+            ];
+            document.write("<table border='1' align='center' cellspacing='0'>");
+            for (var i = 0; i < 3; i++) {
+                document.write("<tr>");
+                for (var j = 0; j < 4; j++) {
+                    document.write("<td>", arr2[i][j], "</td>");
+                }
+
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        </script>
+
+        <h2>兩數交換</h2>
+        <script>
+            var a = 10;
+            var b = 20;
+            var temp;
+            temp = a;
+            a = b;
+            b = temp;
+            document.write("a:", a, "<br>");
+            document.write("b:", b, "<br>");
+        </script>
+
+        <h2>陣列排序(由小排到大)</h2>
+        <script>
+            var arr = [90, 70, 50, 20, 10, 30, 60, 40, 100, 80];
+            for (var i = 0; i <= 9; i++) {
+                for (var j = i + 1; j <= 10; j++) {
+                    //比到最後
+                    if (arr[i] > arr[j]) {
+                        var temp;
+                        temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+            document.write("arr:", arr, "<br>");
+        </script>
+
+        <h2>sort()配合compare function</h2>
+        <script>
+            function myCompareAsc(a, b) {
+                return a - b;
+            }
+            var arr = [90, 70, 50, 20, 10, 30, 60, 40, 100, 80];
+            arr.sort(myCompareAsc);
+            document.write(arr, "<br>");
+        </script>
+
+        <h2>全域變數v.s區域變數</h2>
+        <script>
+            var a;
+            a = 10;
+            var b = 20;
+            c = 30;
+
+            function test(m) {
+                var d = 40; //在function裡宣告-->區域變數
+                a = a + 100;
+                d = d + 100;
+                e = 50;
+                e = e + 100; //未宣告e,從裡面找
+            }
+            test();
+
+            document.write("a:", a, "<br>");
+            document.write("b:", b, "<br>");
+            document.write("c:", c, "<br>");
+            // document.write("d:", d, "<br>"); //error,不再執行下面程式
+            document.write("e:", e, "<br>");
+        </script>
+
+<h2>sort()配合compare function------1</h2>
+<script>
+function myCompareAsc(a, b){ //a:30, b:80
+	return a-b; //30-80 ->  -50 ------------------>30,80
+}	
+
+var arr = [40, 20, 50, 70, 30, 80, 7]; 
+
+arr.sort(myCompareAsc);
+document.write( arr, "<br>");	
+</script>
+
+
+<h2>sort()配合compare function------2</h2>
+<script>
+function myCompareDesc(a, b){ //a:30, b:80
+	return b-a; //80-30 ->  50 ------------------>80,30
+}	
+
+var arr = [40, 20, 50, 70, 30, 80, 7]; 
+
+arr.sort(myCompareDesc);
+document.write( arr, "<br>");	
+</script>
+
+
+<h2>sort()配合compare function------3</h2>
+<script>
+	//奇數排前面, 偶數排後面
+function myCompare(a, b){ 
+	if( (a+b) % 2 == 0){ //同為奇數, 同為偶數
+		return a-b;
+	}else if( a%2 == 1){ //a:奇數
+		return -1;
+	}else{ //偶數
+		return 1;
+	}
+	
+}	
+
+var arr = [40, 27, 57, 70, 32, 820, 7]; 
+
+arr.sort(myCompare);
+document.write( arr, "<br>");	
+</script>
+
+</html>
+    </body>
+</html>

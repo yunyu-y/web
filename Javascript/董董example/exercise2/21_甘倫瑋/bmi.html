@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>11homework</title>
+		<style>
+            body{
+                width:100%;
+            }
+            div.bmi{
+                display:inline-block;
+                width:300px;
+                margin:0 auto;
+                border:1px solid deeppink;
+            }
+			h2, h1{color:#8281bd;}
+            div>p{
+                display:inline-block;
+            }
+            div>input{
+                display:inline-block;
+            }
+            button.enter{
+                width:80px;
+                height:30px;
+                position:relative;
+                left:50px;
+                top: 20px;
+                text-align: center;
+                display:inline-block;
+        
+            
+            }
+            button.enter{
+                display:inline-block;
+        
+            }
+            div.result{
+                width:300px;
+                border:1px solid blue;
+                position:relative;
+                top:50px;
+            }
+            div.result>span #result{
+                width:180px;
+                height:20px;
+                position:absolute;
+                right:0;   
+            }
+            div.result1{
+                width:300px;
+                border:1px solid blue;
+                position:relative;
+                top:70px;
+            }
+            div.result1>span #safe{
+                width:180px;
+                height:20px;
+                position:absolute;
+                right:0;   
+            }
+
+		</style>
+	</head>
+	<body>
+        <div class="bmi">
+        <h1>BMI</h1>
+        <div class="height">
+            <p>身高:</p>
+            <input type="content" id="height">
+            <p>cm</p>
+        </div>
+        <div class="weight">
+            <p>體重:</p>
+            <input type="content" id="weight">
+            <p>kg</p>
+        <button type="submit" class="enter" onclick="bmi();">
+        計算
+
+        </button>
+        <div class="result" >
+            你的BMI結果是:
+            <span id="result">
+            </span>
+
+        </div>
+        <div class="result1">
+            標準嗎?
+            <span id="safe">
+            </span>
+
+        </div>
+        </div>
+        </div>
+
+        <script>
+            function bmi(){
+                var height = Number(document.getElementById("height").value);
+                var weight = Number(document.getElementById("weight").value);
+
+                var BMI= weight / Math.pow (height/100,2);
+                console.log(height)
+                console.log(weight)
+                console.log(BMI)
+
+                document.getElementById("result").innerText = BMI;
+
+                if(BMI<18.5){
+                    document.getElementById("safe").innerText = "體重過輕";
+                }
+                else if(BMI>=18.5 && BMI<24){
+                    document.getElementById("safe").innerText = "正常範圍";
+                }
+                else if(BMI>=24 && BMI<27){
+                    document.getElementById("safe").innerText = "過重";
+                }
+                else if(BMI>=27 && BMI<30){
+                    document.getElementById("safe").innerText = "輕度肥胖";
+                }
+                else if(BMI>=30 && BMI<35){
+                    document.getElementById("safe").innerText = "中度肥胖";
+                }
+                else if(BMI>=35){
+                    document.getElementById("safe").innerText = "重度肥胖";
+                }
+            }
+
+        </script>
+    
+    
+	
+
+	</body>
+</html>

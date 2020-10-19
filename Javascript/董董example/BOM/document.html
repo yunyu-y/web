@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Examples</title>
+<style>
+
+</style>
+</head>
+<body>
+<div>
+	現在位置 : <span class="nav" id="curPos">A<i>B</i>C</span>
+</div>
+
+搜尋<input type="text" name="sData" > <br>
+
+<script>
+var curPos = document.getElementById("curPos");
+console.log( curPos.innerText);	
+console.log( curPos.textContent);	
+// console.log( curPos.innerHTML);
+curPos.innerText = "首頁>><b>會員專區</b>";	
+curPos.innerHTML = "首頁>><b>會員專區</b>";	
+
+var objs = document.getElementsByName("sData");
+objs[0].value="輸入類別名稱";
+
+//---------------------------
+curPos.style.color = "deeppink";
+curPos.style.borderBottomStyle = "dotted";
+console.log(curPos.id);
+console.log(curPos.className);
+//---------------------------
+document.getElementsByTagName("div")[0].style.display="none";
+</script>    
+</body>
+</html>

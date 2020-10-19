@@ -1,0 +1,344 @@
+@import "./common/all.css";
+@import "./common/header.css";
+@import "./common/footer.css";
+body {
+    background-color: #e2d9ce;
+}
+.nav_blog {
+    background-color: #d19c64;
+}
+.blogbg {
+    min-width: 1515px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.blogContentbg {
+    background-color: ivory;
+    min-width: 1215px;
+    height: 550px;
+    top: 200px;
+    left: 15%;
+    margin: 0 auto;
+}
+.blogContentOut {
+    display: flex;
+    justify-content: space-between;
+    width: 1215px;
+    height: 550px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.blogContentL {
+    /* border: 1px solid red; */
+    width: 607px;
+    height: 850px;
+}
+.blogContentL_img01 {
+    /* border: 1px solid blue; */
+    width: 607px;
+    display: flex;
+}
+
+.blogContentL_img01 img {
+    /* border: 1px solid red; */
+    width: 205px;
+    height: 266px;
+    margin: 30px 0 0 30px;
+    z-index: 1;
+}
+.blogContentL_imgCB1 {
+    /* border: 1px solid black; */
+    font-family: "Book Antiqua";
+    font-style: italic;
+    font-size: 50px;
+    text-shadow: 0 0 5px white;
+    width: 190px;
+    height: 50px;
+    margin: 10px 0 0 -190px;
+    padding-right: 10px;
+}
+.blogContentL_imgC01 {
+    /* border: 1px solid orange; */
+    font-family: "Book Antiqua";
+    font-style: italic;
+    font-size: 25px;
+    margin-top: 16.3rem;
+}
+.blogContentL_CT01 {
+    /* border: 1px solid orchid; */
+    margin: 70px 0 0 -30px;
+}
+.blogContentL_CT01tit {
+    font-size: 1.5rem;
+    background-color: #d1c0a5;
+    padding: 5px 50px;
+    margin-left: -43px;
+}
+
+.blogContentL_CT01ct {
+    /* border: 1px solid springgreen; */
+    font-size: 18px;
+    margin: 70px 0 0 0;
+}
+.blogContentL_img03 {
+    /* border: 1px solid blue; */
+    margin: 20px 0 0 30px;
+    width: 607px;
+    display: flex;
+}
+
+.blogContentL_img03 img {
+    width: 205px;
+    height: 266px;
+    margin: 30px 0 0 30px;
+    z-index: 1;
+}
+.blogContentL_imgCB3 {
+    font-family: "Book Antiqua";
+    font-style: italic;
+    font-size: 50px;
+    text-shadow: 0 0 5px white;
+    width: 190px;
+    height: 50px;
+    margin: 10px 0 0 -190px;
+    padding-right: 10px;
+    z-index: 2;
+}
+.blogContentL_imgC03 {
+    font-family: "Book Antiqua";
+    font-style: italic;
+    font-size: 25px;
+    margin-top: 16.3rem;
+}
+.blogContentL_CT03 {
+    margin: 70px 0 0 -30px;
+}
+.blogContentL_CT03tit {
+    font-size: 1.5rem;
+    background-color: #d1c0a5;
+    padding: 5px 50px;
+    margin-left: -43px;
+}
+.blogContentL_CT03ct {
+    font-size: 18px;
+    margin: 70px 0 0 0;
+}
+.blogContentL_img05 {
+    /* border: 1px solid green; */
+    margin: 60px 0 10px 30px;
+    width: 605px;
+    display: flex;
+}
+.blogContentL_img05 img {
+    /* border: 1px solid red; */
+    width: 275px;
+    height: 198px;
+    z-index: 1;
+    cursor: pointer;
+}
+.blogContentL_imgCB5 {
+    /* border: 1px solid black; */
+    font-family: "Book Antiqua";
+    font-style: italic;
+    font-size: 50px;
+    text-shadow: 0 0 5px gray;
+    width: 250px;
+    height: 50px;
+    margin: -30px 0 0 -250px;
+    z-index: 2;
+}
+.blogContentL_imgC05 {
+    /* border: 1px solid orange; */
+    font-family: "Book Antiqua";
+    font-style: italic;
+    font-size: 25px;
+    margin: 10rem -4rem 0 0;
+}
+.blogContentL_CT05 {
+    margin: 0 0 0 -30px;
+}
+.blogContentL_CT05tit {
+    font-size: 1.5rem;
+    background-color: #d1c0a5;
+    width: 350px;
+    margin-top: 16px;
+    padding: 5px 0 0 50px;
+}
+.blogContentL_CT05ct {
+    /* border: 1px solid black; */
+    padding-left: 20px;
+    font-size: 18px;
+    margin: 50px 0px 0 25px;
+}
+.blogContentR {
+    /* border: 1px solid hotpink; */
+    width: 607px;
+    height: 850px;
+}
+.blogContentR_img02 {
+    /* border: 1px solid green; */
+    margin-top: 150px;
+    /* height: 210px; */
+    display: flex;
+}
+.blogContentR_img02 img {
+    /* border: 1px solid red; */
+    width: 275px;
+    height: 198px;
+    z-index: 1;
+}
+.blogContentR_imgCB2 {
+    /* border: 1px solid black; */
+    font-family: "Book Antiqua";
+    font-style: italic;
+    font-size: 50px;
+    text-shadow: 0 0 5px white;
+    width: 250px;
+    height: 50px;
+    margin: -30px 0 0 -250px;
+    z-index: 2;
+}
+.blogContentR_imgC02 {
+    /* border: 1px solid orange; */
+    font-family: "Book Antiqua";
+    font-style: italic;
+    font-size: 25px;
+    margin-top: 10rem;
+    margin-left: 225px;
+}
+.blogContentR_CT02 {
+    /* border: 1px solid black; */
+    margin: 0 0 0 -67px;
+}
+.blogContentR_CT02tit {
+    /* border: 1px solid red; */
+    font-size: 1.5rem;
+    background-color: #d1c0a5;
+    width: 354px;
+    padding: 0px 0 0 50px;
+    margin: 16px 0 0 0px;
+}
+.blogContentR_CT02ct {
+    /* border: 1px solid blue; */
+    font-size: 18px;
+    margin: 50px 0 0 53px;
+}
+
+.blogContentR_img04 {
+    /* border: 1px solid blue; */
+    width: 607px;
+    margin: 60px 0 0 20px;
+    display: flex;
+}
+
+.blogContentR_img04 img {
+    width: 205px;
+    height: 266px;
+    margin: 30px 0 0 30px;
+    z-index: 1;
+}
+.blogContentR_imgCB4 {
+    font-family: "Book Antiqua";
+    font-style: italic;
+    font-size: 50px;
+    text-shadow: 0 0 5px white;
+    width: 190px;
+    height: 50px;
+    margin: 10px 0 0 -190px;
+    padding-right: 10px;
+    z-index: 2;
+}
+.blogContentR_imgC04 {
+    font-family: "Book Antiqua";
+    font-style: italic;
+    font-size: 25px;
+    margin-top: 16.3rem;
+}
+.blogContentR_CT04 {
+    margin: 70px 0 0 -30px;
+}
+.blogContentR_CT04tit {
+    font-size: 1.5rem;
+    background-color: #d1c0a5;
+    padding: 5px 50px 5px 50px;
+    margin-left: -43px;
+}
+.blogContentR_CT04ct {
+    font-size: 18px;
+    margin: 70px 0 0 0;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background-color: ivory;
+}
+.btn_modal {
+    outline: none;
+    background: none;
+}
+div.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0.7);
+
+    /* 預設：完全透明；設定 z-index: -1 會在整個頁面的後方，看不到，才不會擋到頁面元素。 */
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 1s;
+}
+div.overlay.-on {
+    /* 加上 -on 之後，Modal 漸漸出現，因為有設定 transition */
+    opacity: 1;
+    z-index: 2;
+}
+
+div.overlay.-opacity-zero {
+    /* 關閉 Modal 時，先讓 opacity設定0，就會慢慢變成完全透明，但這時會擋到後面的元素，所以要再移除 -on 及 -opacity-zero 這兩個 class */
+    opacity: 0;
+}
+
+/* 元素 article 置中及基本樣式 */
+div.overlay > article {
+    max-width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.articleIn {
+    /* border: 1px solid red; */
+    display: flex;
+}
+.articleInR {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.articleInROut {
+    /* border: 1px solid red; */
+    background-color: white;
+    width: 420px;
+    height: 511px;
+    margin: -15px 0 0 -22px;
+}
+.articleInRtit {
+    font-size: 2rem;
+    margin: 32px 10px;
+}
+.articleInRct {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 80px 15px;
+}
+.btn_modal_close {
+    outline: none;
+}

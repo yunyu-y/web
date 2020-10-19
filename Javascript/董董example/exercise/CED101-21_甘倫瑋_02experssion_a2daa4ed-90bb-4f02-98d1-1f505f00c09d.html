@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-hang">
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>換算時分秒</h1>
+    <script>
+    var a = 8000;
+    var hour = parseInt(a/3600) ;
+    var minute = parseInt(a%3600/60);
+    var second = parseInt(a%3600%60);
+
+    document.write( hour,"時");
+    document.write(minute,"分");
+    document.write(second,"秒");
+
+
+    </script>
+  </body>
+
+</html>

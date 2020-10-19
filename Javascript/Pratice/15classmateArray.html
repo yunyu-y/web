@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>作業15: (二維陣列練習)</title>
+    </head>
+    <body>
+        <script>
+            document.write("<table border='1' align='center' cellspacing='0'>");
+            var stu = [
+                ["學號", "姓名", "電話", "地址"],
+                [94951001, "黃一丁", "0911000333", "中壢市中大路1號"],
+                [94951002, "劉二毛", "0922999887", "高雄市中山路2號"],
+                [94951003, "張大化", "0933555779", "台北市師大路3號"],
+            ];
+            for (i = 0; i <= 3; i++) {
+                document.write("<tr>");
+
+                for (j = 0; j <= 3; j++) {
+                    document.write("<td>", stu[i][j], "</td>");
+                }
+            }
+            document.write("</tr>");
+            document.write("</table>");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>函式</title>
+        <style>
+            h2 {
+                color: cornflowerblue;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <h2>eval()</h2> -->
+        <!-- <h2>isNaN()</h2> -->
+        <h2>沒有參數，沒有回傳值</h2>
+        <script>
+            function hello() {
+                document.write("Hello World~~<br>");
+            }
+            hello();
+        </script>
+
+        <h2>有參數，沒有回傳值</h2>
+        <script>
+            function hello(name) {
+                document.write("Hello ", name, "~~<br>");
+            }
+            hello("YUNYU");
+        </script>
+
+        <h2>有參數，有回傳值</h2>
+        <script>
+            function sum(a, b) {
+                var total = 0;
+                total = a + b;
+                return total;
+            }
+            document.write("10+20=", sum(10, 20));
+        </script>
+
+        <h2>有參數，有回傳值//重複宣告</h2>
+        <script>
+            function sum(a, b) {
+                var total = 0;
+                total = a + b;
+                return total;
+            }
+            document.write("10+20=", sum(10, 20));
+
+            function sum(a, b, c) {
+                var total = 0;
+                total = a + b + c;
+                return total;
+            }
+            document.write("10+20=", sum(10, 20), "<br>"); //NaN
+            document.write("10+20+30=", sum(10, 20, 30));
+        </script>
+
+        <h2>有參數，有回傳值//重複宣告------arguments</h2>
+        <script>
+            function sum(a, b) {
+                var total = 0;
+                total = a + b;
+                return total;
+            }
+            function sum(a, b, c) {
+                var total = 0;
+                for (i = 0; i < arguments.length; i++) {
+                    //argument可呼叫所有實際引數資料
+                    total += arguments[i];
+                }
+                return total;
+            }
+            document.write("10+20=", sum(10, 20), "<br>");
+            document.write("10+20+30=", sum(10, 20, 30), "<br>");
+            document.write("10+20+30+40=", sum(10, 20, 30, 40), "<br>");
+        </script>
+
+        <h2>參數給預設值</h2>
+        <script>
+            function showMsg(msg = "Hi~~~~") {
+                document.write(msg, "<br>");
+            }
+            showMsg("Hello~~");
+            showMsg(); //若未設預設值將回傳undefined
+        </script>
+        <h2>sort()配合compare function</h2>
+        <script>
+            function myCompareAsc(a, b) {
+                return a - b;
+            }
+            var arr = [90, 70, 50, 20, 10, 30, 60, 40, 100, 80];
+            arr.sort(myCompareAsc);
+            //sort-->由小排到大 : 計算完若 < 0 排前面(維持原位) , > 0 排後面(換位)
+            document.write(arr, "<br>");
+        </script>
+
+        <h2>全域變數v.s區域變數</h2>
+        <script>
+            var a;
+            a = 10;
+            var b = 20;
+            c = 30;
+
+            function test(m) {
+                var d = 40; //在function裡宣告-->區域變數
+                a = a + 100;
+                d = d + 100;
+                e = 50;
+                e = e + 100; //未宣告e,從裡面找
+            }
+            test();
+
+            document.write("a:", a, "<br>");
+            document.write("b:", b, "<br>");
+            document.write("c:", c, "<br>");
+            // document.write("d:", d, "<br>");//error,不再執行下面程式
+            document.write("e:", e, "<br>");
+        </script>
+
+        <h2>sort()配合compare function------1</h2>
+        <script>
+            function myCompareAsc(a, b) {
+                //a:30, b:80
+                return a - b; //30-80 ->  -50 ------------------>30,80
+            }
+
+            var arr = [40, 20, 50, 70, 30, 80, 7];
+
+            arr.sort(myCompareAsc);
+            //sort-->由小排到大 : 計算完若 < 0 排前面(維持原位) , > 0 排後面(換位)
+            document.write(arr, "<br>");
+        </script>
+
+        <h2>sort()配合compare function------2</h2>
+        <script>
+            function myCompareDesc(a, b) {
+                //a:30, b:80
+                return b - a; //80-30 ->  50 ------------------>80,30
+            }
+
+            var arr = [40, 20, 50, 70, 30, 80, 7];
+
+            arr.sort(myCompareDesc);
+            //sort-->由小排到大 : 計算完若 > 0 排前面(維持原位) , < 0 排後面(換位)
+            document.write(arr, "<br>");
+        </script>
+
+        <h2>sort()配合compare function------3</h2>
+        <script>
+            //奇數排前面, 偶數排後面
+            function myCompare(a, b) {
+                if ((a + b) % 2 == 0) {
+                    //同為奇數, 同為偶數
+                    return a - b;
+                } else if (a % 2 == 1) {
+                    //a:奇數
+                    return -1;
+                } else {
+                    //偶數
+                    return 1;
+                }
+            }
+
+            var arr = [40, 27, 57, 70, 32, 820, 7];
+
+            arr.sort(myCompare);
+            document.write(arr, "<br>");
+        </script>
+    </body>
+</html>

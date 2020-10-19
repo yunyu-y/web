@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BMI</title>
+	<style>
+		#returnnum{
+			display:none;
+		}
+		.return{display: flex;}
+	</style>
+</head>
+<body>
+	<section>
+		<h3>請輸入身高體重：</h3>
+		<form action="">
+		<label for="height">身高：</label><input type="number" id="height" min="1" ><span>cm</span>
+		<br>
+		<label for="weight">體重：</label><input type="number" id="weight" min="1" ><span>kg</span>
+		<br>
+		<input type="button" value="計算" id="out1"><input type="reset" id="reset1" value="清除">
+		</form>
+		
+	</section>
+	<section class="return">
+		<h3>BMI：</h3>
+		<p id="returnnum">0</p>
+	</section>
+	<script>
+		var sub=document.getElementById('out1')	;//計算按鈕
+		sub.addEventListener('click',calcBMI);//點按鈕
+		var re=document.querySelector('#reset1');//清除重置
+		var n=document.querySelector('#returnnum');//輸出資料
+		re.addEventListener('click',undo);
+		function undo(e){
+		n.style.display="none";
+		n.innerText= ``;
+		return
+		}
+		function bmi(weight,height){
+		let w = parseInt(weight);
+		let h = parseInt(height)/100;//因為公分要轉公尺所以除以100
+		let bmi = (w/(h**2)).toFixed(2);//toFixed讓小數點4捨5入只有2位
+		return bmi;
+		}
+		var bmi2=function(bmi){
+		if( bmi < 18.5){
+		    return "體重過輕"
+		    }else if( bmi >=18.5 &&  bmi < 24){
+		    return "正常範圍 "
+		    }else if( bmi >=24 &&  bmi < 27){
+		    return "過重 "
+		    }else if( bmi >=27 &&  bmi < 30){
+		    return "輕度肥胖 "
+		    }else if( bmi >=30 &&  bmi < 35){
+		    return "中度肥胖 "
+		    }else if( bmi  >=35){
+		    return "重度肥胖 "
+		    }
+		}
+		function calcBMI(){
+		let bodyWeight =document.getElementById('weight').value;
+		let bodyHeight =document.getElementById("height").value;
+		if(bodyWeight>0 &&bodyHeight>0){
+		n.style.display="block";
+		n.innerText=`${bmi(bodyWeight,bodyHeight)}，${bmi2(bmi(bodyWeight,bodyHeight))}` ;
+			}else{
+			n.style.display="none";
+			alert("請輸入正確身高體重！")
+			return
+		  }
+		}
+
+	</script>
+</body>
+</html>

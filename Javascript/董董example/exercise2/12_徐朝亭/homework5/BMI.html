@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>董董 的 BMI 計算器</title>
+
+        <style>
+            .box {
+                /* display: flex; */
+                /* flex-direction: column; */
+                width: 250px;
+                height: 400px;
+                margin: auto auto;
+
+                border: 2px solid gray;
+            }
+            .title {
+                color: hotpink;
+                font-size: 27px;
+                font-weight: bold;
+                text-align: center;
+            }
+            .box > div {
+                padding: 10px;
+            }
+            .result {
+                color: red;
+                font-size: 24px;
+                text-align: center;
+                height: 35px;
+            }
+            .suggest {
+                color: sandybrown;
+                font-weight: bold;
+                font-size: 20px;
+                text-align: center;
+                height: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="title">董董的BMI計算器</div>
+            <div>
+                <label for="tall">身高 :</label>
+                <input type="text" id="tall" class="tall" />
+            </div>
+            <div>
+                <label for="wight">體重 :</label>
+                <input type="text" id="wight" class="wight" />
+            </div>
+            <div>
+                <button class="reset" id="reset">重置</button>
+                <button class="count">計算</button>
+            </div>
+            <div>結果:</div>
+            <div class="result"></div>
+            <div>建議:</div>
+            <div class="suggest"></div>
+        </div>
+        <script>
+            const reset = document.querySelectorAll('.reset')[0]
+            var count = document.querySelectorAll('.count')[0]
+
+            reset.addEventListener('click', resetbtn)
+            count.addEventListener('click', countbtn)
+
+            function countbtn() {
+                var tall = document.querySelectorAll('.tall')[0].value / 100
+                var wight = document.querySelectorAll('.wight')[0].value
+                var bmi = Math.floor(wight / (tall * tall))
+
+                document.querySelectorAll('.result')[0].innerText = bmi
+                if (bmi < 18.5) {
+                    document.querySelectorAll('.suggest')[0].innerText = '有夠瘦，下課去吃麥當當'
+                } else if ((bmi >= 18.5) & (bmi < 24)) {
+                    document.querySelectorAll('.suggest')[0].innerText = '普通人'
+                } else if ((bmi >= 24) & (bmi < 27)) {
+                    document.querySelectorAll('.suggest')[0].innerText = '你比他胖一點'
+                } else if ((bmi >= 27) & (bmi < 30)) {
+                    document.querySelectorAll('.suggest')[0].innerText = '看起來你比我胖'
+                } else if ((bmi >= 30) & (bmi < 35)) {
+                    document.querySelectorAll('.suggest')[0].innerText = '小胖子，中午吃少一點'
+                } else if (bmi >= 35) {
+                    document.querySelectorAll('.suggest')[0].innerText = '胖子，下課跑步回家'
+                }
+            }
+
+            function resetbtn() {
+                document.querySelectorAll('.tall')[0].value = ''
+                document.querySelectorAll('.wight')[0].value = ''
+                document.querySelectorAll('.result')[0].innerText = ''
+                document.querySelectorAll('.suggest')[0].innerText = ''
+            }
+        </script>
+    </body>
+</html>

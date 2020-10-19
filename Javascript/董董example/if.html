@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+<style>
+	h2{color:deeppink;}
+</style>
+</head>
+<body>
+<h2>if...1</h2>
+<script>
+var avg = 88;
+if( avg >= 60)
+	document.write("通過" , "<br>");
+else
+	document.write("再努力喔~" , "<br>");
+</script> 
+
+<h2>if...2</h2>
+<script>
+var avg = 88;
+if( avg >= 60){
+	document.write("通過" , "<br>");
+	document.write("證書列印...." , "<br>");	
+}else{
+	document.write("再努力喔~" , "<br>");
+	document.write("三餐飯後睡前看喔~" , "<br>");
+}
+</script>
+
+<h2>if.....3</h2> 
+<script type="text/javascript">
+	avg = 38;
+	
+	if(avg >= 90) {
+	   grade = "A";
+	}else if(avg >= 80) { 
+	        grade = "B";
+	}else if(avg >= 70) {
+	        grade = "C";
+	}else if(avg >= 60) {
+	        grade = "D";
+	}else{
+		grade = "E";
+	}
+
+	document.write("等級 : ", grade);
+	
+</script>
+
+
+<hr>
+
+<h2>巢狀句型</h2>
+<script>
+var lowType = 1;
+var education = "有";
+var amount;
+
+if( lowType == 1 ){//-----------
+	amount = 5000;
+	if(education == "有"){
+		amount = amount + 1000;
+	}
+}else if( lowType == 2 ){
+	amount = 3000;
+}else if( lowType == 3 ){  
+	amount = 1000;
+}else{
+	amount = 0;	
+} 
+
+document.write("補助款 : ", amount, "元<br>");	
+</script>
+
+
+<h2>資料型別</h2>
+<script>
+var lowType = "2";
+var education = true;
+var amount;
+
+if( lowType == 1 ){//-----------
+	amount = 5000;
+	if(education == true){
+		amount = amount + 1000;
+	}
+}else if( lowType == 2 ){
+	amount = 3000;
+}else if( lowType == 3 ){  
+	amount = 1000;
+}else{
+	amount = 0;	
+} 
+
+document.write("補助款 : ", amount, "元<br>");	
+</script>
+</body>
+</html>

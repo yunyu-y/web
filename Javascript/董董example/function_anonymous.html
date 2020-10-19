@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<style>
+	h2{color:deeppink;}
+	td{
+		width:40px;
+	}
+</style>
+</head>
+<body>
+
+
+<h2></h2>
+<script>
+
+showMsg("Hi");
+
+function showMsg(msg){ //function statement, 有hoist現象
+	document.write( msg, "<br>");
+}
+
+var greeting = function (){ //function expression, 函式物件在這裡才被建立, 没有hoist的現象
+	document.write(  "Hello~<br>");
+}
+
+greeting();  
+</script> 
+
+<h2>IIFE</h2>
+<script src="CED101_lib.js"></script>
+<script type="text/javascript">
+(function(word){
+		document.write( word, "<br>");
+		var times = 10; //避免汚染全域變數
+		document.write( "times : ", times, "<br>");	
+	})("午安~");	
+
+document.write( "times : ", times, "<br>");	
+</script>
+
+</body>
+</html>

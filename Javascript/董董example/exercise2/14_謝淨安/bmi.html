@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BMI 計算機</title>
+  </head>
+  <body>
+    <section>
+      <h1>BMI 計算機</h1>
+      <hr />
+      <br />
+      <form>
+        <div>
+          <label for="height">
+            <span>身高：</span>
+            <input id="height" type="number" />
+          </label>
+          <span>Cm</span>
+        </div>
+        <br />
+        <div>
+          <label for="weight">
+            <span>體重：</span>
+            <input id="weight" type="number" />
+          </label>
+          <span>Kg</span>
+        </div>
+        <br />
+        <hr />
+        <input class="calculate-button" type="button" value="計算" />
+        <input class="clear-button" type="button" value="清除" />
+      </form>
+      <div>
+        <p>
+          <span>你的 BMI 值是：</span>
+          <span class="bmi-value"></span>
+        </p>
+        <p>
+          <span>你的健康狀況：</span>
+          <span class="bmi-evaluation"></span>
+        </p>
+      </div>
+    </section>
+
+    <script>
+      /**
+       *  String
+       *  Number
+       *  Array
+       *  Object
+       *  Date
+       *  Function
+       *  Null
+       *  Undefined
+       *
+       *  Symbol
+       *
+       *  getString
+       *  GetString
+       *  get_string
+       *  變量
+       *  常量 GET_STRING
+       */
+      window.onload = function () {
+        var evaluationMap = {
+          tooThin: "體重過輕",
+          normal: "正常範圍",
+          tooFat: "體重過重",
+          muchFat: "輕度肥胖",
+          moreFat: "中度肥胖",
+          theFattest: "重度肥胖"
+        };
+
+        function getBMI(weightKg = 0, heightCm = 0) {
+          var heightM = heightCm / 100;
+          var BMI = weightKg / Math.pow(heightM, 2);
+          return Number(BMI.toFixed(2));
+        }
+
+        function BMIEvaluation(BMI) {
+          var result = "";
+          switch (true) {
+            case BMI < 18.5: {
+              result = evaluationMap.tooThin;
+              break;
+            }
+            case BMI >= 18.5 && BMI < 24: {
+              result = evaluationMap.normal;
+              break;
+            }
+            case BMI >= 24 && BMI < 27: {
+              result = evaluationMap.tooFat;
+              break;
+            }
+            case BMI >= 27 && BMI < 30: {
+              result = evaluationMap.muchFat;
+              break;
+            }
+            case BMI >= 30 && BMI < 35: {
+              result = evaluationMap.moreFat;
+              break;
+            }
+            case BMI >= 35: {
+              result = evaluationMap.theFattest;
+              break;
+            }
+          }
+
+          return result;
+        }
+
+        var calculateBtn = document.querySelector(".calculate-button");
+        var clearBtn = document.querySelector(".clear-button");
+        var BMIDom = document.querySelector(".bmi-value");
+        var BMIEvaluationDom = document.querySelector(".bmi-evaluation");
+        var heightValue = document.querySelector("#height");
+        var weightValue = document.querySelector("#weight");
+
+        function calculateBtnHandler(event) {
+          var value = getBMI(weightValue.value, heightValue.value);
+          BMIDom.textContent = value;
+          BMIEvaluationDom.textContent = BMIEvaluation(value);
+        }
+
+        function clearBtnHandler(event) {
+          heightValue.value = null;
+          weightValue.value = null;
+          BMIDom.textContent = null;
+          BMIEvaluationDom.textContent = null;
+        }
+
+        calculateBtn.addEventListener("click", calculateBtnHandler);
+        clearBtn.addEventListener("click", clearBtnHandler);
+      };
+    </script>
+  </body>
+</html>

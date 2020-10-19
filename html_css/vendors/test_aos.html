@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./aos/css/aos.css" />
+        <style>
+            .top_block,
+            .bottom_block {
+                height: 1000px;
+                border: 1px solid gray;
+                background-color: lightgray;
+            }
+
+            div.custom_block {
+                border: 1px solid red;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="top_block">上面的內容</div>
+        <div class="custom_block" data-aos="fade-up">測試的文字2</div>
+        <div class="bottom_block">底部的內容</div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./aos/js/aos.js"></script>
+
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <title>測試字體</title>
+    <style>
+      @font-face{
+        font-family: "myFontLight";
+        /* src: url("./fonts/NotoSerifTC-Light.otf"); */
+        src: url("https://alldata.sgp1.digitaloceanspaces.com/fonts/NotoSerifTC/NotoSerifTC-Light.otf");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "myFontBold";
+        /* src: url("./fonts/NotoSerifTC-Black.otf"); */
+        src: url("https://alldata.sgp1.digitaloceanspaces.com/fonts/NotoSerifTC/NotoSerifTC-Black.otf");
+        font-display: swap;
+      }
+      p{
+        font-size: 40px;
+      }
+      p.para{
+        font-family: "myFontLight";
+      }
+      p.para2{
+        font-family: "myFontBold";
+      }
+    </style>
+  </head>
+  <body>
+    <p>這是一般文字，沒有設定任何字體。</p>
+    <p class="para">這是一般文字，有載入並設定思源宋體：NotoSerifTC-Light。</p>
+    <p class="para2">這是一般文字，有載入並設定思源宋體：NotoSerifTC-Black。</p>
+  </body>
+</html>

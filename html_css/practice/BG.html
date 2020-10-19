@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>這是網頁標題</title>
+  <style>
+ /* label{
+      border: 1px solid red;
+
+    }
+
+     label::before {
+      content: "";
+      display: inline-block;
+      background-image: url("https://alldata.sgp1.digitaloceanspaces.com/images/unchecked-checkbox-50.png");
+      background-size: contain;
+      width: 14px;
+      height: 14px;
+    } 
+
+    input:checked + label{
+      background-image: url("https://alldata.sgp1.digitaloceanspaces.com/images/checked-checkbox-50.png");
+      background-size: contain;
+      width: 14px;
+      height: 14px;
+}
+
+    input.custom_checkbox {
+      display: none;
+    } */
+
+/* 滑鼠移過，改變游標成手指圖案 */
+div.normal_checkbox label, div.custom_checkbox label{
+  cursor: pointer;
+  border: 1px solid red;
+}
+
+/* 將原來的 checkbox 隱藏 */
+div.custom_checkbox input[type="checkbox"]{
+  display: none;
+}
+
+/* 透過 Pseudo Element ::before 來放圖片 */
+div.custom_checkbox input[type="checkbox"] + label::before{
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  /* border: 1px solid blue; */
+  
+  background-image: url("https://alldata.sgp1.digitaloceanspaces.com/images/unchecked-checkbox-50.png");
+  background-size: contain;
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+}
+
+/* checkbox 勾選後，Pseudo Element ::before 換圖 */
+div.custom_checkbox input[type="checkbox"]:checked + label::before{
+  background-image: url("https://alldata.sgp1.digitaloceanspaces.com/images/checked-checkbox-50.png");
+}
+
+  </style>
+  </head>
+  <body>
+    <div class="normal_checkbox">
+      <input type="checkbox" id="original_checkbox">
+      <label for="original_checkbox">預設的 checkbox</label>
+    </div>
+
+    <div class="custom_checkbox">
+    <input type="checkbox" id="custom_checkbox" value="2">
+    <label for="custom_checkbox" id="the_label">換圖的 checkbox</label>
+  </div>
+  </body>
+</html>

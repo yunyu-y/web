@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var price
+        var kg = 40
+        var level = 3
+        if (level == 1) {
+            if (kg > 100){
+                price = 20
+            }else if (kg > 40){
+                price = 25
+            }else {
+                price = 30
+            }
+        } else if (level == 2) {
+            if (kg > 100){
+                price = 15
+            }else if (kg > 40){
+                price = 20
+            }else {
+                price = 25
+            }            
+        } else {
+            if (kg > 100){
+                price = 10
+            }else if (kg > 40){
+                price = 15
+            }else {
+                price = 20
+            }
+        }
+        var subTotal = price * kg        
+        document.write(subTotal)
+    </script>
+</body>
+</html>

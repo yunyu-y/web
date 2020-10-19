@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-hants" >
+  <head>
+    <meta charset="utf-8">
+    <title>05orangeIf</title>
+  <style>
+
+  </style>
+
+  </head>
+  <body>
+
+	<h3>橘子的單價和等級的關係如下:<br>
+      寫程式，設定變數存放所購買的等級及公斤數，並算出小計
+
+</h3>
+	<h3>Answer:</h3>
+
+    <script>
+
+    	var level = 1;
+      var kg=100;
+    	var total
+
+    	if(level===1){
+    		  if(kg<40){
+            total = 30*kg;
+            document.write("購買等級1的橘子",kg,"公斤,因不足40公斤，一公斤單價30元，金額為",total,"元");
+          }
+
+          else if(kg>40 && kg<100){
+            total=25*kg;
+            document.write("購買等級1的橘子",kg,"公斤,因超過40公斤，不足100公斤，一公斤單價25元，金額為",total,"元");
+          }
+
+          else if(kg>=100){
+            total=20*kg;
+            document.write("購買等級1的橘子",kg,"公斤,因超過100公斤一公斤單價20元，金額為",total,"元");
+          }
+      }
+      else if(level===2) {
+          if(kg<40){
+            total=25*kg;
+            document.write("購買等級2的橘子",kg,"公斤,因不足40公斤，一公斤單價25元，金額為",total,"元");
+          }
+
+          else if(kg>40 && kg<100) {
+            total=20*kg;
+            document.write("購買等級2的橘子",kg,"公斤,因超過40公斤，不足100公斤，一公斤單價20元，金額為",total,"元");
+          }
+
+          else if(kg>=100) {
+             total=15*kg
+            document.write("購買等級2的橘子",kg,"公斤,因超過100公斤一公斤單價15元，金額為",total,"元");
+          }
+      }
+
+
+      else if(level===3) {
+          if(kg<40){
+            total=20*kg;
+            document.write("購買等級3的橘子",kg,"公斤,因不足40公斤，一公斤單價20元，金額為",total,"元");
+          }
+
+          else if(kg>40 && kg<100){
+            total=15*kg;
+            document.write("購買等級3的橘子",kg,"公斤,因超過40公斤，不足100公斤，一公斤單價15元，金額為",total,"元");
+          }
+
+          else if(kg>=100){
+            total=10*kg
+            document.write("購買等級3的橘子",kg,"公斤,因超過100公斤一公斤單價10元，金額為",total,"元");
+          }
+
+      }
+
+      </script>
+
+  </body>
+</html>

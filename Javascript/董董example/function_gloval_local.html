@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+
+</head>
+<body>
+<script>
+var a;  //a:100 , b:20 , c:30,  m:55,  e:150
+a = 10;
+
+var b = 20;
+
+c = 30;
+
+
+var m = 55; 
+
+function test(m){ // m ->211 
+	let d = 40;  //d:140
+
+	a = 100;
+	d = d + 100;
+	e = 50;
+	e = e + 100; 
+	m = m + 100;//--------
+}	
+
+test(111);
+
+document.write( "a : ", a, "<br>"); //110
+document.write( "b : ", b, "<br>"); //20
+document.write( "c : ", c, "<br>"); //30
+// document.write( "d : ", d, "<br>"); //error
+document.write( "e : ", e, "<br>"); //150
+document.write( "m : ", m, "<br>");
+</script> 
+
+<h2>一個危險的範例</h2>
+<!-- <script src="CED101_lib.js"></script> -->
+<script>
+
+function sum(a, b, c){  //a,  b,  c,  arguments
+	total = 0; //未宣告成區域變數
+	for(i=0; i<arguments.length; i++){
+		total += arguments[i];
+	}
+	return total;
+}
+
+var total = 1000; //total : 30
+var i = 600; //	i : 2
+document.write( "total : ", total, "<br>"); //1000
+document.write( "i : ", i, "<br>"); //600
+document.write( sum(10,20), "<br>");
+document.write( "total : ", total, "<br>"); //
+document.write( "i : ", i, "<br>"); 
+
+</script>   
+</body>
+</html>

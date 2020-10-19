@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02expressin</title>
+</head>
+<body>
+    <script>
+        var todaySeconds  = 9000;
+        var minute = 60;
+        var hour = 60;
+        var f = minute*hour;
+        var d = todaySeconds%(minute*hour);
+        var a = todaySeconds%(minute*hour)%minute;
+        document.write("時:",(todaySeconds-d)/f,"<br>");
+        document.write("分",(d-a)/minute,"<br>");
+        document.write("秒:",todaySeconds%(minute*hour)%minute,"<br>");
+        // document.write("秒:",d,"<br>")
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>button_wiggle</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            @keyframes wiggle {
+                0% {
+                    left: 0;
+                }
+                10% {
+                    left: -10px;
+                }
+                20% {
+                    left: 0;
+                }
+                30% {
+                    left: 10px;
+                }
+                40% {
+                    left: 0;
+                }
+                50% {
+                    left: -10px;
+                }
+                60% {
+                    left: 0;
+                }
+                70% {
+                    left: 10px;
+                }
+                100% {
+                    left: 0;
+                }
+            }
+
+            body {
+                margin: 0;
+            }
+            div.fixed_block {
+                position: fixed;
+                display: inline-block;
+                border: 1px solid gray;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            input.input_text {
+                border: 1px solid red;
+                position: relative;
+            }
+
+            /* 文字框有 -wiggle 樣式的話，就套用動畫效果 */
+            input.input_text.-wiggle {
+                animation-name: wiggle;
+                animation-duration: 1s;
+                animation-timing-function: linear;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="fixed_block">
+            <input type="text" class="input_text" placeholder="text 欄位" />
+
+            <br />
+
+            <button type="button" class="trigger">資料送出</button>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(function () {
+                // 點擊(click)事件
+                $("button.trigger").on("click", function () {
+                    // 加上指定的樣式
+                    $("input.input_text").addClass("-wiggle");
+
+                    // 經過指定毫秒後，移除 -wiggle 樣式
+                    setTimeout(function () {
+                        $("input.input_text").removeClass("-wiggle");
+                    }, 1000); // 單位是毫秒
+                });
+            });
+        </script>
+    </body>
+</html>

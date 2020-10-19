@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Expressint</title>
+    </head>
+    <body>
+        <script>
+            var x = 8000;
+            var sec = x % 60;
+            var min = Math.floor(x % 3600 / 60) ;
+            var hour = Math.floor(x / 3600);
+            document.write("已過", hour, "時", min, "分", sec, "秒");
+        </script>
+    </body>
+</html>

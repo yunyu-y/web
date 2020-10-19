@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/index.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./venders/fontawesome-free-5.15.1-web/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css"></link>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.theme.default.min.css"></link>
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/owl.carousel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <title>TE AMO Wedding Photographer</title>
+    </head>
+    
+    <body>
+        <header>
+            <div class="header">
+               <div class="logo-box">
+                   <a href="#">
+                       <img src="./images/logo.png" alt="" /></a>
+               </div>
+               <!-- ---------手機平板版--------- -->
+               
+
+            <button type="button" class="hamburger_icon">
+                <span class="-hr -top"></span>
+                <span class="-hr -middle"></span>
+                <span class="-hr -bottom"></span>
+            </button>
+
+            <nav class="hamburg_nav">
+                <ul class="hamburg_ul">
+                    <li><a href="">RESERVATION</a></li>
+                    <li><a href="">SERVICE</a></li>
+                    <li><a href="">DESIGNERS
+                        <ul class="hamburg_designers_list">
+                            <li><a href="#">LINWEI</a></li>
+                            <li><a href="#">MAK TUMANG</a></li>
+                            <li><a href="#">VERA WANG</a></li>
+                        </ul>
+                    </a></li>
+                    <li><a href="">PORTFOLIO</a></li>
+                    <li><a href="">BLOG</a></li>
+                    <li><a href="">ABOUT</a></li>
+
+                </ul>
+            </nav>
+   
+               <!-- ---------電腦版--------- -->
+               <nav class="nav">
+                <ul class="link_list">
+                    <li><a href="./reservation.html" class="nav_reservation ho_line">RESERVATION</a></li>
+                    <li><a href="./service.html" class="nav_service ho_line">SERVICE</a></li>
+                    <li>
+                        <div class="designers">
+                            DESIGNERS
+                            <ul class="designers_list">
+                                <li><a href="./designers_LW.html">LINWEI</a></li>
+                                <li><a href="./designers_LW.html">MAK TUMANG</a></li>
+                                <li><a href="./designers_LW.html">VERA WANG</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="./portfolio.html" class="nav_portfolio ho_line">PORTFOLIO</a></li>
+                    <li><a href="./blog.html" class="nav_blog ho_line">BLOG</a></li>
+                    <li><a href="./about.html" class="nav_about ho_line">ABOUT</a></li>
+                </ul>
+            </nav>
+           </div>
+        </header>
+        <script>
+            // jQuery 版本：DOM 載入完成之後執行
+$(function(){
+  // 按鈕狀態的切換
+  $("button.hamburger_icon").on("click", function(){
+    
+    $(this).toggleClass("-on");
+    
+  });
+});
+
+
+
+// JavaScript 版本：DOM 載入完成之後執行
+/*
+document.addEventListener('DOMContentLoaded', function(){
+  
+  var hamburger_icon = document.getElementsByClassName("hamburger_icon")[0];
+  hamburger_icon.addEventListener("click", function(){
+    if( hamburger_icon.classList.contains("-on") ){
+      hamburger_icon.classList.remove("-on");
+    }else{
+      hamburger_icon.classList.add("-on");
+    }
+  });
+  
+});
+*/
+        </script>
+        
+    </body>
+</html>

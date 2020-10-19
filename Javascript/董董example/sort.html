@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<style>
+	h2{color:deeppink;}
+</style>
+</head>
+<body>
+<h2>sort()</h2>
+<script>
+var arr = [40, 20, 50, 70, 30, 80, 7]; 
+//["40", "20", "50", "70", "30", "80", "7"]
+arr.sort();
+document.write( arr, "<br>");	
+</script>
+
+
+<h2>兩數交換</h2>
+<script>
+	var a = 10;
+	var b = 20;
+	var temp;
+	temp = a;
+	a = b;
+	b = temp;
+	document.write( "a: ", a, "<br>");
+	document.write( "b: ", b, "<br>");
+</script>  
+
+
+<h2>自己排序(從小排到大)</h2>
+<script>
+var arr = [40, 20, 50, 70, 30, 80, 7]; 
+//["40", "20", "50", "70", "30", "80", "7"]
+for(var i=0; i<=5; i++){ //
+	for(var j=i+1; j<=6; j++){ //
+		if( arr[i]>arr[j]){
+			temp = arr[i];
+			arr[i] = arr[j];
+			arr[j] = temp;
+		}
+	}
+}
+document.write( arr, "<br>");	
+</script>  
+
+
+<h2>sort()配合compare function------1</h2>
+<script>
+function myCompareAsc(a, b){ //a:30, b:80
+	return a-b; //30-80 ->  -50 ------------------>30,80
+}	
+
+var arr = [40, 20, 50, 70, 30, 80, 7]; 
+
+arr.sort(myCompareAsc);
+document.write( arr, "<br>");	
+</script>
+
+
+<h2>sort()配合compare function------2</h2>
+<script>
+function myCompareDesc(a, b){ //a:30, b:80
+	return b-a; //80-30 ->  50 ------------------>80,30
+}	
+
+var arr = [40, 20, 50, 70, 30, 80, 7]; 
+
+arr.sort(myCompareDesc);
+document.write( arr, "<br>");	
+</script>
+
+
+<h2>sort()配合compare function------3</h2>
+<script>
+	//奇數排前面, 偶數排後面
+function myCompare(a, b){ 
+	if( (a+b) % 2 == 0){ //同為奇數, 同為偶數
+		return a-b;
+	}else if( a%2 == 1){ //a:奇數
+		return -1;
+	}else{ //偶數
+		return 1;
+	}
+}	
+
+var arr = [40, 27, 57, 70, 32, 820, 7]; 
+
+arr.sort(myCompare);
+document.write( arr, "<br>");	
+</script>
+</body>
+</html>

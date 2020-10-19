@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-hant" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var price = parseInt("60") ;
+    var num = parseInt("100");
+    var total = price * num;
+    if (total >= 1000){
+      total = total * .7;
+    }else if (total >= 500) {
+      total = total * .9;
+    }
+
+
+    document.write(total);
+
+    </script>
+
+  </body>
+</html>

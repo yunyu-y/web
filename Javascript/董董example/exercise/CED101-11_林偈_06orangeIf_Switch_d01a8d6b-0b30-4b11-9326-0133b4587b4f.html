@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var vip = 2;
+    var num = parseInt("100");
+    switch (vip){
+      case 1:
+      var price = 30;
+      if (num>=100){
+        var price = 20;
+      }else if (num>=40){
+        var price = 25;
+      }
+        break;
+        case 2:
+        var price = 25;
+        if (num>=100) {
+          var price = 15;
+        }else if (num>=40){
+          var price = 20;
+        }
+          break;
+          default:
+          var price = 20;
+           if (num>=100) {
+            var price = 10;
+          }else if (num>=40){
+            var price = 15;
+          }
+    }
+      document.write(price*num);
+      </script>
+  </body>
+</html>

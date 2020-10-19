@@ -1,0 +1,381 @@
+@import "./common/all.css";
+@import "./common/header.css";
+@import "./common/footer.css";
+body {
+    margin: 0;
+}
+
+div.banner_bg {
+    background-image: url(../images/avatar.png);
+    background-repeat: no-repeat;
+    height: 690px;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    margin-top: -6rem;
+}
+div.slogan {
+    font-size: 2.4rem;
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 3rem;
+}
+div.slogan_content {
+    font-size: 1.5rem;
+    font-weight: 300;
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 2rem;
+}
+div.designers_show div.designers_show1 {
+    border: 5px solid rgba(116, 112, 93, 0.5);
+    height: 437px;
+    width: 337px;
+    margin: 3rem auto auto 1rem;
+}
+div.designers_show div.designers_show1 div.designers_show1bg {
+    background-image: url(../images/MAK\ TUMANG.png);
+    background-repeat: no-repeat;
+    height: 485px;
+    width: 374px;
+    background-size: cover;
+    background-position: center center;
+    margin: 1rem auto auto 1rem;
+}
+div.designers_show div.designers_show2 {
+    border: 5px solid rgba(116, 112, 93, 0.5);
+    height: 437px;
+    width: 337px;
+    margin: 3rem auto auto 1rem;
+}
+div.designers_show div.designers_show2 div.designers_show2bg {
+    background-image: url(../images/LINWEI.png);
+    background-repeat: no-repeat;
+    height: 485px;
+    width: 374px;
+    background-size: cover;
+    background-position: center center;
+    margin: 1rem auto auto 1rem;
+}
+div.designers_show div.designers_show3 {
+    border: 5px solid rgba(116, 112, 93, 0.5);
+    height: 437px;
+    width: 337px;
+    margin: 3rem auto auto 1rem;
+}
+div.designers_show div.designers_show3 div.designers_show3bg {
+    background-image: url(../images/VERA\ WANG.png);
+    background-repeat: no-repeat;
+    height: 485px;
+    width: 374px;
+    background-size: cover;
+    background-position: center center;
+    margin: 1rem auto auto 1rem;
+}
+.designers_show {
+    display: flex;
+}
+.designers_name {
+    height: 3rem;
+    width: 25rem;
+    font-size: 2rem;
+    background: linear-gradient(10deg, rgb(163, 155, 155), white 75px);
+    text-align: center;
+    line-height: 3rem;
+}
+.rs_bg {
+    height: 323px;
+    width: 100%;
+    margin-top: 10rem;
+    /* position: relative; */
+}
+.rs_bgimg {
+    background-image: url(../images/reservation_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 323px;
+    max-width: 100%;
+}
+.rs_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-family: "Palatino Linotype";
+    font-style: italic;
+    color: white;
+    height: 323px;
+    text-shadow: 5px 5px 10px black;
+}
+.res {
+    font-family: "Josefin Sans";
+    font-style: normal;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #231815;
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    line-height: 2.5rem;
+    padding: 1rem 2rem 0.5rem 2rem;
+    border-radius: 40px;
+    text-shadow: none;
+    box-shadow: 5px 5px 35px 0px black;
+}
+.portfolio-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+}
+.portfolio-lineline {
+    height: 2px;
+    width: 500px;
+    background-color: #d3d1d0;
+}
+.portfolio {
+    font-size: 2.5rem;
+    color: #d3d1d0;
+    margin: 0 1rem;
+}
+.por_lw {
+    display: flex;
+}
+.por_lwimg {
+    margin-left: 5rem;
+    z-index: 100;
+}
+.por_LWtitle {
+    color: #362e2b;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.por_LWtitlebg {
+    width: 80%;
+    height: 1rem;
+    margin: 25px 0 25px 30rem;
+    background-color: rgba(116, 112, 93, 0.5);
+    float: right;
+}
+.por_LWside {
+    position: relative;
+}
+.por_LWWhiteOne {
+    /* border: 1px solid black; */
+    color: #362e2bc9;
+    margin-top: 12rem;
+    font-size: 2rem;
+    width: 20rem;
+}
+.por_LWWOcontent {
+    color: #81511c;
+    background-color: #81501c31;
+    font-size: 1.5rem;
+    padding: 1.5rem 4rem 1.5rem 3.6rem;
+    position: absolute;
+    width: 48rem;
+    left: -50px;
+    line-height: 2.3rem;
+}
+.por_LWmore {
+    font-size: 2rem;
+    background-color: #d1c0a5;
+    color: white;
+    position: absolute;
+    right: -23rem;
+    padding: 0.5rem 0.8rem;
+    bottom: -0.8rem;
+    border-radius: 40px;
+    box-shadow: 3px 3px 10px 0px black;
+}
+.por_mt {
+    margin-top: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.por_mtimg {
+    margin-right: -1rem;
+    z-index: 100;
+}
+.por_MTtitle {
+    color: #362e2b;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 0;
+    right: -12rem;
+}
+.por_MTtitlebg {
+    width: 80%;
+    height: 1rem;
+    margin: 150px 50px -43px 0;
+    background-color: rgba(116, 112, 93, 0.5);
+    float: left;
+}
+.por_MTside {
+    position: relative;
+}
+.por_MTApril {
+    color: #362e2bc9;
+    margin-top: 11.5rem;
+    font-size: 2rem;
+    position: absolute;
+    right: -12rem;
+}
+.por_MTAcontent {
+    color: #81511c;
+    background-color: #81501c31;
+    font-size: 1.5rem;
+    padding: 1.5rem 6rem 1.5rem 3.6rem;
+    position: relative;
+    right: -18rem;
+    line-height: 2.3rem;
+    margin-top: 13.5rem;
+}
+.por_MTmore {
+    font-size: 2rem;
+    background-color: #d1c0a5;
+    color: white;
+    position: absolute;
+    right: -12rem;
+    padding: 0.5rem 0.8rem;
+    bottom: 0.5rem;
+    border-radius: 40px;
+    box-shadow: 3px 3px 10px 0px black;
+}
+
+.por_vw {
+    margin-top: 5rem;
+    display: flex;
+}
+.por_vwimg {
+    margin-left: 5rem;
+    z-index: 100;
+}
+.por_VWtitle {
+    color: #362e2b;
+    margin: 1rem 0 0 22.5rem;
+    font-size: 2.5rem;
+    position: absolute;
+}
+.por_VWtitlebg {
+    width: 90%;
+    height: 1rem;
+    margin: 105px 0 0 -100%;
+    background-color: rgba(116, 112, 93, 0.5);
+    float: right;
+}
+.por_VWside {
+    position: relative;
+}
+.por_VWEsther {
+    color: #362e2bc9;
+    margin-top: 12rem;
+    font-size: 2rem;
+}
+.por_VWEcontent {
+    color: #81511c;
+    background-color: #81501c31;
+    font-size: 1.5rem;
+    margin: 14rem 0 0 29rem;
+    padding: 1.5rem 0 1.5rem 3.6rem;
+    position: absolute;
+    width: 50rem;
+    left: -10rem;
+    line-height: 2.3rem;
+}
+.por_VWmore {
+    font-size: 2rem;
+    background-color: #d1c0a5;
+    color: white;
+    position: absolute;
+    padding: 0.5rem 0.8rem;
+    left: 62rem;
+    margin-top: 25rem;
+    border-radius: 40px;
+    box-shadow: 3px 3px 10px 0px black;
+}
+
+.blog-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6rem 0 3rem 0;
+}
+.blog-lineline {
+    height: 2px;
+    width: 500px;
+    background-color: #d3d1d0;
+}
+.blog {
+    font-size: 2.5rem;
+    color: #d3d1d0;
+    margin: 0 1rem;
+}
+.blog_area {
+    display: flex;
+}
+.blog_bigcontent {
+    display: flex;
+    justify-content: center;
+}
+.blog_bgimg {
+    background-image: url(../images/index-Blogbg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+}
+.blog_Limg {
+    margin: 2rem 0;
+    position: relative;
+    z-index: 10;
+}
+.blog_Rarea {
+    margin: 2.5rem 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 446px;
+    height: 585px;
+    position: relative;
+    left: -5px;
+}
+.blog_name {
+    margin: 2rem 0 5rem 1rem;
+    font-size: 2rem;
+}
+.blog_content {
+    font-size: 1.4rem;
+    line-height: 2.3rem;
+    margin-left: 1rem;
+}
+.blog_moreOut {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.blog_more {
+    width: 1200px;
+    font-size: 2rem;
+    background-color: #d1c0a5;
+    color: white;
+    width: 13rem;
+    border-radius: 40px;
+    box-shadow: 3px 3px 10px 0px black;
+    text-align: center;
+    padding: 0.3rem 0;
+    margin-bottom: 2rem;
+}
+.mes {
+    position: fixed;
+    width: 0px;
+    height: 0px;
+    bottom: 100px;
+    right: 100px;
+}
+footer {
+    margin-top: -0px;
+}

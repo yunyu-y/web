@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JS練習</title>
+        <style>
+            h2 {
+                color: deeppink;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>練習</h2>
+        <script>
+            var price = "20";
+            var amount = "40";
+            var ship = "80";
+            var subTotal = price * amount;
+            var total = subTotal + ship;
+            document.write("subTotal : ", subTotal, "<br>");
+            document.write("total : ", total, "<br>");
+        </script>
+
+        <h2>練習正確</h2>
+        <script>
+            var price = parseInt("20");
+            var amount = parseInt("40");
+            var ship = parseInt("80");
+            var subTotal = price * amount;
+            var total = subTotal + ship;
+            document.write("subTotal : ", subTotal, "<br>");
+            document.write("total : ", total, "<br>");
+        </script>
+
+        <h2>parseInt</h2>
+        <script>
+            document.write("parseInt('321abc') : ", parseInt("321abc"), "<br>");
+        </script>
+
+        <h2>比較</h2>
+        <script>
+            document.write("5 !== '5' : ", 5 !== "5", "<br>"); //ture
+            document.write("5 != '5' : ", 5 != "5", "<br>"); //false
+        </script>
+
+        <h2>邏輯</h2>
+        <script>
+            document.write("5 !== '5' : ", 5 !== "5", "<br>"); //ture
+            document.write("5 != '5' : ", 5 != "5", "<br>"); //false
+        </script>
+
+        <h2>if</h2>
+        <script>
+            var avg = 88;
+            if (avg >= 60) {
+                document.write("通過", "<br>");
+            } else {
+                document.write("再加油唷!", "<br>");
+            }
+        </script>
+
+        <h2>if...3</h2>
+        <script>
+            var avg = 88;
+
+            if (avg >= 90) {
+                grade = "A";
+            } else if (avg >= 80) {
+                grade = "B";
+            } else if (avg >= 70) {
+                grade = "C";
+            } else if (avg >= 60) {
+                grade = "D";
+            } else {
+                grade = "E";
+            }
+
+            document.write("等級 : ", grade);
+        </script>
+
+        <h2>var有hoist(提昇)現象</h2>
+        <script>
+            document.write("a : ", a, "<br>");
+            a = 10;
+            document.write("a : ", a, "<br>");
+        </script>
+
+        <h2>可重複宣告</h2>
+        <script>
+            var a = 100;
+            document.write("a : ", a, "<br>");
+        </script>
+
+        <h2>沒有區塊作用域</h2>
+        <script>
+            var avg = 66;
+            if ((avg = 60)) {
+                var msg = "通過";
+            }
+            document.write("msg : ", msg, "<br>");
+        </script>
+
+        <h2>let沒有hoist(提昇)現象</h2>
+        <script>
+            // document.write("a : ", a, "<br>");
+            a = 10;
+            document.write("a : ", a, "<br>");
+        </script>
+
+        <h2>可重複宣告</h2>
+        <script>
+            var a = 100;
+            document.write("a : ", a, "<br>");
+        </script>
+
+        <h2>沒有區塊作用域</h2>
+        <script>
+            var avg = 66;
+            if ((avg = 60)) {
+                var msg = "通過";
+            }
+            document.write("msg : ", msg, "<br>");
+        </script>
+
+        <h2>switch...1</h2>
+        <script>
+            var lowType = 1;
+
+            switch (lowType) {
+                case 1:
+                    amount = 5000;
+                    break;
+                case 2:
+                    amount = 3000;
+                    break;
+                case 3:
+                    amount = 1000;
+                    break;
+                default:
+                    amount = 0;
+                    break;
+            }
+
+            document.write("補助款 : ", amount, "元<br>");
+        </script>
+
+        <h2>改成if else if+巢狀句型</h2>
+        <script>
+            var lowtype = 2;
+            var education = "有";
+            var amount;
+
+            if (lowtype == 1) {
+                amount = 5000;
+                if (education == "有") {
+                    amount += 1000;
+                }
+            } else if (lowtype == 2) {
+                amount = 3000;
+            } else if (lowtype == 3) {
+                amount = 1000;
+            } else {
+                amount = 0;
+            }
+            document.write("補助款 : ", amount, "元<br>");
+        </script>
+
+        <h2>資料型別</h2>
+        <script>
+            var lowtype = "1";
+            var education = true;
+            var amount;
+
+            if (lowtype == 1) {
+                //{ ==寬鬆的比較(會自動轉換成值) ,=== 嚴謹的比較(字串跟數值都需相同)
+                amount = 5000;
+                if (education == true) {
+                    amount += 1000;
+                }
+            } else if (lowtype == 2) {
+                amount = 3000;
+            } else if (lowtype == 3) {
+                amount = 1000;
+            } else {
+                amount = 0;
+            }
+            document.write("補助款 : ", amount, "元<br>");
+        </script>
+
+        <h2>switch...2</h2>
+        <script>
+            var lowtype = "1";
+            var education = true,
+                amount;
+
+            switch (lowType) {
+                case 1:
+                    amount = 5000;
+                    if (education == true) {
+                        amount += 1000;
+                    }
+                    break;
+                case 2:
+                    amount = 3000;
+                    break;
+                case 3:
+                    amount = 1000;
+                    break;
+                default:
+                    amount = 0;
+                    break;
+            }
+            document.write("補助款 : ", amount, "元<br>");
+        </script>
+
+        <h2>for迴圈</h2>
+        <script>
+            for (var i = 1; i <= 3; i++) {
+                document.write("I Love JavaScript~~ <br>");
+            }
+        </script>
+        <hr />
+        <h2>印出1.2.3.4...10----自己做</h2>
+        <script>
+            for (var i = 1; i <= 10; i++) {
+                if (i == 10) {
+                    document.write(i);
+                } else {
+                    document.write(i, "、");
+                }
+            }
+        </script>
+        <h2>印出1.2.3.4...10-----方法一</h2>
+        <script>
+            for (var i = 1; i <= 10; i++) {
+                if (i < 10) {
+                    document.write(i, "、");
+                } else {
+                    document.write(i);
+                }
+            }
+        </script>
+        <h2>印出1.2.3.4...10-----方法二</h2>
+        <script>
+            for (var i = 1; i <= 9; i++) {
+                document.write(i, "、");
+            }
+            document.write(i);
+        </script>
+        <h2>1+2+3+4...50的總和</h2>
+        <script>
+            var total = 0;
+            for (var i = 1; i <= 50; i++) {
+                total = total + i;
+            }
+            document.write(total);
+        </script>
+        <h2>印出1到50間3的倍數, 及其總和</h2>
+        <script>
+            var total = 0;
+            for (var i = 1; i <= 50; i++) {
+                if (i % 3 == 0) {
+                    total = total + i;
+                    document.write(i, "、");
+                }
+            }
+            document.write(total);
+        </script>
+        <h2>break</h2>
+        <script>
+            var total = 0;
+            for (var i = 1; i <= 1000; i++) {
+                total += i;
+                if (total >= 1000) {
+                    document.write("1+2+3...+", i, "=", total, ">1000<br>");
+                    break;
+                }
+            }
+        </script>
+        <h2>印出3的倍數(continue)</h2>
+        <script>
+            var total = 0;
+            for (var i = 1; i <= 50; i++) {
+                if (i % 3 != 0) {
+                    continue;
+                }
+                document.write(i, "、");
+            }
+        </script>
+        <h2>三元運算</h2>
+        <script>
+            var avg = 60;
+            document.write(avg >= 60 ? "通過" : "在努力唷!");
+        </script>
+        <h2>while()</h2>
+        <script>
+            var i = 1;
+            while (i <= 3) {
+                document.write("I LOVE JavaScript~~~<br>");
+                i++;
+            }
+        </script>
+        <h2>印1.2.3......9.10</h2>
+        <script>
+            var i = 1;
+            while (i <= 9) {
+                document.write(i, "、");
+                i++;
+            }
+            document.write(i);
+        </script>
+
+        <h2>印1到50間3的倍數及其總和</h2>
+        <script>
+            var total = 0;
+            var i = 3;
+            while (i <= 9) {
+                document.write(i, "、");
+                i++;
+            }
+            document.write(i);
+        </script>
+        <h2>Math物件Math.random()</h2>
+        <script>
+            var num = Math.random();
+            document.write(num * 11);
+        </script>
+        <h2>do...while()</h2>
+        <script>
+            var i = 1;
+            do {
+                document.write("I Love JavaScript~~<br>");
+                i++;
+            } while (i <= 3);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>String</title>
+</head>
+<body>
+<script type="text/javascript">
+var str="abcdeabcde";
+var obj = new String(123);
+console.log("typeof str :", typeof str);
+console.log("typeof obj :", typeof obj);
+
+document.write("length : " , str.length, "<br>"); //10
+document.write("toUpperCase() : " , str.toUpperCase(), "<br>");
+document.write("str : " , str, "<br>");
+2
+document.write("indexOf('cd') : " , str.indexOf('cd'), "<br>"); //2
+document.write("indexOf('cdd') : " , str.indexOf('cdd'), "<br>");//-1
+
+document.write("lastIndexOf('cd') : " , str.lastIndexOf('cd'), "<br>");//7 
+document.write("lastIndexOf('cdd') : " , str.lastIndexOf('cdd'), "<br>");//-1 
+
+document.write("match('cd') : " , str.match('cd'), "<br>");  //cd
+document.write("match('cdd') : " , str.match('cdd'), "<br>");//null 
+
+document.write("charAt(3) : " , str.charAt(3), "<br>"); //d
+document.write("charCodeAt(3) : " , str.charCodeAt(3), "<br>");//100 
+
+document.write("substr(2,5) : " , str.substr(2,5), "<br>"); //cdeab
+document.write("substring(2,5) : " , str.substring(2,5), "<br>"); //cde
+
+document.write("replace('de','QQQ') : " , str.replace('de','QQQ'), "<br>"); 
+/**/
+//---------------------------------找主檔名和副檔名
+var fileStr = "Sara.smile.gif";
+
+//請找出主檔名, 副檔名
+var fileName, fileExt;
+
+//被允許的副檔名有 "bmp", "png", "gif", "jpg"
+var fileAllowed = ["bmp", "png", "gif", "jpg"];
+
+var dot = fileStr.lastIndexOf(".");
+fileName = fileStr.substring(0, dot);
+fileExt = fileStr.substr(dot+1); //"gif"
+
+document.write(  "fileName : ", fileName, "<br>");
+document.write(  "fileExt : ", fileExt, "<br>");
+
+if(fileAllowed.indexOf(fileExt) == -1){
+	document.write(  "檔案類型...NG<br>");
+}else{
+	document.write(  "檔案類型...OK<br>");
+}
+</script>    
+</body>
+</html>

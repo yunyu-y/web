@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+
+       div.block1{
+        border: 1px solid black;
+        position: static;
+      }
+      div.block2{
+        border: 1px solid red;
+        position: fixed;
+        left: 0px;
+        bottom: 20px;
+      }
+      div.block3{
+        border: 1px solid blue;
+        position: relative;
+        /* left: 10px; */
+
+        height: 300px;
+      }
+      p.para1{
+        border: 1px solid green;
+        margin: 0;
+        position: absolute;
+        /* 加上absolute會不斷找父元素定位(父元素須設除了預設之外的定位) */
+        right: 0;
+        bottom: 0;
+      }
+      p.para2{
+        border: 1px solid red;
+        margin: 0;
+        position: sticky;
+        top: 10px;
+      }
+
+      section.sec{
+        border: 1px solid purple;
+        height: 2000px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="block1">div1</div>
+    <div class="block2">div2</div>
+    <div class="block3">
+      div3
+      <p class="para1">這是段落1</p>
+      <p class="para2">這是段落2</p>
+    </div>
+
+
+    <section class="sec">section</section>
+
+
+  </body>
+</html>

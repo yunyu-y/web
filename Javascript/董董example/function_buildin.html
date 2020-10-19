@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+</head>
+<body>
+
+<h2>避免和全域方法一樣名稱</h2>
+<script>
+function alert(){
+	document.write(  "???????????<br>");
+}	
+window.alert("@@@@@@@@@@@");	
+</script>
+<h2>-------------------------没有參數,没有回傳值</h2>
+<script>
+function sayHello(){
+	document.write( "Hello world~", "<br>");
+	return;
+}	
+sayHello();
+</script>   
+<h2>-------------------------有參數,没有回傳值</h2>
+<script>
+function sayHelloToSomeone(name){
+	document.write( "Hello ", name, "~", "<br>");
+}	
+sayHelloToSomeone("冠伶");
+</script>  
+<h2>-------------------------有參數,有回傳值</h2>
+<script>
+function sum(a, b){ //a:10 , b:20
+	var total = 0;  //total:30
+	total = a + b;
+	return total;
+}
+//同名的函式,後宣告的函式會覆寫前面的
+function sum(a, b, c){ //a:10 , b:20, c:30, arguments:[10,20,30]
+	//arguments.length
+	var total = 0;  
+	for(var i=0; i<arguments.length; i++){
+		total += arguments[i];
+	}
+	return total;
+}
+sum(100,200);
+document.write( "10+20=", sum(10, 20), "<br>");	 	
+document.write( "10+20+30=", sum(10, 20, 30), "<br>"); //------------
+document.write( "10+20+30+40=", sum(10, 20, 30, 40), "<br>");
+</script>
+
+<h2>設定參數的預設值</h2>
+<script>
+function showMsg(msg="Hi~~~"){
+	document.write( msg, "<br>");
+}
+showMsg("Hello~");	
+showMsg();
+</script>
+
+</body>
+</html>

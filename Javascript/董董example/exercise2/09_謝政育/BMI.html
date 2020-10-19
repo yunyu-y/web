@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bmi_result,#healthy_result{
+            height: auto;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <span>身高</span>
+    <input type="number" id = "height">
+    <span>cm</span>
+    <br>
+    <span >體重</span>
+    <input type="number" id = "weight">
+    <span>kg</span>
+    <br>
+    <button id = "clear_btn">清空</button>
+    <button id = "btn">計算</button>
+    <span>BMI: </span>
+    <div id = "bmi_result"></div>
+    <span>分級: </span>
+    <div id = "healthy_result"></div>
+
+    <script>
+        var height
+        var weight
+        var btn
+        var bmi_result
+        function bmi() {
+            if (weight.value == "" || height.value == ""){
+                window.alert("請輸入身高或體重")
+            }else{
+                value = weight.value / ((height.value / 100) * (height.value / 100))
+                value = value.toFixed(2)
+                bmi_result.innerText = value
+                healthy()
+            }
+        }
+
+        function healthy(){
+            var result
+            if (value >= 35) {
+                result = "重度肥胖"
+            }else if (value >= 30) {
+                result = "中度肥胖"
+            }else if (value >= 27) {
+                result = "輕度肥胖"
+            }else if (value >= 24) {
+                result = "過重"
+            }else if (value >= 18.5) {
+                result = "正常範圍"
+            }else{
+                result = "體重過輕"
+            }
+            healthy_result.innerText = result
+        }
+
+        function clear() {
+            height.value = ""
+            weight.value = ""
+            bmi_result.innerText = ""
+            healthy_result.innerText = ""
+        }
+        
+        function init(){
+            height = document.getElementById("height")
+            weight = document.getElementById("weight")
+            btn = document.getElementById("btn")
+            clear_btn = document.getElementById("clear_btn")
+            bmi_result = document.getElementById("bmi_result")
+            healthy_result = document.getElementById("healthy_result")
+            btn.addEventListener("click",bmi,false)
+            clear_btn.addEventListener("click",clear,false)
+        }
+        window.onload = init
+    </script>
+</body>
+</html>

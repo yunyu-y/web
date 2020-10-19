@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>String</title>
+</head>
+<body>
+現在時刻 : <span id="timePanel"></span>	<br>
+
+<script type="text/javascript">
+function showTime(){
+	var now = new Date();
+	document.getElementById("timePanel").innerText = now.getHours() + " : " + now.getMinutes() + " : " + now.getSeconds() ;	
+}
+
+function init(){
+	showTime();
+	setInterval( showTime, 1000);
+}
+window.addEventListener("load", init);
+
+
+var aDate = new Date(); //2020, 09, 15
+aDate.setDate(1);//2020, 09, 1
+
+// var firstDate = new Date(2020, 9, 1);
+
+// var birthday = new Date(1996, 8, 16)
+// document.write( "威威在星期", birthday.getDay(), "哇哇誕生~<br>");
+// document.write( today.getDay(), "<br>");
+console.log(today.toString());
+console.log(today.toDateString());
+</script>    
+</body>
+</html>

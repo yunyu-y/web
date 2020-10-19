@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作業5</title>
+</head>
+<body>
+    <script>
+        var kg = 50;
+        var lv = 2;
+
+        if( lv == 1 ){
+            if( kg>=100 ){
+                var price=20;
+            }else if( kg>40 ){
+                var price=25;
+            }else if( kg<=40 ){
+                var price= 30;
+            }
+        }else if( lv == 2 ){
+            if( kg >= 100 ){
+                var price = 15;
+            }else if( kg>40 ){
+                var price=20;
+            }else if( kg<=40 ){
+                var price=25;
+            }
+        }else if( lv == 3 ){
+            if( kg >= 100 ){
+                var price=10;
+            }else if( kg > 40 ){
+                var price=15;
+            }else if( kg <= 40 ){
+                var price=20;
+            }
+        }    
+        document.write("小計:",price*kg,"元<br>" )
+         
+
+
+        
+    </script>
+</body>
+</html>

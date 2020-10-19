@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02expressint</title>
+</head>
+<body>
+    <script>
+        let allsec = 7200 ; 
+        let hour = parseInt(allsec/3600);
+        let min = parseInt((allsec-hour*3600)/60);      
+        let sec = parseInt(allsec-(hour*3600)-(min*60));
+        // let sec = parseInt(allsec%60);
+        document.write('目前經過時間 = ',hour,'小時',min,'分鐘',sec,'秒');
+    </script>
+</body>
+</html>

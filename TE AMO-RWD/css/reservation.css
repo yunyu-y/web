@@ -1,0 +1,86 @@
+@import "./common/all.css";
+@import "./common/header.css";
+@import "./common/footer.css";
+
+.nav_reservation {
+    background-color: #d19c64;
+}
+.rsvTop_Video {
+    display: flex;
+    justify-content: center;
+    min-width: 1519.2px;
+}
+.reservationBottom {
+    display: flex;
+    flex-direction: column;
+    min-width: 1519.2px;
+}
+.reservationBottom_title {
+    /* border: 1px solid blue; */
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+.reservationBottom_desc {
+    text-align: center;
+    font-size: 20px;
+    margin: 1rem 0 2rem 0;
+}
+.reservationBottomOut {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    /* background-color: #b1cbcc; */
+    margin-bottom: 2rem;
+}
+.rsvInR {
+    /* border: 1px solid rebeccapurple; */
+    background-color: rgb(230, 230, 203);
+    width: 403px;
+    height: 560px;
+}
+.rsvInR_form {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0 1rem 0;
+}
+.rsvInR_formLInner {
+    /* border: 1px solid orange; */
+    font-size: 20px;
+    line-height: 2;
+}
+.rsvInR_formR {
+    /* border: 1px solid green; */
+    line-height: 2.5;
+    margin-left: 1rem;
+}
+.sel {
+    height: 2rem;
+    width: 15rem;
+}
+.content {
+    margin-top: 10px;
+}
+.sub {
+    background-color: #ffffff;
+    font-size: 16px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    margin: auto 30px auto 150px;
+    cursor: pointer;
+}
+.res {
+    background-color: #ffffff;
+    font-size: 16px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    width: 94px;
+    cursor: pointer;
+}
+.sub:hover {
+    opacity: 0.5;
+}
+.res:hover {
+    opacity: 0.5;
+}

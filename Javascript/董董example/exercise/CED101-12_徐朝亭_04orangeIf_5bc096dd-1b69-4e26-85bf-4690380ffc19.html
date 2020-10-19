@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h2>作業04</h2>
+        <script>
+            var price_1 = 800
+            var amount_1 = 7
+            var total_1 = price_1 * amount_1
+
+            if (total_1 > 1000) {
+                var n_1 = 0.7
+                var pay_1 = total_1 * n_1
+            } else if (total_1 > 500) {
+                var n_1 = 0.9
+                var pay_1 = total_1 * n_1
+            } else {
+                var n_1 = 1
+                var pay_1 = total_1 * n_1
+            }
+            document.write('橘子一斤', price_1, '元，購買', amount_1, '斤，共計', parseInt(pay_1), '元', '<br><br><br>')
+        </script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>06orangeIf_Switch.html</title>
+  </head>
+  <body>
+    <script>
+      var level = 3;
+      var kg = 150;
+      var total;
+
+      switch (level) {
+        case 1:
+          if (level == 1 && kg>100) {
+            total=kg*20;
+            }
+          else if (level == 1 && kg>40) {
+            total=kg*25;
+            }
+          else if (level == 1 && kg<40) {
+            total=kg*30;
+            }
+            break;
+
+        case 2:
+          if (level == 2 && kg>100) {
+            total=kg*15;
+          }else if (level == 2 && kg>40) {
+            total=kg*20;
+          }else if (level == 2 && kg<40) {
+            total=kg*25;
+          }
+          break;
+
+        case 3:
+          if (level == 3 && kg>100) {
+            total=kg*10;
+          }else if (level == 3 && kg>40) {
+            total=kg*15;
+          }else if (level == 3 && kg<40) {
+            total=kg*20;
+          }
+
+
+        }
+
+
+          document.write(total);
+
+    </script>
+  </body>
+</html>

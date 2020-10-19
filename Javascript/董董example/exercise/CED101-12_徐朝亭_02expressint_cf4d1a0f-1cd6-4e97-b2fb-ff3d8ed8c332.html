@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h2>作業02</h2>
+        <script>
+            var setting = 8000
+            var hour = parseInt(setting / 3600)
+            var minute = parseInt((setting - hour * 3600) / 60)
+            var second = parseInt(setting - hour * 3600 - minute * 60)
+
+            document.write('現在經過了', setting, '秒，', '是', hour, '時', minute, '分', second, '秒', '<br><br><br>')
+        </script>
+    </body>
+</html>

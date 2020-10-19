@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06orangeIf</title>
+</head>
+<body>
+    <script>
+        let grade = '2';      
+        let jin = '50' ;
+        let total ;
+        switch( grade ){
+            case '1':
+                if(jin >= 100){
+                    total=20*jin;
+                }else if(jin > 40){
+                    total=25*jin;
+                }else if(jin <= 40){
+                    total=30*jin;
+                }
+                break;             
+            case '2':
+                if(jin >= 100){
+                    total=15*jin;
+                }else if(jin > 40){
+                    total=20*jin;
+                }else if(jin <= 40){
+                    total=25*jin;
+                }
+                break;
+            case '3':
+                if(jin >= 100){
+                    total=10*jin;
+                }else if(jin > 40){
+                    total=15*jin;
+                }else if(jin <= 40){
+                    total=20*jin;
+                }
+                break;
+        }
+        document.write('總共',total,'元');        
+    </script>
+</body>
+</html>

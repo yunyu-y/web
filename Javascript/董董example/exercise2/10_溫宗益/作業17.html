@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>BMI計算機</h1>
+    <label for="bodyHeight">身高:</label>
+    <input type="number" class="bodyHeight" min="0">cm
+    <br>
+    <label for="bodyWeight">體重:</lable>
+    <input type="number" class="bodyWeight" min = "0">kg
+    <br>
+    <input type="submit" value="計算" class="calcualteBMI">
+    <input type="submit" value="清除重算" class="reset">
+
+    <h2>您的BMI</h2>
+    <p id="bmiText"></p>
+    <p id="resultText">0</p>
+
+
+    <script>
+        let bmiText =document.querySelector('#bmiText');
+        bmiText.style.display="none";
+        let btn =document.querySelector('.calcualteBMI');
+        let reset =document.querySelector('.reset');
+
+        function bmi(weight,height){
+            let w =parseInt(weight);
+            let h = parseInt(height)/100;
+            let bmi =(w/(h*h)).toFixed(2);
+            return bmi;
+        }
+        function calculateBMI(){
+            let bodyWeight = document.querySelector('.bodyWeight').value;
+            let bodyHeight = document.querySelector('.bodyHeight').value;
+            let resultText = document.querySelector('#resultText');
+            let bmiText = document.querySelector('#bmiText');
+            if((bodyWeight !="") && (bodyHeight !="")){
+                bmiText.style.display = "block";
+                resultText.innerHTML = bmi(bodyWeight,bodyHeight);
+                bmiText.innerHTML = checkBMI(bmi(bodyWeight,bodyHeight));
+            }
+        }
+        
+        function checkBMI(bmi){
+            if( bmi < 18.5 ){
+                return "體重過輕"
+            }else if( bmi >=18.5 && bmi < 24 ){
+                return "正常範圍"
+            }else if( bmi >=24 && bmi < 27 ){
+                return "過重"
+            }else if( bmi >=27 && bmi <30 ){
+                return "輕度肥胖"
+            }else if( bmi >=30 && bmi < 35 ){
+                return "中度肥胖"
+            }else if( bmi >=35){
+                return "重度肥胖"
+            }
+        }
+        function undo(e){
+            document.querySelector('.bodyWeight').value ='';
+            document.querySelector('.bodyHeight').value = '';
+            bmiText.style.display = "none";
+            resultText.innerHTML = 0;
+            return
+        }
+
+        btn.addEventListener('click',calculateBMI);
+        reset.addEventListener('click',undo);
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>

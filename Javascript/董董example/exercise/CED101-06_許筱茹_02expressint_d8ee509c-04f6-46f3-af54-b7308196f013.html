@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <title>js</title>
+  </head>
+  <body>
+  	<p>作業 02： 02expressint.html (變數與運算式)</p>
+  	<script>
+      var second = 8000;
+      var minute = parseInt(second / 60);
+      var hour = parseInt(minute / 60);
+
+      var hourAfter = hour * 60;
+      var minuteAfter = parseInt(minute - hourAfter);
+
+      var minuteChange = minuteAfter * 60;
+      var hourChange = hourAfter * 60;
+
+      var secondAfter = parseInt(second - hourChange - minuteChange);
+
+      document.write("8000秒=", hour ,"小時又", minuteAfter, "分鐘", secondAfter, "秒","<br>");
+  	</script>
+  </body>
+</html>

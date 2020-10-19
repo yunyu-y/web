@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+<style>
+	h2{color:deeppink;}
+</style>
+</head>
+<body>
+
+<h2>parseInt()</h2>
+<script>
+document.write("parseInt('321abc') : ", parseInt('321abc') , "<br>"); //十進位
+document.write("parseInt('abc') : ", parseInt('abc') , "<br>"); //轉不出十進位的值, NaN
+document.write("parseInt('321abc', 16) : ", parseInt('321abc', 16) , "<br>"); //十六進位
+document.write("parseInt('321abc', 8) : ", parseInt('321abc', 8) , "<br>"); //八進位 : 3*64 + 2*8 + 1
+document.write("parseInt('321abc',2) : ", parseInt('321abc',2) , "<br>"); //NaN : Not a Number
+</script> 
+
+<h2>危險的範例</h2>  
+<script>
+var price = "20";
+var amount = "40";
+var ship = "80";
+var subTotal = price * amount;
+var total = subTotal + ship;
+document.write("subTotal : ", subTotal, "<br>");
+document.write("total : ", total, "<br>");
+</script>
+
+<h2>較安全的範例</h2>  
+<script>
+var price = parseInt("20");
+var amount = parseInt("40");
+var ship = parseInt("80");
+var subTotal = price * amount;
+var total = subTotal + ship;
+document.write("subTotal : ", subTotal, "<br>");
+document.write("total : ", total, "<br>");
+</script>
+</body>
+</html>

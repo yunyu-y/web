@@ -1,0 +1,228 @@
+header {
+    width: 100%;
+    min-width: 1200px;
+}
+
+div.header {
+    /* width: 1200px; */
+    /* height: 100px; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    border: 1px solid blue;
+    /* position: relative; */
+}
+nav.nav {
+    height: 100px;
+    min-width: 1200px;
+    display: flex;
+    align-items: center;
+}
+div.logo-box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+div.logo-box img {
+    margin: 3px 0 0 6px;
+}
+ul.link_list {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+div.designers {
+    position: relative;
+}
+div.designers::after {
+    content: "v";
+}
+
+/* span.triangle1 {
+    margin-top: -10px;
+    display: inline-block;
+
+    border-top: 15px solid black;
+    border-bottom: 0px solid green;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+
+    width: 0px;
+    height: 0px;
+} */
+ul.designers_list {
+    position: absolute;
+    list-style: none;
+}
+.designers_list > li > a {
+    display: block;
+}
+.designers_list > li {
+    padding: 5px 0;
+}
+
+div.header nav.nav ul.link_list > li {
+    display: inline-block;
+    font-size: 1.6rem;
+}
+div.header nav.nav ul.link_list > li > a {
+    text-decoration: none;
+    color: #231815;
+}
+/* div.header nav.nav ul.link_list > li > a:hover {
+    background-color: rgb(113, 199, 166);
+    color: white;
+} */
+div.header nav.nav ul.link_list > li div.designers > ul.designers_list {
+    width: 14rem;
+    margin-left: -40px;
+    font-size: 1.6rem;
+    display: none;
+}
+div.header nav.nav ul.link_list > li div.designers:hover ul.designers_list {
+    display: block;
+    z-index: 100;
+}
+ul.designers_list li {
+    list-style: none;
+}
+div.header nav.nav ul.link_list > li div.designers > ul.designers_list > li > a {
+    text-decoration: none;
+    color: #231815;
+    padding: 3px 0;
+}
+
+div.header nav.nav ul.link_list > li div.designers ul.designers_list > li a:hover {
+    background-color: rgb(199, 165, 113);
+    color: white;
+}
+.ho_line::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition-duration: 1s;
+}
+.ho_line:hover::before {
+    width: 100%;
+    transition: 0.8s;
+}
+.ho_line::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition-duration: 1s;
+}
+.ho_line:hover::after {
+    width: 100%;
+    transition: 0.8s;
+}
+
+@media screen and (max-width: 1200px) {
+    .nav.nav {
+        display: none;
+    }
+}
+
+nav.hamburg_nav {
+    display: none;
+}
+@media screen and (max-width: 1200px) {
+    nav.hamburg_nav {
+        display: inline;
+    }
+}
+
+button.hamburger_icon {
+    display: none;
+}
+@media screen and (max-width: 1200px) {
+    button.hamburger_icon {
+        display: inline;
+    }
+}
+
+nav.hamburg_nav {
+    border: 1px solid red;
+    position: absolute;
+    top: 5rem;
+    font-size: 32px;
+    color: black;
+    /* left: 0; */
+    /* display: inline-block; */
+}
+
+.hamburg_ul > li,
+.hamburg_designers_list > li {
+    list-style: none;
+    padding: 0.5rem 0;
+}
+.hamburg_ul > li > a,
+.hamburg_designers_list > li > a {
+    text-decoration: none;
+}
+
+/* 基本按鈕樣式 */
+button.hamburger_icon {
+    border: none;
+    width: 44px;
+    height: 44px;
+
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    background: none;
+    border: 1px solid orange;
+}
+
+/* 每一條橫線的樣式 */
+button.hamburger_icon span.-hr {
+    height: 1px;
+    width: 80%;
+    background-color: gray;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 最上面那條線的樣式 */
+button.hamburger_icon span.-hr.-top {
+    top: 25%;
+}
+
+/* 最下面那條線的樣式 */
+button.hamburger_icon span.-hr.-bottom {
+    top: 75%;
+}
+
+/* -on 的狀態 */
+/* 上方的線 */
+button.hamburger_icon.-on span.-hr.-top {
+    transform-origin: top left;
+    top: 5px;
+    left: 6px;
+    width: 102%;
+    transform: rotate(45deg);
+}
+/* 中間的線 */
+button.hamburger_icon.-on span.-hr.-middle {
+    opacity: 0;
+}
+/* 下方的線 */
+button.hamburger_icon.-on span.-hr.-bottom {
+    transform-origin: top left;
+    bottom: 5px;
+    left: 6px;
+    width: 102%;
+    transform: rotate(-45deg);
+
+    top: auto;
+}

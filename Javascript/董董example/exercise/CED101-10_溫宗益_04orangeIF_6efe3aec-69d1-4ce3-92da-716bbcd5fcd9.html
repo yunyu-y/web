@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if練習-2</title>
+</head>
+<body>
+    <script>
+        var price = 100;
+        var catty = 10;
+        var total = price*catty;
+        var discount = 0.9;
+        var discountMore = 0.7;
+        if(total >= 1000){
+            document.write("七折扣後價格:",total*discountMore,"<br>");
+        }else if(total >= 500){
+            document.write("九折扣後價格:",total*discount,"<br>");
+        }else{
+            document.write("sorry","<br>")
+        }
+
+    </script>
+</body>
+</html>

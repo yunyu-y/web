@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var price = 60
+        var kg = 10
+        var subTotal = price * kg
+        var total = subTotal
+        if (subTotal > 1000) {
+            total = total * 0.7
+        }else if (subTotal > 500) {
+            total = total * 0.9
+        }
+        document.write("橘子一斤",price,"元",",買了",kg,"斤,總共",total,"元")
+    </script>
+</body>
+</html>

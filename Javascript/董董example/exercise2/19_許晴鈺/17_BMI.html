@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BMI</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+            }
+            div {
+                display: flex;
+                flex-direction: column;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <label>Height</label>
+            <input type="text" id="height" placeholder="cm" />
+            <label>Weight</label>
+            <input type="text" id="weight" placeholder="kg" />
+            <button id="calculate">Calculate</button>
+            <br />
+            <label>BMI</label>
+            <input type="text" id="bmi" />
+            <label>State</label>
+            <input type="text" id="state" />
+            <button id="clear">Clear</button>
+        </div>
+        <script>
+            var calculate = document.getElementById("calculate");
+
+            calculate.onclick = function bmi() {
+                var userHeight = document.getElementById("height").value;
+                var userWeight = document.getElementById("weight").value;
+                var bmi = Math.floor(userWeight / (userHeight * 0.01 * (userHeight * 0.01)));
+                document.getElementById("bmi").value = bmi;
+
+                if (bmi < 18.5) {
+                    document.getElementById("state").value = "underweight";
+                } else if (18.5 <= bmi && bmi < 24) {
+                    document.getElementById("state").value = "regular";
+                } else if (24 <= bmi && bmi < 27) {
+                    document.getElementById("state").value = "overweight";
+                } else if (27 <= bmi && bmi < 30) {
+                    document.getElementById("state").value = "Obese Class I";
+                } else if (30 <= bmi && bmi < 35) {
+                    document.getElementById("state").value = "Obese Class II";
+                } else {
+                    document.getElementById("state").value = "Obese Class III";
+                }
+            };
+
+            var clear = document.getElementById("clear");
+
+            clear.onclick = function clearItAll() {
+                document.getElementById("height").value = "";
+                document.getElementById("weight").value = "";
+                document.getElementById("bmi").value = "";
+                document.getElementById("state").value = "";
+            };
+        </script>
+    </body>
+</html>

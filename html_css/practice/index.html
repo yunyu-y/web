@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <title>這是網頁標題</title>
+    <style>
+      h1{
+        color: red;
+      }
+
+      table{
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      table td,table th{
+        border: 1px solid black;
+      }
+    </style>
+    <!-- 以下四行是常用的meta,放在head裡 -->
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="網站前端教學">
+    <!-- <meta http-equiv="refresh" content="3">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"> -->
+</head>
+  </head>
+  <body>
+    <h1>這是內文標題</h1>
+
+    <script>
+      var h1 = document.getElementsByTagName("h1")[0];
+      h1.addEventListener("click",function(){
+        alert("open dialog");
+      })
+    </script>
+    <pre>試試看空格        這有四個Tab
+      來斷行一下
+            縮排四個哩
+    </pre>
+    <code>顯示程式碼</code>
+    <pre><code>
+      function(){
+          alert("this is function");
+      }
+    </code></pre>
+    <!--來試試看key註解 這是html的寫法不要誤用-->
+    <time datetime="2020-09-03 20:00">這個是時間標籤,僅語意表示不含功能!</time>
+    <p>在網頁中，<abbr title="HyperText Markup Language">HTML</abbr> 是用來做結構用途。滑鼠移至 abbr 標籤上方，會出現 title 屬性的文字。</p>
+    <!-- 標題h1-h6差異 -->
+    <h1>第一級標題</h1>
+    <h2>第二級標題</h2>
+    <h3>第三級標題</h3>
+    <h4>第四級標題</h4>
+    <h5>第五級標題</h5>
+    <h6>第六級標題</h6>
+    <!-- 試試看會不會斷行,
+    判斷方法：同時寫相同的兩個標籤，並各自加上內容，看是會在同一行呈現還是會出現不同行即可判斷。 -->
+    <pre>pre斷行?</pre>
+    <pre>pre斷行?</pre>
+    <code>code斷行?</code>
+    <code>code斷行?</code>
+    <time>time斷行?</time>
+    <time>time斷行?</time>
+    <abbr>abbr斷行?</abbr>
+    <abbr>abbr斷行?</abbr>
+    <p>P斷行?</p>
+    <p>P斷行?</p>
+    <h1>h1斷行?</h1>
+    <h1>h1斷行?</h1>
+
+    <!-- 預設項目1.2.3... -->
+    <ol>
+      <li>第一項</li>
+      <li>第二項</li>
+      <li>第三項</li>
+    </ol>
+
+    <!-- 預設項目符號... -->
+    <ul>
+      <li>第一項</li>
+      <li>第二項</li>
+      <li>第三項</li>
+  </ul>
+  <!-- 解釋名詞 -->
+  <dl>
+    <dt>拿鐵咖啡</dt>
+    <dd>加了牛奶的咖啡</dd>
+  </dl>
+
+    <a href="https://www.youtube.com/?hl=zh-TW&gl=TW">開啟連結</a>
+    <a href="https://www.youtube.com/?hl=zh-TW&gl=TW" target="_blank">另開新視窗</a>
+    <a href="https://www.youtube.com/?hl=zh-TW&gl=TW" target="mywindow">僅開一分頁</a>
+    <br>
+    <img src="http://notes.carlos-studio.com/images/butterfly.png" alt="圖片未正常出現會出現的文字" title="滑鼠移過，稍微停留會出現的文字">
+    <br>
+    <img src="./images/butterfly.png">
+    <br>
+    <img src="../butterfly.png">
+
+    <!-- 練習製作表格 -->
+    <table>
+      <tr>
+        <td>第一列第一欄</td>
+        <td>第一列第二欄</td>
+      </tr>
+      <tr>
+        <td>第二列第一欄</td>
+        <td>第二列第二欄</td>
+      </tr>
+    </table>
+    <br>
+    <table>
+      <tr>
+        <th>標題一</th>
+        <th>標題二</th>
+      </tr>
+      <tr>
+        <!-- 垂直合併第一列第一欄&第二列第一欄 -->
+        <td rowspan="2">第一列第一欄</td>
+        <td>第一列第二欄</td>
+      </tr>
+      <tr>
+        <!-- <td>第二列第一欄</td> -->
+        <td>第二列第二欄</td>
+      </tr>
+      <tr>
+        <td colspan="2">第三列第一欄</td>
+        <!-- <td>第三列第二欄</td> -->
+      </tr>
+    </table>
+    <iframe src="https://dictionary.cambridge.org/dictionary/english-chinese-traditional/table"></iframe>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7J6wtlkgntI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br>
+    &amp; = &#38;
+    &lt; &copy;
+    <br>
+
+    <video width="500" controls autoplay disablePictureInPicture controlsList="nodownload" poster="https://picsum.photos/id/406/500/300" muted loop>
+      <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+      <source src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg">
+  出現這個訊息，表示您的瀏覽器不支援 HTML5 video 標籤。
+  </video>
+  <audio controls loop>
+      <source src="https://www.w3schools.com/jsref/horse.mp3" type="audio/mpeg">
+      <source src="https://www.w3schools.com/jsref/horse.ogg" type="audio/ogg">
+      出現這個訊息，表示您的瀏覽器不支援 HTML5 audio 標籤。
+  </audio>
+  <!-- 表單開始嚕 -->
+  <form action="#" method="#">
+    <label for="username">使用者帳號:</label>
+    <input type="text" value="" placeholder="請輸入帳號..." id="username">
+    <label for="password">使用者密碼:</label>
+    <input type="password" value="" placeholder="請輸入密碼..." id="password">
+
+
+  </form>
+
+  </body>
+</html>

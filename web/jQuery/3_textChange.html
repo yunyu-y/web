@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script> -->
+    <script>
+        $(document).ready(function(){
+            // let theText = $('#box p').text();
+            // alert(theText);
+
+            // $('#box p').text('inner');
+            $('#box p').html('<span>inner</span>'); 
+            $('#box>p>span').css('backgroundColor','#abc');
+        });
+    </script>
+</head>
+<body>
+    <div id="box">
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <p>outer</p>
+</body>
+</html>

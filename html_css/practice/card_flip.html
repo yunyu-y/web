@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>練習4：卡片翻轉效果</title>
+        <style>
+            div.scene {
+                width: 200px;
+                height: 260px;
+                border: 1px solid #ccc;
+                margin: 40px 0;
+
+                perspective: 600px; /* 透視 */
+            }
+            .card {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+
+                transform-style: preserve-3d;
+                transform-origin: center center;
+            }
+            .card.flipped {
+                transform: rotateY(-180deg);
+            }
+
+            /* 剩下 .card_front 和 .card_back */
+            .card_front {
+                background-color: black;
+                color: white;
+            }
+            .card_back {
+                background-color: blue;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="scene">
+            <div class="card">
+                <div class="card_front">卡片的前面</div>
+                <div class="card_back">卡片的背面</div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(function () {
+                // 點擊，切換 flipped 樣式
+                $("div.card").on("click", function () {
+                    $(this).toggleClass("flipped");
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>作業12： (巢狀迴圈練習)</title>
+    </head>
+    <body>
+        <!-- 印出 1 
+                  12 
+                  123 
+                  1234 
+                  12345 
+                  123456 -->
+        <h2>方法一</h2>
+        <script>
+            for (var i = 1; i <= 6; i++) {
+                for (var j = 1; j <= 6; j++) {
+                    while (j <= i) {
+                        document.write(j);
+                        break;
+                    }
+                }
+                document.write("<br>");
+            }
+        </script>
+
+        <h2>方法二</h2>
+        <script>
+            var sum = " ";
+            for (i = 1; i <= 6; i++) {
+                var s = i.toString();
+                // document.write(s);
+                sum = sum + s;
+                document.write(sum);
+                document.write("<br>");
+            }
+        </script>
+    </body>
+</html>

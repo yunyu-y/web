@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h2>作業03</h2>
+
+        <script>
+            var price = 80
+            var amount = 7
+            var total = price * amount
+
+            if (total > 500) {
+                n = 0.9
+                var pay = total * n
+            } else {
+                n = 1
+                var pay = total * n
+            }
+            document.write('橘子一斤', price, '元，購買', amount, '斤，共計', parseInt(pay), '元', '<br><br><br>')
+        </script>
+    </body>
+</html>

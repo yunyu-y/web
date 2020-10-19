@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17_BMI.html</title>
+    <style>
+        .ann{
+            color: orange;
+        }
+        .ann1{
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="ann">體重理想範圍為 BMI 18.5~24</div>
+    <div class="ann1">快看看自己的BMI是否在理想範圍吧!</div>
+    <div class="tall">身高:
+        <input type="text" id="height">cm
+    </div>
+    <div class="kg">體重:
+        <input type="text" id="weight">kg
+    </div>
+    <input type="submit" id="countBMI" value="計算BMI">
+    <input type="submit" id="reset" value="清除重算">
+
+
+<script>
+    
+    function bmi(){
+        var height=document.getElementById("height").value/100;
+        var weight=document.getElementById("weight").value;
+        var BMI=parseInt(weight/(height*height));        
+        if(BMI >= 35){
+            alert(`您的BMI為${BMI}您已重度肥胖請注意!!!`);
+        }else if(BMI >= 30){
+            alert(`您的BMI為${BMI}您已中度肥胖少吃點!!!`);
+        }else if(BMI >= 27){
+            alert(`您的BMI為${BMI}您已輕度肥胖要稍微克制唷!!!`);
+        }else if(BMI >= 24){
+            alert(`您的BMI為${BMI}您已過重~`);
+        }else if(BMI >= 18.5){
+            alert(`您的BMI為${BMI}正常範圍唷~~~`);
+        }else if(BMI < 18.5){
+            alert(`您的BMI為${BMI},已經過輕了多吃點唷!!`);
+        }
+        
+        // console.log(height,weight,BMI);
+    }
+
+    function del(){
+        var height=document.getElementById("height");
+        var weight=document.getElementById("weight");
+        height.value ="";
+        weight.value ="";
+    }
+
+    function init(){
+	let countBMI = document.getElementById("countBMI");
+	countBMI.onclick = bmi;
+    let reset = document.getElementById("reset");
+    reset.onclick = del;
+ 
+}
+    window.addEventListener("load", init, false);
+</script>   
+
+</body>
+</html>

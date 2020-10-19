@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/lightbox.css">
+    <script src="./venders/jquery/jquery-3.4.1.min.js"></script>
+    <title>Lightbox</title>
+</head>
+<body>
+    
+<button type="button" class="btn_modal">開啟 Modal 彈跳視窗</button>
+
+<div class="overlay">
+  <article>
+    <h1>這是 Modal 裡的標題</h1>
+    <p>這是 Modal 段落</p>
+    <button type="button" class="btn_modal_close">關閉</button>
+  </article>
+</div>
+<script>
+    $(function(){
+  
+  // 開啟 Modal 彈跳視窗
+  $("button.btn_modal").on("click", function(){
+    $("div.overlay").addClass("-on");
+  });
+  
+  // 關閉 Modal
+  $("button.btn_modal_close").on("click", function(){
+    $("div.overlay").addClass("-opacity-zero");
+    
+    // 設定隔一秒後，移除相關 class
+    setTimeout(function(){
+      $("div.overlay").removeClass("-on -opacity-zero");
+    }, 1000);
+  });
+  
+});
+</script>
+    
+</body>
+</html>

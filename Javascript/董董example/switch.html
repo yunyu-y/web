@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+<style>
+	h2{color:deeppink;}
+</style>
+</head>
+<body>
+<h2>switch........1</h2>
+<script>
+
+var lowType = "2";
+
+switch( lowType ){
+	case "1":
+		amount = 5000;
+		break;
+	case "2":
+		amount = 3000;
+		break;
+	case "3":
+		amount = 1000;
+		break;
+	default:
+		amount = 0;			
+}
+
+document.write("補助款 : ", amount, "元<br>");
+
+</script> 
+
+
+<h2>switch........2</h2>
+<script>
+
+var lowType = "1";
+var education = false, amount;
+
+switch( lowType ){
+	case "1":
+		amount = 5000;
+		if( education == true){
+			amount += 1000;
+		}
+		break;
+	case "2":
+		amount = 3000;
+		break;
+	case "3":
+		amount = 1000;
+		break;
+	default:
+		amount = 0;			
+}
+
+document.write("補助款 : ", amount, "元<br>");
+
+</script> 
+
+
+
+
+</body>
+</html>

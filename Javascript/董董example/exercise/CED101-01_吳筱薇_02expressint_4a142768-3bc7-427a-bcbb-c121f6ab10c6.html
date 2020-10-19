@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-hants" >
+  <head>
+    <meta charset="utf-8">
+    <title>02expressint</title>
+  </head>
+  <body>
+
+	<h3>寫程式，設定變數存放今天到目前為止所經過的秒數(比如8000秒)，請將其轉換成時分秒後顯示在頁面上。</h3>
+	<h3>Answer:</h3>
+
+    <script>
+
+    var x=8000;
+// 一分鐘60秒、一小時60*60秒、
+    
+    var hour = parseInt( x / 3600 );
+    var minute = parseInt( x % 3600 /60);
+    var sec = parseInt( x % 3600 % 60 );
+
+    document.write( "8000秒等於",hour,"小時",minute,"分",sec,"秒");
+
+      </script>
+
+  </body>
+</html>

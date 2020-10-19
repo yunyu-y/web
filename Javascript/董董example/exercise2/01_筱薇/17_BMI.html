@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BMI</title>
+    <style>
+        div.calc{
+			width: 350px;
+		}
+		div{
+			margin-bottom: 10px;
+		}
+		input{
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+		div.button {
+			text-align: center;
+		}
+		</style>
+</head>
+
+<body>
+    <form>
+        <div class="calc">
+            <h3>快看看自己的BMI是否在理想範圍內吧</h3>
+            <div class="height">
+                <label>身高:</label>
+                <input type="text" name="" id="height">CM
+            </div>
+            <div class="weight">
+                <label>體重:</label>
+                <input type="text" name="" id="weight">KG
+            </div>
+            <div class="button">
+                <input type="reset" value="清除重算">
+                <input type="button" value="送出計算" onclick="getBMI()">
+            </div>
+        </div>
+    </form>
+    <script>
+        function getBMI(height, weight) {
+            var weight = parseInt(document.getElementById("weight").value);
+            var height = parseInt(document.getElementById("height").value);
+            var bmi = weight / Math.pow((height / 100), 2);
+            bmi = bmi.toFixed(1)
+
+            if (bmi < 18.5) {
+                alert("BMI為" + bmi + "\r體重過輕");
+            } else if (bmi < 24 && bmi >= 18.5) {
+                alert("BMI為" + bmi + "\r正常範圍");
+            } else if (bmi < 27 && bmi >= 24) {
+                alert("BMI為" + bmi + "\r過重");
+            } else if (+bmi < 30 && bmi >= 27) {
+                alert("BMI為" + bmi + "\r輕度肥胖");
+            } else if (bmi < 35 && bmi >= 30) {
+                alert("BMI為" + bmi + "\r中度肥胖");
+            } else if (bmi >= 35) {
+                alert("BMI為" + bmi + "\r重度肥胖");
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+header {
+    width: 100%;
+    min-width: 1519px;
+}
+
+div.header {
+    width: 1500px;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+nav.nav {
+    height: 100px;
+    min-width: 1200px;
+    display: flex;
+    align-items: center;
+}
+div.logo-box {
+    width: 100px;
+    height: 100px;
+}
+
+div.logo-box img {
+    margin: 3px 0 0 6px;
+}
+ul.link_list {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+div.designers {
+    position: relative;
+}
+div.designers::after {
+    content: "v";
+}
+
+/* span.triangle1 {
+    margin-top: -10px;
+    display: inline-block;
+
+    border-top: 15px solid black;
+    border-bottom: 0px solid green;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+
+    width: 0px;
+    height: 0px;
+} */
+ul.designers_list {
+    position: absolute;
+    list-style: none;
+}
+.designers_list > li > a {
+    display: block;
+}
+.designers_list > li {
+    padding: 5px 0;
+}
+
+div.header nav.nav ul.link_list > li {
+    display: inline-block;
+    font-size: 1.6rem;
+}
+div.header nav.nav ul.link_list > li > a {
+    text-decoration: none;
+    color: #231815;
+}
+/* div.header nav.nav ul.link_list > li > a:hover {
+    background-color: rgb(113, 199, 166);
+    color: white;
+} */
+div.header nav.nav ul.link_list > li div.designers > ul.designers_list {
+    width: 14rem;
+    margin-left: -40px;
+    font-size: 1.6rem;
+    display: none;
+}
+div.header nav.nav ul.link_list > li div.designers:hover ul.designers_list {
+    display: block;
+    z-index: 100;
+}
+ul.designers_list li {
+    list-style: none;
+}
+div.header nav.nav ul.link_list > li div.designers > ul.designers_list > li > a {
+    text-decoration: none;
+    color: #231815;
+    padding: 3px 0;
+}
+
+div.header nav.nav ul.link_list > li div.designers ul.designers_list > li a:hover {
+    background-color: rgb(199, 165, 113);
+    color: white;
+}
+.ho_line::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition-duration: 1s;
+}
+.ho_line:hover::after {
+    width: 100%;
+    transition: 0.8s;
+}

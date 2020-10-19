@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form method="post">
+    身高:<input type="text" id="height" value=""><br>
+    體重:<input type="text" id="weight" value=""><br>
+    BMI: <input type="text" id="BMI" value="" readonly><br>
+    健康狀況: <input type="text" id="health" value="" readonly><br>
+    <input id="btn" type="button" value="start"  >
+    <input type="reset" id="reset" value="reset">
+  </form>
+  <script type="text/javascript">
+  function getBMI(a,b) {
+    var a= document.getElementById("height");
+    var b= document.getElementById("weight");
+    var c= document.getElementById("BMI");
+    var d= document.getElementById("health");
+    a=a.value;
+    b=b.value;
+    var bmi = b/((a/100)*(a/100));
+    bmi=bmi.toFixed(2);
+    c.value = bmi;
+    if (bmi<18.5) {
+      d.value="體重過輕";
+    }else if(bmi>=18.5 & bmi<24) {
+        d.value="正常範圍";
+    }else if(bmi>=24 & bmi<27) {
+        d.value="過重";
+    }else if(bmi>=27 & bmi<30) {
+        d.value="輕度肥胖";
+    }else if(bmi>=30 & bmi<35) {
+        d.value="中度肥胖";
+    }else{
+        d.value="重度肥胖";
+    }
+  }
+  function clean(a,b) {
+    var a= document.getElementById("height");
+    var b= document.getElementById("weight");
+    var c= document.getElementById("BMI");
+    var d= document.getElementById("health");
+    a.value= " ";
+    b.value= " ";
+    c.value= " ";
+    d.value= " ";
+  }
+  var btn = document.getElementById("btn");
+  btn.addEventListener('click',getBMI);
+  var reset = document.getElementById("reset");
+  reset.addEventListener('click',clean);
+  </script>
+  </body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <title>作業一</title>
+  </head>
+  <body>
+    <script>
+
+      var level = 2;
+      var kg = 10;
+      var total;
+
+      switch (level) {
+        case 1:
+        if (kg >= 100){
+          total = kg*20;
+        }else if (kg >= 40) {
+          total = kg*25;
+        }else if (kg < 40 && kg > 0) {
+          total = kg*30;
+          break;
+        }
+
+        case 2:
+        if (kg >= 100){
+          total = kg*15;
+        }else if (kg >= 40) {
+          total = kg*20;
+        }else if (kg < 40 && kg > 0) {
+          total = kg*25;
+          break;
+        }
+
+        case 3:
+        if (kg >= 100){
+          total = kg*10;
+        }else if (kg >= 40) {
+          total = kg*15;
+        }else if (kg < 40 && kg > 0) {
+          total = kg*20;
+          break;
+        }default:
+          document.write("輸入不正確");
+          break;
+        }
+
+
+      document.write("小計", total);
+
+
+    </script>
+  </body>
+</html>

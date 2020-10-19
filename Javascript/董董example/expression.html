@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+<style>
+	h2{color:deeppink;}
+</style>
+</head>
+<body>
+<h2>算術</h2>
+<script>
+document.write("18 % 14 : ", 18 % 14 , "<br>"); //取餘數
+
+</script> 
+
+<h2>比較</h2>
+<script>
+document.write("10 > 14 : ", 10 > 14 , "<br>"); //false
+document.write("10 <= 14 : ", 10 <= 14 , "<br>"); //true
+document.write("0 === false : ", 0 === false , "<br>");//false, 型值都要一樣
+document.write("0 == false : ", 0 == false , "<br>");//true
+
+document.write("5 !== '5' : ", 5 !== '5' , "<br>");//true
+document.write("5 != '5' : ", 5 != '5' , "<br>");//false
+</script>   
+
+
+<h2>邏輯</h2>
+<script>
+document.write("10 > 14 && 20 < 30 : ", 10 > 14 && 20 < 30 , "<br>"); //false && true -> false
+document.write("10 > 14 || 20 < 30 : ", 10 > 14 || 20 < 30 , "<br>"); //false || true -> true
+
+document.write("! true : ", ! true , "<br>"); //false
+document.write("! false : ", ! false , "<br>"); //true
+
+var x = 0;
+document.write("! (x > 5) : ", ! (x > 5) , "<br>"); //true
+</script> 
+
+
+<h2>位元</h2>
+<script>
+a = 10; 
+b = 6;  
+document.write( "a & b : ", a & b, "<br>"); //2
+document.write( "a | b : ", a | b, "<br>");    //14
+</script>
+
+<h2>指定</h2>
+<script>
+a = b = c = 0;
+document.write( "a : ", a,  "<br>"); 
+document.write( "b : ", b, "<br>"); 
+document.write( "c : ", c,  "<hr>");   
+
+a = 10;
+a += 1000; 
+document.write( "a : ", a,  "<br>"); 
+</script>
+
+<h2>typeof</h2>
+<script>
+var a = "123";
+document.write( "typeof a : ", typeof a,  "<br>"); 
+</script>
+
+
+<h2>++在前</h2>
+<script>
+var x = 10;
+var y = ++x + 100;
+document.write( "x : ", x,  "<br>"); 
+document.write( "y : ", y,  "<br>"); 	
+</script>
+
+
+<h2>++在後</h2>
+<script>
+var x = 10; //x:11
+var y = x++ + 100; //10 + 100
+document.write( "x : ", x,  "<br>"); 
+document.write( "y : ", y,  "<br>"); 	
+</script>
+
+
+<h2>++在前.......ex2</h2>
+<script>
+a = 10;
+b = ++a + ++a;  
+document.write( "a : ", a, "<br>"); //12
+document.write( "b : ", b, "<br>"); //23
+</script>
+
+
+<h2>++在後........ex2</h2>
+<script>
+a = 10;
+b = a++ + a++; 
+document.write( "a : ", a, "<br>"); //12
+document.write( "b : ", b, "<br>"); //21	
+</script>
+
+<h2>三元</h2>
+<script>
+var avg = 50;
+
+document.write( avg>=60 ? "通過" : "再努力喔~", "<br>");
+</script>
+
+</body>
+</html>

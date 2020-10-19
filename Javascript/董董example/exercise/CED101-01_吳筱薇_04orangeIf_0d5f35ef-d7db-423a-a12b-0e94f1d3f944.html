@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-hants" >
+  <head>
+    <meta charset="utf-8">
+    <title>04orangeIf</title>
+  <style>
+
+  </style>
+
+  </head>
+  <body>
+
+	<h3>寫程式，設定變數存放一斤的單價，及購買的斤數，並算出小計為何,<br>
+      若消費金額超過500元, 則打九折,<br>
+      若消費金額超過1000元, 則打七折
+</h3>
+	<h3>Answer:</h3>
+
+    <script>
+    	var price=120;
+    	var kg=10;
+    	var total = price * kg;
+
+    	if( total >500 && total<1000){
+    		discount= total*0.9;
+        document.write("橘子一斤",price,"元，共購買",kg,"斤","金額為",total,"元，因消費金額超過500元，故打9折後的金額為",discount,"元");
+
+    	}
+
+      else if(total>=1000){
+        discount=total*0.7;
+        document.write("橘子一斤",price,"元，共購買",kg,"斤","金額為",total,"元，因消費金額超過1000元，故打7折後的金額為",discount,"元");
+      }
+
+
+
+      </script>
+
+  </body>
+</html>

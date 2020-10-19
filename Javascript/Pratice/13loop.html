@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>作業13 ： (巢狀迴圈練習)</title>
+    </head>
+    <body>
+        <!-- 印出 
+            1=1 
+            1+2=3 
+            1+2+3=6 
+            1+2+3+4=10 
+            … 
+            1+2+3+ ……..+10=55 -->
+        <script>
+            var sum = 0;
+            for (var i = 1; i <= 10; i++) {
+                var j = 1;
+                sum = sum + i;
+                do {
+                    if (j < i) {
+                        document.write(j, "+");
+                    } else if (j == i) {
+                        document.write(j, "=", sum, "<br>");
+                    }
+                    j++;
+                } while (j <= 10);
+            }
+        </script>
+    </body>
+</html>

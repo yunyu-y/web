@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text_vertical</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        article.card{
+            border: 1px solid  rgba(0,0,0,.125); 
+            width: 300px;
+            border-radius: 5% 5% 5% 5%;
+            overflow: hidden;
+        }
+        
+        article.card > a.img_block{
+            /* border: 1px solid blue; */
+            width: 300px;
+            display: inline-block;
+        }
+
+        article.card > a.img_block > img{
+            max-width: 100%;
+        }
+
+        article.card h1{
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        article.card p {
+            font-size: 1rem;
+             margin: 0;
+        }
+
+        article.card div.content_block {
+            /* border: 1px solid orange; */
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <article class="card">
+  
+        <a href="https://tw.yahoo.com/" target="_blank" class="img_block"><img src="https://picsum.photos/id/729/500/300"></a>
+        
+        <div class="content_block">
+          <h1>農夫耕種的照片</h1>
+      
+          <p>這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字這是隨機的文字
+          </p>
+        </div>
+      </article>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<style>
+	h2{color:deeppink;}
+	td{
+		width:40px;
+	}
+</style>
+</head>
+<body>
+
+
+<h2>eval()</h2>
+<script>
+var str = "var a=10; var b=20;";
+eval(str);
+document.write( "a : ", a, "<br>");
+document.write( "b : ", b, "<br>");
+</script> 
+
+
+<h2>isNaN()</h2>
+<script>
+document.write( "isNaN('3#555') : ", isNaN('3#555'), "<br>"); //true
+document.write( "isNaN('35555') : ", isNaN('35555'), "<br>"); //false
+</script>
+
+
+</body>
+</html>

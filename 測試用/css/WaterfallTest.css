@@ -1,0 +1,49 @@
+/* .content_box {
+    display: inline-block;
+    border: 1px dotted #4f4f4f;
+    padding: 10px;
+    margin: 5px 5px 5px 0;
+    overflow: hidden;
+    width: 213px;
+} */
+* {
+    box-sizing: border-box;
+}
+
+/* force scrollbar */
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* ---- grid ---- */
+
+.grid {
+    background: #ddd;
+}
+
+/* clear fix */
+.grid:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+    width: 33.333%;
+}
+
+.grid-item {
+    float: left;
+}
+
+.grid-item img {
+    display: block;
+    max-width: 100%;
+}

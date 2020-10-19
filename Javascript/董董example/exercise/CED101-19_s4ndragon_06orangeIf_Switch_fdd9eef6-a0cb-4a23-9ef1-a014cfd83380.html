@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Orangeif</title>
+    </head>
+    <body>
+        <script>
+            var price, total;
+            var amount = 40;
+            var rank = 2;
+
+            switch (rank) {
+                case 1:
+                    if (amount > 100) {
+                        price = 20;
+                        total = price * amount;
+                    } else if (amount > 40) {
+                        price = 25;
+                        total = price * amount;
+                    } else {
+                        price = 30;
+                        total = price * amount;
+                    }
+                    break;
+                case 2:
+                    if (amount > 100) {
+                        price = 15;
+                        total = price * amount;
+                    } else if (amount > 40) {
+                        price = 20;
+                        total = price * amount;
+                    } else {
+                        price = 25;
+                        total = price * amount;
+                    }
+                    break;
+                case 3:
+                    if (amount > 100) {
+                        price = 10;
+                        total = price * amount;
+                    } else if (amount > 40) {
+                        price = 15;
+                        total = price * amount;
+                    } else {
+                        price = 20;
+                        total = price * amount;
+                    }
+            }
+            document.write("共", total, "元");
+        </script>
+    </body>
+</html>

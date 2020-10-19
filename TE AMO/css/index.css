@@ -1,0 +1,298 @@
+@import "./common/all.css";
+@import "./common/header.css";
+@import "./common/footer.css";
+
+.mes {
+    position: fixed;
+    width: 0px;
+    height: 0px;
+    bottom: 100px;
+    right: 100px;
+}
+.indexOut {
+    /* border: 1px solid red; */
+    width: 1519px;
+    margin: 0 auto;
+}
+
+.indexArea02 {
+    background-color: ivory;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.indexArea02L {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+.indexArea02L_Top,
+.indexArea02L_Mid {
+    font-size: 32px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+}
+.indexArea02L_Bottom {
+    font-size: 24px;
+    margin: 0 auto;
+}
+.indexArea02R {
+    /* border: 1px solid red; */
+    text-align: center;
+    width: 600px;
+    height: 300px;
+    position: relative;
+}
+.indexArea02R_con {
+    width: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 2;
+}
+.indexArea03In {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.indexArea03In_01img img {
+    margin-left: -15px;
+}
+.indexArea03In_01img img:hover {
+    opacity: 0.8;
+}
+.indexArea03In_02img img:hover {
+    opacity: 0.8;
+}
+.indexArea03In_03img img:hover {
+    opacity: 0.8;
+}
+.indexArea03In_01 > a,
+.indexArea03In_02 > a,
+.indexArea03In_03 > a {
+    text-decoration: none;
+    color: #231815;
+}
+.indexArea03In_01name {
+    /* border: 1px solid blue; */
+    margin: 16px auto;
+    width: 500px;
+    font-size: 32px;
+    background: linear-gradient(10deg, rgb(163, 155, 155), white 75px);
+    text-align: center;
+    line-height: 3rem;
+}
+.indexArea03In_02name,
+.indexArea03In_03name {
+    margin: 16px auto;
+    width: 250px;
+    font-size: 24px;
+    background: linear-gradient(10deg, rgb(163, 155, 155), white 75px);
+    text-align: center;
+    line-height: 3rem;
+}
+.indexArea03In_02 {
+    margin-top: 100px;
+}
+.indexArea03In_03 {
+    margin-top: -100px;
+    /* margin-right: -10px; */
+}
+.indexArea04 {
+    /* border: 1px solid red; */
+    width: 1519px;
+}
+.indexArea04bg {
+    /* border: 1px solid blue; */
+    height: 320px;
+    background-image: url(../images/reservation_bg1.png);
+    background-attachment: fixed;
+}
+.indexArea04In {
+    width: 1519.2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.indexArea04In_Top,
+.indexArea04In_Bottom {
+    margin: 0 auto;
+}
+.indexArea04In_TopCon {
+    /* border: 1px solid blue; */
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Palatino Linotype";
+    font-style: italic;
+    color: white;
+    text-shadow: 5px 5px 10px black;
+    margin-top: 30px;
+}
+.indexArea04In_Bottom > a {
+    text-decoration: none;
+}
+.indexArea04In_BottomCon {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #231815;
+    font-size: 40px;
+    margin-top: 48px;
+    line-height: 40px;
+    padding: 16px 32px 8px 32px;
+    border-radius: 40px;
+    box-shadow: 5px 5px 35px 0px black;
+}
+.indexArea04In_BottomCon:hover {
+    opacity: 0.7;
+}
+
+.indexArea05In_des {
+    display: flex;
+    justify-content: space-around;
+    margin: 16px auto;
+}
+.indexArea05In_Left {
+    /* border: 1px solid blue; */
+    font-size: 40px;
+    width: 300px;
+}
+.desname {
+    /* border: 1px solid green; */
+    margin: 160px auto;
+    width: 290px;
+    text-align: center;
+}
+.indexArea05In_Mid {
+    /* border: 1px solid blue; */
+    width: 300px;
+}
+.indexArea05In_Right {
+    border: 1px solid blue;
+    width: 700px;
+    background-color: rgb(245, 231, 212);
+}
+.indexArea05In_RightTop {
+    border: 1px solid green;
+    width: 190px;
+    font-size: 36px;
+    margin: 48px auto;
+}
+.indexArea05In_RightBottom {
+    border: 1px solid blue;
+    width: 550px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.2;
+    color: grey;
+}
+.more {
+    background-color: rgb(212, 185, 144);
+    color: white;
+    font-size: 25px;
+    width: 100px;
+    padding: 7px 0px 5px 20px;
+    border-radius: 40px;
+    box-shadow: 1px 1px 10px 0px black;
+    margin: 0px 0 0 400px;
+}
+.indexArea05In_RightBottom > a {
+    text-decoration: none;
+}
+.more2 {
+    background-color: rgb(212, 185, 144);
+    color: white;
+    font-size: 25px;
+    width: 100px;
+    padding: 7px 0px 5px 20px;
+    border-radius: 40px;
+    box-shadow: 1px 1px 10px 0px black;
+    margin: 32px 0 0 400px;
+}
+.more:hover {
+    opacity: 0.8;
+}
+.more2:hover {
+    opacity: 0.8;
+}
+
+.blog-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6rem 0 3rem 0;
+}
+.blog-lineline {
+    height: 2px;
+    width: 500px;
+    background-color: #d3d1d0;
+}
+.blog {
+    font-size: 2.5rem;
+    color: #d3d1d0;
+    margin: 0 1rem;
+}
+.indexArea06 {
+    display: flex;
+    margin-bottom: -32px;
+}
+.blog_bigcontent {
+    display: flex;
+    justify-content: center;
+}
+.blog_bgimg {
+    background-image: url(../images/index-Blogbg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+}
+.blog_Limg {
+    margin: 2rem 0;
+    position: relative;
+    z-index: 10;
+}
+.blog_Rarea {
+    margin: 2.5rem 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 446px;
+    height: 585px;
+    position: relative;
+    left: -5px;
+}
+.blog_name {
+    margin: 2rem 0 5rem 1rem;
+    font-size: 2rem;
+}
+.blog_content {
+    font-size: 1.4rem;
+    line-height: 2.3rem;
+    margin-left: 1rem;
+}
+.blog_moreOut {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.blog_more {
+    width: 1200px;
+    font-size: 2rem;
+    background-color: #d1c0a5;
+    color: white;
+    width: 13rem;
+    border-radius: 40px;
+    box-shadow: 3px 3px 10px 0px black;
+    text-align: center;
+    padding: 0.3rem 0;
+    margin-bottom: 2rem;
+}
+.blog_moreOut > a {
+    text-decoration: none;
+}
+.blog_more:hover {
+    opacity: 0.8;
+}

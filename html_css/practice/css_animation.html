@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            @keyframes move_to_right {
+                0% {
+                    transform: rotate(0deg);
+                    left: 100px;
+                }
+                30% {
+                    transform: rotate(360deg);
+                    left: 30%;
+                    animation-timing-function: cubic-bezier(1, 0.06, 0.78, 0.81);
+                }
+                70% {
+                    transform: rotate(720deg);
+                    left: calc(100% - 100px);
+                    animation-timing-function: ease-out;
+                }
+                100% {
+                    transform: rotate(360deg);
+                    left: calc(100% - 100px - 300px);
+                }
+            }
+            @keyframes fade_out {
+                0% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0.1;
+                }
+            }
+            body {
+                margin: 0;
+            }
+            div.status {
+                position: fixed;
+                top: 0;
+                left: 0;
+                color: blue;
+            }
+            div.ball {
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                position: fixed;
+                top: 100px;
+                background: radial-gradient(circle at 25px 25px, hsla(9, 100%, 84%, 1), hsla(9, 100%, 44%, 1));
+
+                animation-name: move_to_right, fade_out;
+                animation-duration: 10s, 1s;
+                animation-timing-function: ease-out, linear;
+                animation-fill-mode: both, none;
+                animation-delay: 1s, 22s;
+                animation-iteration-count: 2, 2;
+                animation-direction: alternate;
+            }
+            div.ball.-pause {
+                animation-play-state: paused;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="status"></div>
+
+        <div class="ball"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(function () {
+                // 相關事件觸發
+                $("div.ball").on("animationstart", function () {
+                    // 需有 延遲(animation-delay) 才會觸發
+                    $("div.status").html("動畫：開始");
+                });
+                $("div.ball").on("animationiteration", function () {
+                    // 反覆執行時，會觸發
+                    $("div.status").html("動畫：第二次執行(反向)");
+                });
+                $("div.ball").on("animationend", function () {
+                    // 動畫效果結束時，會觸發
+                    $("div.status").html("動畫：結束");
+                });
+
+                // 點擊暫停
+                $("div.ball").on("click", function () {
+                    $(this).toggleClass("-pause");
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>04orangeIf.html</title>
+  </head>
+  <body>
+    <script>
+      var a = 50; /*一斤30元*/
+      var b = 21; /*買5斤*/
+      var c = a*b;
+      var d = c*0.9;
+      var e = c*0.7;
+      var price;
+
+      if(1000>=c>500){
+        price = d ;
+      }else if (c>1000) {
+        price = e;
+      }else if (c<500) {
+        price = c;
+      }
+
+      document.write(price,"元")
+
+    </script>
+
+  </body>
+</html>

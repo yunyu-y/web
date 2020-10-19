@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作業6</title>
+</head>
+<body>
+    <script>
+        var lv = 2;
+        var kg = 50;
+        var am = price*kg;
+
+        switch( lv ){
+            case 1:
+                if( kg<=40 ){
+                var price = 30;    
+                }else if( kg >= 100 ){
+                var price = 20;
+                }else if( kg >= 40){
+                var price = 25;    
+                }
+                var am = price*kg;
+                break;
+            case 2:
+                if( kg<=40 ){
+                var price = 25;
+                }else if( kg >= 100 ){
+                var price = 15;
+                }else if( kg >= 40){
+                var price = 20;    
+                }
+                var am = price*kg;
+                break;
+            case 3:
+                if( kg<=40 ){
+                var price = 20;
+                }else if( kg>=100){
+                var price = 10;   
+                }else if( kg>=40 ){
+                var price = 15;    
+                }
+                var am = price*kg;
+                break;
+                
+                   
+        }
+        document.write("小計:",am,"元<br>" ) 
+        
+    </script>
+</body>
+</html>

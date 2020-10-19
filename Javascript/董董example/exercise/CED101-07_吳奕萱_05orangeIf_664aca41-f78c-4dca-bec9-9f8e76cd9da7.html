@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>05_orangeIf</title>
+  </head>
+
+  <body>
+    <!-- 另有一寫法:巢狀寫法 if包if -->
+    <script>
+      var grade = 2;  //購買等級
+      var weight = 20;  //公斤數
+      var price;  //單價
+
+
+      if(grade == 1 && weight > 100){  //比較時，等號須為兩個
+        price = 20;
+      }else if(grade == 1 && weight > 40){
+        price = 25;
+      }else if(grade == 1 && weight <= 40){
+        price = 30;
+      }else if(grade == 2 && weight > 100){
+        price = 15;
+      }else if(grade == 2 && weight > 40){
+        price = 20;
+      }else if(grade == 2 && weight <= 40){
+        price = 25;
+      }else if(grade == 3 && weight > 100){
+        price = 10;
+      }else if(grade == 3 && weight > 40){
+        price = 15;
+      }else if(grade == 3 && weight <= 40){
+        price = 20;
+      }
+
+      var total = weight * price;  //總價
+      // document.write("總計: ", weight * price, "元<br>");
+      document.write("總計: ", total, "元<br>");
+
+    </script>
+  </body>
+
+</html>

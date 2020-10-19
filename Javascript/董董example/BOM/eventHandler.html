@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+
+</head>
+<body>
+
+<input type="button" name="btn" value="10+20=?[0]" onCliCk="showAns();">
+<input type="button" name="btn" value="10+20=?[1]">
+<input type="button" name="btn" value="10+20=?[2]">    
+
+<script type="text/javascript">
+function showAns(e){
+	var a=10; 
+	var b=20;
+	window.alert(a+b);
+	document.write(  a+b,"<br>");
+}
+
+function showFun(){
+	window.alert("^_________________^");
+	btns[2].removeEventListener("click", showFun, false);
+	btns[2].addEventListener("click", showAngry, false);
+}
+
+function showAngry(){
+	window.alert("><...");
+}
+
+function noAns(){
+	window.alert("不告訢你~~~");
+}
+
+var btns;
+function init(){
+	btns = document.getElementsByName("btn");
+	btns[1].onclick = showAns;
+	btns[1].onclick = noAns;
+
+	btns[2].addEventListener("click", showAns, false);
+	btns[2].addEventListener("click", showFun, false);	
+}
+window.onload = init;
+</script>
+
+</body>
+</html>

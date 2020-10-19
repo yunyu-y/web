@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <title>js作業</title>
+    <meta charset="utf-8">
+
+</head>
+<body>
+
+
+<h2>05　：(if練習)</h2>
+<script>
+  var p1;
+  var w=110;
+  var level=1;
+    if(level==1){
+      if(w>100){
+        p1=20
+      }
+      else if(w>40){
+        p1=25
+      }
+      else{p1=30}
+    }
+    else if(level==2){
+      if(w>100){
+        p1=15
+      }
+      else if(w>40){
+        p1=20
+      }
+      else{p1=25}
+    }
+    else if(level==3){
+      if(w>100){
+        p1=10
+      }
+      else if(w>40){
+        p1=15
+      }
+      else{p1=20}
+    }
+    var p2=(p1*w);
+  document.write(p2,"元<br>")
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+<style>
+	h2{color:deeppink;}
+</style>
+</head>
+<body>
+
+<h2>while()</h2>
+<script>
+var i=1;
+while(i<=3){
+	document.write("I love JavaScript~~<br>"); 
+	i++;
+}	
+</script> 
+
+<h2>印1、2、3、4...9、10</h2>
+<script>
+var i = 1;
+while( i<=9){
+	document.write( i, "、");
+	i++;
+}
+document.write( i );
+</script> 
+
+<h2>1+2+3+...50的總和</h2>
+<script>
+var total = 0;
+var i = 1;
+while(i<=50){
+	total += i;
+	i++;
+}
+document.write( "總和 : ", total, "<br>");	
+</script>	
+
+<h2>印出1到50間3的倍數, 及其總和</h2>
+<script>
+var total = 0;
+var i = 3;
+while(i <= 50){
+	document.write( i, "<br>");
+	total += i;
+	i += 3;
+}
+document.write("1到50間3的倍數其總和 : ", total,  "<br>");
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+@import "./common/all.css";
+@import "./common/header.css";
+@import "./common/footer.css";
+
+.nav_service {
+    background-color: #d19c64;
+}
+.serviceAll {
+    width: 100%;
+    margin-bottom: -32px;
+}
+
+.servicebg {
+    background-image: url(../images/service_bg.png);
+    background-repeat: no-repeat;
+    height: 775px;
+    margin-top: -2rem;
+    display: flex;
+    background-size: cover;
+    width: 1519.2px;
+    margin: 0 auto;
+}
+.serviceOut {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 1519.2px;
+    margin: 0 auto;
+}
+.servicelineOut {
+    border: 1px solid none;
+}
+.serviceline {
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    width: 1500px;
+    /* min-width: 1500px; */
+    /* margin: 0 auto; */
+}
+.service {
+    margin-top: 1rem;
+    font-size: 18px;
+}
+
+.serviceline ol {
+    font-size: 0;
+    width: 1534px;
+    /* width: 100vw; */
+    padding: 100px 0;
+    transition: all 1s;
+}
+
+.serviceline ol li {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+    width: 160px;
+    height: 3px;
+    background: #362e2bc9;
+    font-size: 1rem;
+}
+
+.serviceline ol li:last-child {
+    width: 160px;
+}
+
+.serviceline ol li:not(:first-child) {
+    margin-left: 14px;
+}
+.serviceline ol li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 1px);
+    bottom: 0;
+    width: 12px;
+    height: 12px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: #362e2bc9;
+}
+
+.servicetextbox {
+    /* border: 1px solid green; */
+    width: 1400px;
+    height: 450px;
+    margin: 0 0 100px 100px;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+/* .serviceTB_top {
+    border: 1px solid orange;
+} */
+.serviceTB_title {
+    font-size: 32px;
+    /* text-shadow: 2px 2px 3px gray; */
+}
+.serviceTB_title_OF {
+    font-size: 32px;
+    margin-right: 30rem;
+}
+.serviceTB_kind {
+    font-size: 28px;
+}
+.serviceTB_price {
+    font-size: 24px;
+}
+.serviceTB_content1 {
+    font-size: 24px;
+    margin-left: 20px;
+}
+.serviceTB_ps {
+    font-size: 18px;
+    margin-left: 48px;
+}
+.serviceTB_below {
+    /* border: 1px solid black; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.serviceTB_belowL {
+    /* border: 1px solid brown; */
+    min-width: 446px;
+    height: 107.2px;
+}
+.serviceTB_belowR {
+    /* border: 1px solid orange; */
+    min-width: 446px;
+    height: 107.2px;
+}

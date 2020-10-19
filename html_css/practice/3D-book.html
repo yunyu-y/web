@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>3D練習-BOOK</title>
+        <style>
+            .book {
+                margin-top: 10px;
+                margin-left: 100px;
+                position: relative;
+                border: 1px solid black;
+                display: inline-block;
+                font-size: 0;
+
+                perspective: 100px;
+            }
+
+            .book img {
+                width: 100%;
+                transform: rotateY(-3deg);
+
+                /*   visibility: hidden; */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="book">
+            <img src="https://alldata.sgp1.digitaloceanspaces.com/images/book_cover.jpg" />
+        </div>
+    </body>
+</html>
