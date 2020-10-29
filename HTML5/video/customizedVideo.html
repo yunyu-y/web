@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Customized Video</title>
+        <link rel="stylesheet" href="main.css" />
+        <script src="new.js"></script>
+    </head>
+    <body>
+        <!-- <video src="movies/videoplayback.mp4" controls poster="../../images/pink.gif"></video> -->
+
+        <div id="skin">
+            <video id="myMovie" width="640">
+                <source src="movies/videoplayback.mp4" />
+            </video>
+
+            <nav>
+                <div id="buttons"></div>
+                <button id="playButton">play</button>
+                <button id="stopButton">stop</button>
+                <button id="upButton">volume up</button>
+                <button id="downButton">volume down</button>
+                <button id="mutedButton">muted</button>
+
+                <div id="defaultBar">
+                    <div id="progress"></div>
+                </div>
+            </nav>
+        </div>
+    </body>
+</html>

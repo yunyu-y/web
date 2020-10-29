@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>jQuery</title>
+    <link rel="stylesheet" href="css/style.css">
+	<script src="./js/jquery-3.5.1.js"></script>
+	<script>
+		$(document).ready(function () {
+            // let today = new Date('10 November 2020');
+
+            // let eventTime = '10 November 2020';      //字串，非日期時間物件
+            eventTime = Date.parse('1 November 2020');  //總毫秒數 
+
+            //現在時間
+            // now = new Date();
+            currentTime = jQuery.now(); //總毫秒數
+
+            milliseconds = eventTime - currentTime;
+            
+            days = Math.ceil(milliseconds / 1000 / (24 * 60 * 60));
+            alert(days)
+      
+            $('#feedback').text(`Only ${days} days until the event.`);
+		});			
+	</script>
+</head>
+
+<body>
+    <div id="feedback"></div>
+</body>
+</html>

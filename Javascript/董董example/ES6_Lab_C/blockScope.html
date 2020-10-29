@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>constant</title>
+</head>
+
+<body>
+<h2> </h2>  
+<script type="text/javascript">
+//var 有hoist的現象  
+
+
+//let 没有hoist的現象
+//document.write('kk : ' , kk ,"<br>"); //此行會error
+
+
+//var 可重複宣告 
+
+
+//let 不可重複宣告
+
+
+//var 没有區塊性的作用範圍
+for(var i=1; i<=10; i++){
+	document.write( i, " ");
+}
+document.write( i, "<br>");
+
+//ES6 : for句型中的let作用範圍
+for(let j=1; j<=10; j++){
+	document.write( j, " ");
+}
+document.write(  "<br>");
+// document.write( j, "<br>"); //此行會Error
+
+//----------
+let total = 0;
+for(let j=1; j<=10; j++){
+	let j = 10;  //block內又宣告一次, 會遮蔽for句型中j的宣告
+	total = total + j;
+}
+document.write( "total : ", total, "<br>");
+//-------------
+
+//從前没有區塊作用域
+{
+	var aa = 10;
+	document.write( "aa : ", aa, "<br>");
+}
+document.write( "aa : ", aa, "<br>");
+
+//let 有區塊作用域
+{
+	let bb = 20;
+	document.write( "bb : ", bb, "<br>");
+}
+document.write( "bb : ", bb, "<br>");  //此行會Error
+</script>
+
+</body>
+</html>

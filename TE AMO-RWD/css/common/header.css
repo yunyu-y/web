@@ -131,11 +131,14 @@ div.header nav.nav ul.link_list > li div.designers ul.designers_list > li a:hove
 }
 
 nav.hamburg_nav {
-    display: none;
+    /* display: none; */
 }
-@media screen and (max-width: 1200px) {
-    nav.hamburg_nav {
+@media screen and (max-width: 767px) {
+    /* nav.hamburg_nav {
         display: inline;
+    } */
+    div.header {
+        flex-direction: column;
     }
 }
 
@@ -150,7 +153,7 @@ button.hamburger_icon {
 
 nav.hamburg_nav {
     border: 1px solid red;
-    position: absolute;
+    /* position: absolute; */
     top: 5rem;
     font-size: 32px;
     color: black;

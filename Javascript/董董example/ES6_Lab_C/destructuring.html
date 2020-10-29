@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Examples</title>
+	</head>
+<body>
+<script type="text/javascript">
+//陣列解構賦值
+var arr = [11, 22, 33, 44];
+// var a = arr[0];
+// var b = arr[1];
+// document.write( "a: " , a , "<br>");
+// document.write( "b: " , b , "<br>");
+
+var [a, b, c, d=100, e=200] = arr;//陣列解構賦值搭配預設值
+document.write( "a: " , a , "<br>");
+document.write( "b: " , b , "<br>");
+document.write( "c: " , c , "<br>");
+document.write( "d: " , d , "<br>");
+document.write( "e: " , e , "<br>");
+
+//陣列解構賦值rest parameter
+var [m, ...arr2] = arr;
+document.write( "m: " , m , "<br>"); //11
+document.write( "arr2: " , arr2 , "<br>"); //[22, 33, 44].toString() ->22,33,44
+
+
+//陣列展開後傳給參數
+function sum( a, b, c){
+	return a+b+c;
+}
+
+var numbers = [11,22,33];
+document.write("total = ", sum( numbers[0], numbers[1], numbers[2]) , "<hr>");
+
+document.write("total = ", sum( ...numbers) , "<hr>");
+
+//物件解構賦值
+var emp = {empno : "7389",
+           ename : "King",
+           salary: 88888};
+
+// var empno = emp.empno;
+// var ename = emp.ename;
+// var sal = emp.salary;
+
+({ename, empno,  salary:sal, deptno=30} = emp);
+document.write( "empno: " , empno , "<br>");
+document.write( "ename: " , ename , "<br>");
+document.write( "sal: " , sal , "<br>");
+document.write( "dept: " , deptno , "<br>");
+</script>    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>jQuery</title>
+        <link rel="stylesheet" href="./28_main.css" />
+        <script src="./js/jquery-3.5.1.js"></script>
+        <style>
+            .big {
+                font-size: 120%;
+            }
+        </style>
+        <script>
+            $(document).ready(function () {
+              // $(document).find('b').addClass('big');
+              $('p').find('b').addClass('big');
+
+            });
+        </script>
+    </head>
+    <body>
+        <p>This is a<b>paragraph</b>,some things are<b>bols</b>and some are <b>not</b>.</b></p>
+        <b>Outside of paragraph</b>
+        <div id="feedback"></div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>jQuery</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <script src="./js/jquery-3.5.1.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('img')
+                    .css('opacity', 0.6)
+                    .mouseover(function () {
+                        $(this).fadeTo(300, 1); //被滑過的1
+
+                        $('img').not(this).fadeTo(300, 0.6); //.not(this)其他的,透明度0.6
+                    });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div>
+            <img src="./images/bg008.gif" />
+            <img src="./images/bg008.gif" />
+            <img src="./images/bg008.gif" />
+            <img src="./images/bg008.gif" />
+            <img src="./images/bg008.gif" />
+            <img src="./images/bg008.gif" />
+            <img src="./images/bg008.gif" />
+            <img src="./images/bg008.gif" />
+            <img src="./images/bg008.gif" />
+            <img src="./images/bg008.gif" />
+            <img src="./images/bg008.gif" />
+            <img src="./images/bg008.gif" />
+        </div>
+    </body>
+</html>

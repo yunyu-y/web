@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>19. is ID No.</title>
+</head>
+
+<body>
+    <label>身分證檢查:</label>
+    <input type="text" name="" id="idno">
+    <input type="button" value="檢查" id="check">
+    <script>
+        function isIdNo() {
+            var idno = document.getElementById("idno").value;
+            var result = /^[A-Z]{1}[1,2]{1}[0-9]{8}$/.test(idno); //正規表達式
+
+            if (result === true) {
+                // 第一碼英文轉換&加總
+                var firstid = idno.charAt(0);
+                var firstNo;
+                var firstsum;
+                switch (firstid) {
+                    case "A":
+                        firstNo = [1, 0];
+                        break;
+                    case "B":
+                        firstNo = [1, 1];
+                        break;
+                    case "C":
+                        firstNo = [1, 2];
+                        break;
+                    case "D":
+                        firstNo = [1, 3];
+                        break;
+                    case "E":
+                        firstNo = [1, 4];
+                        break;
+                    case "F":
+                        firstNo = [1, 5];
+                        break;
+                    case "G":
+                        firstNo = [1, 6];
+                        break;
+                    case "H":
+                        firstNo = [1, 7];
+                        break;
+                    case "I":
+                        firstNo = [3, 4];
+                        break;
+                    case "J":
+                        firstNo = [1, 8];
+                        break;
+                    case "K":
+                        firstNo = [1, 9];
+                        break;
+                    case "L":
+                        firstNo = [2, 0];
+                        break;
+                    case "M":
+                        firstNo = [2, 1];
+                        break;
+                    case "N":
+                        firstNo = [2, 2];
+                        break;
+                    case "O":
+                        firstNo = [3, 5];
+                        break;
+                    case "P":
+                        firstNo = [2, 3];
+                        break;
+                    case "Q":
+                        firstNo = [2, 4];
+                        break;
+                    case "R":
+                        firstNo = [2, 5];
+                        break;
+                    case "S":
+                        firstNo = [2, 6];
+                        break;
+                    case "T":
+                        firstNo = [2, 7];
+                        break;
+                    case "U":
+                        firstNo = [2, 8];
+                        break;
+                    case "V":
+                        firstNo = [2, 9];
+                        break;
+                    case "W":
+                        firstNo = [3, 2];
+                        break;
+                    case "X":
+                        firstNo = [3, 0];
+                        break;
+                    case "Y":
+                        firstNo = [3, 1];
+                        break;
+                    case "Z":
+                        firstNo = [3, 3];
+                        break;
+
+                }
+                firstsum = firstNo[0] + firstNo[1] * 9
+                // 2~8碼加總
+                var j = 8;
+                var sum = 0;
+                for (i = 1; i <= 8; i++) {
+                    sum += idno.charAt(i) * j;
+                    j--;
+                }
+                // 1~9碼加總，驗證檢查碼
+                var total;
+                total = sum + firstsum;
+
+                if (10 - total % 10 === parseInt(idno.charAt(9)) || parseInt(idno.charAt(9)) === 0 && total % 10 === 0) {
+                    alert("ok");
+                } else {
+                    alert("輸入錯誤，請檢查。正確格式為大寫英文+9碼數字");
+                }
+
+            } else {
+                alert("輸入錯誤，請檢查。正確格式為大寫英文+9碼數字");
+            }
+        }
+
+        function init() {
+            document.getElementById("check").onclick = isIdNo;
+        };
+
+        window.addEventListener("load", init);
+    </script>
+</body>
+
+</html>

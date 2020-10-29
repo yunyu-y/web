@@ -31,6 +31,53 @@ document.write("substr(2,5) : " , str.substr(2,5), "<br>"); //cdeab
 document.write("substring(2,5) : " , str.substring(2,5), "<br>"); //cde
 
 document.write("replace('de','QQQ') : " , str.replace('de','QQQ'), "<br>"); 
+document.write("replace(/de/,'QQQ') : " , str.replace(/de/,'QQQ'), "<br>"); 
+document.write("replace(/de/g,'QQQ') : " , str.replace(/de/g,'QQQ'), "<br>");
+
+//---------------------------------------
+document.write(  "<hr>");
+str = "10,10@20,35@28,30";
+var arr = str.split("@");
+for(let i in arr){
+	document.write( arr[i], "<br>");
+}
+document.write(  "<hr>");
+//----------------------將字串轉陣列
+str = "abcde";
+var arr = str.split("");
+for(let i in arr){
+	document.write( arr[i], "<br>");
+}
+document.write(  "<hr>");
+</script>
+
+<h2>新的瀏覽器可以用類似陣列的方法來取用索引值i的字元</h2>
+<script>
+	var str = "abcde";
+	for(let i=0; i<str.length; i++){
+		document.write( str[i], "<br>");
+	}
+</script>
+<h2>將字串反轉印出---------1</h2>
+<script>
+var str = "ABCDE"; //0,1,2,3,4
+for(let i=str.length-1; i>=0; i--){
+	document.write(  str.charAt(i));
+}
+</script>
+
+<h2>將字串反轉印出---------2</h2>
+<script>
+var str = "ABCDE"; //0,1,2,3,4
+// var arr = str.split(""); //["A","B","C","D","E"]
+// arr.reverse(); //["E","D","C","B","A"]
+// document.write(  arr.join(""),"<br>");
+document.write( str.split("").reverse().join(""), "<br>");
+</script>
+
+<h2>------------------取出主檔名, 副檔名</h2>
+<script>
+//--------------------------------------------------
 /**/
 //---------------------------------找主檔名和副檔名
 var fileStr = "Sara.smile.gif";
@@ -53,6 +100,50 @@ if(fileAllowed.indexOf(fileExt) == -1){
 }else{
 	document.write(  "檔案類型...OK<br>");
 }
+</script>
+
+
+<h2>取得主檔名和副檔名(包成函數)</h2>
+<script>
+function getFileInfo(fileStr){  //傳回一個陣列，索引值0放的是主檔名, 索引值1放的是副檔名
+	//傳回主檔名和副檔名
+	var fileName, fileExt;
+
+	var dot = fileStr.lastIndexOf(".");
+	fileName = fileStr.substring(0, dot);
+	fileExt = fileStr.substr(dot+1); //"gif"
+	return [fileName, fileExt];	
+}
+
+var filePath = "Sara.smile.docx";
+var file = getFileInfo(filePath);
+document.write(  "主檔名 : ", file[0], "<br>");
+document.write(  "副檔名 : ", file[1], "<br>");
+</script>    
+
+
+<h2>取得主檔名和副檔名(包成函數2)</h2>
+<script>
+function getFileInfo_2(fileStr){  //傳回一個陣列，索引值0放的是主檔名, 索引值1放的是副檔名
+	//傳回主檔名和副檔名
+	var fileName, fileExt;
+
+	var dot = fileStr.lastIndexOf(".");
+	fileName = fileStr.substring(0, dot);
+	fileExt = fileStr.substr(dot+1); //"gif"
+
+	// var file = new Object();
+	// file.name = fileName;
+	// file.ext = fileExt;
+	// return file;	
+
+	return {name:fileName, ext:fileExt};
+}
+
+var filePath = "Sara.smile.docx";
+var file = getFileInfo_2(filePath);
+document.write(  "主檔名 : ", file.name, "<br>");
+document.write(  "副檔名 : ", file.ext, "<br>");
 </script>    
 </body>
 </html>

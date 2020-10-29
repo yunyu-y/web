@@ -1,6 +1,6 @@
-@import "./common/all.css";
-@import "./common/header.css";
-@import "./common/footer.css";
+@import './common/all.css';
+@import './common/header.css';
+@import './common/footer.css';
 
 header {
     background-color: #81501c31;
@@ -55,7 +55,7 @@ html {
 
 /* clear fix */
 .grid:after {
-    content: "";
+    content: '';
     display: block;
     clear: both;
 }

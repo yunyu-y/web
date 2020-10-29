@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>jQuery UI -- draggable</title>
+    <link rel="stylesheet" href="">
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+	<script>
+		$(document).ready(function () {
+          $('#drag').draggable({
+            // axis: 'y',
+
+            //拖曳的範圍限制
+            // containment: 'document',  //window, document, parent, [x1,y1,x2,y2]
+            // containment: 'parent',
+            containment: [0,0,300,300],
+            cursor: "crosshair",  //pointer
+            opacity: 0.6,
+            // grid: [20,20],
+            revert: true,  //拖曳完回到原位
+
+            //加上#event之後
+            // start: function(){},
+            start(){
+                $('#event').text('Dragging started');
+            },
+            drag(){
+                $('#event').text('Dragging');
+            },
+            stop(){
+                $('#event').text('Dragging stopped');
+            },
+          });
+        });
+	</script>
+</head>
+<body>
+    <!-- <div id="box" style="width:200px;height:200px;background: #ccc;">
+        <span id="drag">Drag me</span>
+    </div> -->
+
+    <span id="drag">Drag me</span>
+    <div id="event"></div>
+</body>
+</html>

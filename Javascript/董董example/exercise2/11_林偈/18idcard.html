@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+
+
+</head>
+
+<body>
+  <div class="box">
+    <label for="idName">身分證字號 :</label>
+    <input type="text" id="idName" />
+    <button id="check">check</button>
+  </div>
+
+  <script>
+    function isIdNo() {
+      var a = document.getElementById('idName')
+      if (a.value.charCodeAt(0) < 65 || a.value.charCodeAt(0) > 90 || a.value.charCodeAt(1) < 49 || a.value.charCodeAt(1) > 50 || a.value.length != 10) {
+        alert('格式錯誤!!')
+      } else {
+        if ((a.value.charCodeAt(0) >= 65) & (a.value.charCodeAt(0) <= 72)) {
+          var n = (10 + (a.value.charCodeAt(0) - 65)).toString()
+        }
+        else if ((a.value.charCodeAt(0) >= 74) & (a.value.charCodeAt(0) <= 78)) {
+          var n = (18 + (a.value.charCodeAt(0) - 74)).toString()
+        }
+        else if ((a.value.charCodeAt(0) >= 80) & (a.value.charCodeAt(0) <= 86)) {
+          var n = (23 + (a.value.charCodeAt(0) - 80)).toString()
+        }
+        else if ((a.value.charCodeAt(0) >= 88) & (a.value.charCodeAt(0) <= 09)) {
+          var n = (30 + (a.value.charCodeAt(0) - 88)).toString()
+        }
+        else if (a.value.charCodeAt(0) == 73) {
+          var n = "34"
+        }
+        else if (a.value.charCodeAt(0) == 79) {
+          var n = "35"
+        }
+        else if (a.value.charCodeAt(0) == 87) {
+          var n = "32"
+        }
+        var total_1 = n.charAt(0) * 1 + n.charAt(1) * 9
+        var total_2 = 0
+        var num
+        var i = 1
+        var j = 8
+        do {
+          num = a.value.charAt(i) * j
+          total_2 = total_2 + num
+          i++
+          j--
+        } while (i <= 8)
+        var total_all = total_1 + total_2
+        if (10 - (total_all % 10) == a.value.charAt(9)) {
+          alert('內容正確!!')
+        } else {
+          alert('內容錯誤!!')
+        }
+      }
+    }
+    function check() {
+      document.getElementById('check').addEventListener('click', isIdNo)
+    }
+    window.addEventListener('load', check)
+  </script>
+</body>
+
+</html>

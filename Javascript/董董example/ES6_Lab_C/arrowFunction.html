@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+
+</head>
+<body>
+
+<script type="text/javascript">
+//===1 匿名函數
+var getArea = function (radius){
+	return radius*radius*3.14;
+}
+document.write("<p>半徑1的圓面積 : ", getArea(1), "</p>");
+
+
+//===2 可以改寫成箭頭函數
+//省略function關鍵字, 改用箭頭指向所需執行的敍述區塊
+var getArea2 = (radius)=>{
+	return radius*radius*3.14;
+}
+document.write("<p>半徑10的圓面積 : ", getArea2(10), "</p>");
+
+//===3 箭頭函數的簡略寫法 
+//若只要執行一行敍述，且該敍述的目的是回傳一個值，
+//則{}和return可以省略
+var getArea3 = (radius)=>radius*radius*3.14;
+
+document.write("<p>半徑100的圓面積 : ", getArea3(100), "</p>");
+
+//===4 箭頭函數的簡略寫法
+//參數列若只有一個參數，則左邊的()可以省略
+var getArea4 = radius=>radius*radius*3.14;
+document.write("<p>半徑1000的圓面積 : ", getArea4(1000), "</p>");
+
+
+//===5 箭頭函數的簡略寫法
+//若没有參數，則左邊的()不可以省略
+var greeting = ()=>{
+	document.write(  "Hi.....<br>");
+}
+
+greeting();
+
+
+//搭配預設參數
+var greeting2 = (msg="Hello~")=>{
+	document.write(  msg, "<br>");
+}
+
+greeting2();
+greeting2("午安~");
+
+//搭配剩餘參數
+var sum = (...array)=>{ //array : [10, 20, 30, 40, 50]
+	let total = 0;
+	for(let i=0; i<array.length;i++){
+		total += array[i];
+	}
+	return total;
+}
+document.write( "10+20+30+40+50+60 = ", sum(10, 20, 30, 40, 50, 60), "<br>");
+
+//-------------函式傳回一個物件
+var getPoint = function(){
+	var x = parseInt(Math.random()*101);
+	var y = parseInt(Math.random()*101);
+	return {x,y};
+}
+
+var point = getPoint();
+document.write( "x : ", point.x, "<br>");
+document.write( "y : ", point.y, "<hr>");
+
+//-------------函式傳回單一變數，且該變數是一個物件
+
+// var getPoint2 = ()=>{x:parseInt(Math.random()*101), y: parseInt(Math.random()*101)}; //error
+var getPoint2 = ()=>({x:parseInt(Math.random()*101), y: parseInt(Math.random()*101)});
+var point2 = getPoint2();
+document.write( "x : ", point2.x, "<br>");
+document.write( "y : ", point2.y, "<br>");
+</script>    
+
+<h2>將陣列中的資料*2, 產生一個陣列</h2>
+<script>
+
+var arr = [10, 20, 30];
+var arr2 = [];
+
+for(let i=0; i<arr.length;i++){
+	arr2[i] = arr[i] * 2;
+}
+
+document.write(  arr.toString(),"<br>");
+document.write(  arr2.toString(),"<br>");	
+</script>
+
+<h2>array 的 map()方法..............1</h2>
+<script>
+function double(data){ //20
+	return data*2;
+}	
+
+var arr = [10, 20, 30];
+var arr2 = arr.map(double);
+document.write(  arr.toString(),"<br>");
+document.write(  arr2.toString(),"<br>");	
+</script>
+
+<h2>array 的 map()方法..............使用匿名函數</h2>
+<script>
+var arr = [10, 20, 30];
+var arr2 = arr.map(function(data){
+	return data*2;
+});
+
+document.write(  arr.toString(),"<br>");
+document.write(  arr2.toString(),"<br>");	
+</script>
+
+
+<h2>array 的 map()方法..............使用箭頭函數</h2>
+<script>
+var arr = [10, 20, 30];
+var arr2 = arr.map((data)=>{
+	return data*3;
+});
+
+document.write(  arr.toString(),"<br>");
+document.write(  arr2.toString(),"<br>");	
+</script>
+
+
+<h2>array 的 map()方法..............使用箭頭函數</h2>
+<script>
+var arr = [10, 20, 30];
+var arr2 = arr.map(data=>data*4);
+
+document.write(  arr.toString(),"<br>");
+document.write(  arr2.toString(),"<br>");	
+</script>
+
+
+<h2>將array中的奇數，放到陣列2</h2>
+<script>
+var arr = [4,2,5,7,3,8];
+var arr2 = [];	
+for(let i=0; i<arr.length;i++){
+	if(arr[i]%2 == 1){
+		arr2.push(arr[i]);
+	}
+}
+document.write(  arr.toString(),"<br>");
+document.write(  arr2.toString(),"<br>");
+</script>
+
+<h2>將array中的奇數，放到陣列2.........array.filter()搭配匿名函數</h2>
+<script>
+var arr = [4,2,5,7,3,8];
+var arr2 = arr.filter(function(data){
+	return data%2==1;
+});	
+document.write(  arr.toString(),"<br>");
+document.write(  arr2.toString(),"<br>");
+</script>
+
+<h2>將array中的偶數，放到陣列2.........使用array.filter()搭配箭頭函數</h2>
+<script>
+var arr = [4,2,5,7,3,8];
+var arr2 = arr.filter(data=>data%2==0);	
+document.write(  arr.toString(),"<br>");
+document.write(  arr2.toString(),"<br>");
+</script>
+
+<h2>array.every()搭配箭頭函數</h2>
+<script>
+var arr = [4,2,8];
+var result= arr.every(data=>data%2==0);	
+document.write(  result ,"<br>");
+</script>
+</body>
+</html>

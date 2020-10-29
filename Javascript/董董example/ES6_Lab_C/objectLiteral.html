@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>object literal</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+//看起來空空的物件
+var arr = new Array(11,22);
+var arr2 = [11, 22];
+
+var obj = new Object();
+var obj = {};
+document.write( "obj.toString() : ", obj.toString(), "<br>");
+document.write( "obj : ", obj, "<br>");
+
+//有較多內容的物件
+var obj2 = {
+	empno : "7001",
+	ename : "Adam"
+}
+document.write( "obj2.empno : ", obj2.empno, "<br>");
+document.write( "obj2.ename : ", obj2.ename, "<br>");
+
+var empno = "7002";
+var ename = "Ann";
+var obj3 = {
+	empno : empno,
+	ename : ename
+}
+document.write( "obj3.empno : ", obj3.empno, "<br>");
+document.write( "obj3.ename : ", obj3.ename, "<br>");
+
+
+//ES6的簡化版的物件表示法
+var obj4 = {empno, ename}
+document.write( "obj4.empno : ", obj4.empno, "<br>");
+document.write( "obj4.ename : ", obj4.ename, "<br>");
+</script>
+
+
+</body>
+</html>

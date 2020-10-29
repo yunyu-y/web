@@ -33,6 +33,10 @@ function countDown(){
 
 function init(){
 	timerId = setInterval(countDown, 1000);
+	for(var i=5; i>=0; i--){
+		console.log(i);
+		document.getElementById("divNum").innerText = i;
+	}
 }
 
 window.onload = init;

@@ -35,7 +35,7 @@ div.designers {
     position: relative;
 }
 div.designers::after {
-    content: "v";
+    content: 'v';
 }
 
 /* span.triangle1 {
@@ -97,7 +97,7 @@ div.header nav.nav ul.link_list > li div.designers ul.designers_list > li a:hove
     color: white;
 }
 .ho_line::after {
-    content: "";
+    content: '';
     display: block;
     width: 0;
     height: 2px;

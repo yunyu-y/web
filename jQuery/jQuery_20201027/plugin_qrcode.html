@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>jQuery plugin -- qrcode</title>
+    <link rel="stylesheet" href="">
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/jquery-qrcode-0.18.0.min.js"></script>
+	<script>
+		$(document).ready(function () {
+          $('button').click(function(){
+              let theURL = $('#source').val();
+
+              $('#feedback').text('');
+              $('#feedback').qrcode({
+                text: theURL,
+                size: 300,
+                mode: 0,
+                // label: 'Silvia.com',
+              });
+          });
+        });
+	</script>
+</head>
+<!-- http://140.115.236.71/CED101G1/index.html -->
+<body>
+    <p>
+        網址: <input type="text" id="source">
+        <button>Generate QRcode</button>
+    </p>
+    <div id="feedback"></div>
+    
+</body>
+</html>

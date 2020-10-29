@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    身分證字號:<input type="text" id="idd">
+    <button id="send">送出檢查</button>
+    <br>
+    <br>
+    格式檢查結果: <input type="text" id="result">
+    <br>
+    驗證碼檢查結果: <input type="text" id="check">
+
+
+
+
+    <script>
+
+        let sen = document.getElementById(send);
+
+        send.onclick = function () {
+
+            let checkresult = document.getElementById("check");      //每點送出後就先清空檢查碼value  格式需先正確才能跑檢查碼
+            checkresult.value = "";
+
+            //驗證身分證格式
+            let inputId = document.getElementById("idd").value;    //取得使用者輸入的身分證值
+            let IdCheck = /^[A-Z][1-2][0-9]{8}$/                   //驗證第一碼是否為大寫A-Z 第二碼1或2 後8碼0-9
+            let re = document.getElementById("result");            //取得格式檢查結果物件
+            re.value = IdCheck.test(inputId);                      //將ID檢查結果test布林值傳入格式檢查結果物件的value
+
+            let first = inputId.charAt(0);                         //取得身分證首字母
+
+            let a;                      //取得英文字轉數字的陣列
+            switch (first) {
+                case 'A': a = [1, 0]; break; case 'P': a = [2, 3]; break;
+                case 'B': a = [1, 1]; break; case 'Q': a = [2, 4]; break;
+                case 'C': a = [1, 2]; break; case 'R': a = [2, 5]; break;
+                case 'D': a = [1, 3]; break; case 'S': a = [2, 6]; break;
+                case 'E': a = [1, 4]; break; case 'T': a = [2, 7]; break;
+                case 'F': a = [1, 5]; break; case 'U': a = [2, 8]; break;
+                case 'G': a = [1, 6]; break; case 'V': a = [2, 9]; break;
+                case 'H': a = [1, 7]; break; case 'W': a = [3, 2]; break;
+                case 'I': a = [3, 7]; break; case 'X': a = [3, 0]; break;
+                case 'J': a = [1, 8]; break; case 'Y': a = [3, 1]; break;
+                case 'K': a = [1, 9]; break; case 'Z': a = [3, 2]; break;
+                case 'L': a = [2, 0]; break;
+                case 'M': a = [2, 1]; break;
+                case 'N': a = [2, 2]; break;
+                case 'O': a = [3, 5]; break;
+            }
+
+            let other = inputId.match(/[0-9]/g);    //取除了英文字以外的數字放入陣列
+            let all = a.concat(other);              //結合英文跟數字陣列
+            console.log(all);
+
+            let sum = 0;
+            let j = 9;
+            let every;       //every是每個數字乘積
+            for (let i = 1; i < 10; i++) {
+                every = all[i] * j;
+                sum = sum + every;
+                j--;
+            }
+            sum = sum + all[0];
+            console.log(sum);
+
+            // 計算驗證碼
+            let left = sum % 10;
+            let checknumber;
+            if (left == 0) {
+                checknumber = 0;
+            }
+            else {
+                checknumber = 10 - left;
+            }
+            console.log(left);
+
+            // 判斷最後一碼驗證碼是否正確
+            if (checknumber != all[10]) {
+                checkresult.value = "false";
+            } else {
+                checkresult.value = "true";
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

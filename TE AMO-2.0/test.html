@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                width: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                border: 1px solid green;
+            }
+            .navv {
+                width: 90%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0 auto;
+            }
+            .logo_img {
+                width: 50px;
+                height: 50px;
+                border: 1px solid black;
+            }
+            .ham {
+                border: 1px red solid;
+                width: 50px;
+                height: 50px;
+                display: none;
+            }
+            .main2 {
+                width: 100%;
+                height: 600px;
+                border: 1px black solid;
+                position: relative;
+            }
+            .box {
+                position: absolute;
+                /* top: 50%; */
+                /* left: 50%; */
+                border: 1px red solid;
+                height: 100%;
+                width: 100%;
+            }
+            .box > nav {
+                width: 100%;
+                height: 100%;
+            }
+            .midd {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .midd > li {
+                height: 10%;
+                display: block;
+            }
+
+            @media (max-width: 1200px) {
+                .navv > nav {
+                    display: none;
+                }
+                .ham {
+                    display: block;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="navv">
+                <div class="logo_img">圖片</div>
+
+                <div class="ham">漢堡</div>
+                <nav>
+                    <ul>
+                        <li>導覽列</li>
+                        <li>導覽列</li>
+                        <li>導覽列</li>
+                        <li>導覽列</li>
+                        <li>導覽列</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="main2">
+            <div class="box">
+                <nav>
+                    <ul class="midd">
+                        <li>導覽列</li>
+                        <li>導覽列</li>
+                        <li>導覽列</li>
+                        <li>導覽列</li>
+                        <li>導覽列</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </body>
+</html>

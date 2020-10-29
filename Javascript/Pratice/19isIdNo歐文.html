@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>董董的身分證檢測器</title>
+
+        <style>
+            .box {
+                width: 350px;
+                height: 250px;
+                margin: 200px auto;
+                border: green 1px solid;
+            }
+            .result {
+                color: red;
+                font-size: 24px;
+                font-weight: bold;
+                white-space: pre;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <label for="name">身分證字號 :</label>
+            <input type="text" id="name" class="name" />
+            <button class="checkbtn">檢查</button>
+            <div class="result"></div>
+        </div>
+
+        <script>
+            // 撰寫 檢查按鈕 按下後 將要啟動運算的函數
+            function isIdNo() {
+                var nameNo = document.querySelectorAll('.name')[0]
+                // 檢測內容使用:
+                // 查看一字元 內容 及 內碼
+                console.log('第一個字元為:', nameNo.value.charAt(0))
+                console.log('第一個字元 內碼為 :', nameNo.value.charCodeAt(0))
+                // 查看字串長度
+                console.log('字串長度 :', nameNo.value.length)
+
+                // -----------------------------------------------------
+
+                // -----------------------------------------------------
+                // 檢測 輸入內容是否符合相關規定 (利用英文字內碼、數字大小、字串長度)
+                if (
+                    // 第一碼是否為英文字(a~z)
+                    nameNo.value.charCodeAt(0) < 65 ||
+                    nameNo.value.charCodeAt(0) > 90 ||
+                    // 第二碼是否為 1 or 2? (男生或女生)
+                    nameNo.value.charCodeAt(1) < 49 ||
+                    nameNo.value.charCodeAt(1) > 50 ||
+                    // 字串長度是否為10?
+                    nameNo.value.length != 10
+                ) {
+                    var result = document.querySelectorAll('.result')[0]
+                    result.innerText = '格式錯誤!!    請重新檢查格式'
+                    console.log('格式錯誤')
+                } else {
+                    // -----------------------------------------------------
+                    // 判別 第一碼 檢測時應相乘的數字 :
+                    // 利用"toString()" 將數字n轉換成字串 (讓我可以個別抓出第一數字和第二數字各別做運算)
+                    // 第一字元 為 A ~ H 時
+                    if ((nameNo.value.charCodeAt(0) >= 65) & (nameNo.value.charCodeAt(0) <= 72)) {
+                        var n = 10 + (nameNo.value.charCodeAt(0) - 65)
+                        var nStr = n.toString()
+                    }
+                    // 第一字元 為 J ~ N 時
+                    else if ((nameNo.value.charCodeAt(0) >= 74) & (nameNo.value.charCodeAt(0) <= 78)) {
+                        var n = 18 + (nameNo.value.charCodeAt(0) - 74)
+                        var nStr = n.toString()
+                    }
+                    // 第一字元 為 P ~ V 時
+                    else if ((nameNo.value.charCodeAt(0) >= 80) & (nameNo.value.charCodeAt(0) <= 86)) {
+                        var n = 23 + (nameNo.value.charCodeAt(0) - 80)
+                        var nStr = n.toString()
+                    }
+                    // 第一字元 為 X ~ Z 時
+                    else if ((nameNo.value.charCodeAt(0) >= 88) & (nameNo.value.charCodeAt(0) <= 09)) {
+                        var n = 30 + (nameNo.value.charCodeAt(0) - 88)
+                        var nStr = n.toString()
+                    }
+                    // 第一字元 為 i 時
+                    else if (nameNo.value.charCodeAt(0) == 73) {
+                        var n = 34
+                        var nStr = n.toString()
+                    }
+                    // 第一字元 為 o 時
+                    else if (nameNo.value.charCodeAt(0) == 79) {
+                        var n = 35
+                        var nStr = n.toString()
+                    }
+                    // 第一字元 為 w 時
+                    else if (nameNo.value.charCodeAt(0) == 87) {
+                        var n = 32
+                        var nStr = n.toString()
+                    }
+                    console.log('第一碼數字n=', n)
+                    console.log('第一碼數字的 第一字元:', nStr.charAt(0))
+                    console.log('第一碼數字的 第二字元:', nStr.charAt(1))
+                    // -----------------------------------------------------
+                    // 計算"中間八碼"的數字總和
+                    var total_8 = 0
+                    var num
+                    var i = 1
+                    var j = 8
+                    do {
+                        num = nameNo.value.charAt(i) * j
+                        total_8 = total_8 + num
+                        i++
+                        j--
+                    } while (i <= 8)
+                    console.log('八碼總和 :', total_8)
+                    // -----------------------------------------------------
+                    // 計算第一碼數值
+                    var total_1 = nStr.charAt(0) * 1 + nStr.charAt(1) * 9
+                    console.log('第一碼總和 :', total_1)
+                    // -----------------------------------------------------
+                    // 計算"全九碼"的數字總和
+                    var total_all = total_1 + total_8
+                    console.log('全九碼的數字總和', total_all)
+                    // -----------------------------------------------------
+                    // 計算最後一碼檢測碼是否正確
+                    if (10 - (total_all % 10) == nameNo.value.charAt(9)) {
+                        var result = document.querySelectorAll('.result')[0]
+                        result.innerText = '內容正確!!'
+                        console.log('內容正確')
+                    } else {
+                        var result = document.querySelectorAll('.result')[0]
+                        result.innerText = '內容錯誤!!'
+                        console.log('內容錯誤')
+                    }
+                    console.log('餘數:', total_all % 10)
+                    console.log('計算出最後一碼應為:', 10 - (total_all % 10))
+                    // 顯示檢測結果正確
+                }
+                // -----------------------------------------------------
+            }
+            // 設定檢查按鈕 "觸發事件" 及 "發生的事情(函數)""
+            function check() {
+                var checkbtn = document.querySelectorAll('.checkbtn')[0]
+                checkbtn.addEventListener('click', isIdNo)
+            }
+            // 設定網頁內容讀取完後才開始讀取相關js
+            window.addEventListener('load', check)
+        </script>
+    </body>
+</html>

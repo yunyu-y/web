@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>董董的身分證檢測器</title>
+
+        <style>
+            .box {
+                width: 350px;
+                height: 250px;
+                margin: 200px auto;
+                border: green 1px solid;
+            }
+            .result {
+                color: red;
+                font-size: 24px;
+                font-weight: bold;
+                white-space: pre;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <label for="name">身分證字號 :</label>
+            <input type="text" id="idNo" class="name" />
+            <button id="checkBtn">檢查</button>
+            <div class="result"></div>
+        </div>
+
+<script>
+    function isIdNo( idNo ){ //a12345789
+      //檢查長度
+      if(idNo.length != 10){ //長度錯誤
+        return false;
+      } 
+      
+      //檢查第一碼 a..z,A..Z
+      idNo = idNo.toUpperCase(); //A123456789
+      let firstCode = idNo.charAt(0);
+      if(firstCode<'A' || firstCode>'Z'){ //第一個字元正確
+        return false;
+      }
+
+      //檢查第二碼 1,2
+      let secondCode = idNo.charAt(1);
+      if(secondCode != '1' && secondCode !=2){
+        return false;
+      }
+      let zone = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      let zoneCodes = ["10","11","12","13","14","15","16","17","34","18","19","20","21","22","35","23","24","25","26","27","28","29","32","30","31","33"];
+      //檢查各字元是否有效並算出檢查碼
+      let index = zone.indexOf(firstCode); //"10"
+      let temp = zoneCodes[index];
+      let sum = temp.substr(0,1)*1 + temp.substr(1,1)*9;
+      for(let i=1; i<=8; i++){
+        let char = idNo.charAt(i);
+        if(char<'0' || char>'9'){
+            return false;
+        }
+        sum = sum + char * (9-i);
+      }
+
+      //比對  算出 的檢查碼是否和輸入的檢查碼一樣
+      let lastCode = idNo.charAt(9); //輸入的檢查碼
+      let checkCode;
+      if(sum % 10 == 0){ //算出的檢查碼
+        checkCode = 0;
+      }else{
+        checkCode = 10 - (sum%10);
+      }
+
+      if(checkCode == lastCode){
+        return true;
+      }else{
+        return false;
+      }
+    } 
+
+    function checkId(){
+        let idNo = document.getElementById("idNo").value;
+        if( isIdNo(idNo) == true){
+            alert("Right");
+        }else{
+            alert("Error")
+        }
+    }
+
+    window.addEventListener('load', function(){
+        //--------------------checkBtn
+        document.getElementById("checkBtn").onclick = checkId;
+    })
+</script>
+    </body>
+</html>

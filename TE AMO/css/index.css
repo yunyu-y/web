@@ -1,6 +1,6 @@
-@import "./common/all.css";
-@import "./common/header.css";
-@import "./common/footer.css";
+@import './common/all.css';
+@import './common/header.css';
+@import './common/footer.css';
 
 .mes {
     position: fixed;
@@ -127,7 +127,7 @@
     /* border: 1px solid blue; */
     text-align: center;
     font-size: 3rem;
-    font-family: "Palatino Linotype";
+    font-family: 'Palatino Linotype';
     font-style: italic;
     color: white;
     text-shadow: 5px 5px 10px black;

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form method="post">
+            身高:
+            <input type="text" name="height" /><br />
+
+            體重:
+            <input type="text" name="weight" /><br />
+            <input type="button" value="計算" onclick="Cal(this.form)" />
+
+            <button type="button" name="reset" id="reset">清除重算</button>
+            <br />
+            理想體重:<input type="text" name="IW" /><br />
+            <br />
+            BMI:<input type="text" name="BMI" />
+        </form>
+
+        <script>
+            var BMI = {};
+
+            BMI.getBMI = function (a, b) {
+                var bmi = b / ((a / 100) * (a / 100));
+                return bmi;
+            };
+
+            BMI.idealweight = function (a) {
+                var x = (a - 100) * 0.9;
+                return x;
+            };
+
+            function Cal(form) {
+                var a = eval(form.height.value);
+                var b = eval(form.weight.value);
+                var bmi = eval(form.BMI.value);
+                var bmiValue = BMI.getBMI(a, b);
+
+                BMI.disp_alert(bmiValue);
+                form.IW.value = BMI.idealweight(a);
+                form.BMI.value = bmiValue;
+            }
+
+            BMI.disp_alert = function (bmi) {
+                if (bmi < 18.5) {
+                    alert("ㄟㄟ太瘦了想逼死誰");
+                } else if (bmi >= 18.5 && bmi < 25) {
+                    alert("可以了啦身材不錯");
+                } else if (bmi >= 25 && bmi < 30) {
+                    alert("好像要減一下肥");
+                } else {
+                    alert("要不要去抽脂");
+                }
+            };
+            button.onclick = bmi;
+            button.addEventListener("click", bmi);
+
+            var reset = document.getElementById("reset");
+
+            reset.onclick = function resetItAll() {
+                document.getElementById("height").value = "";
+                document.getElementById("weight").value = "";
+                document.getElementById("bmi").value = "";
+                document.getElementById("state").value = "";
+            };
+        </script>
+    </body>
+</html>

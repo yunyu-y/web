@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>jQuery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #talk{
+            /* resize: none; */
+            width: 200px;
+            height:200px;
+        }
+    </style>
+	<script src="./js/jquery-3.5.1.js"></script>
+	<script>
+		$(document).ready(function () {
+            $('#agree').attr('disabled',true);
+
+            $('#talk').scroll(function(){
+                // $('#agree').removeAttr('disabled');
+                let textarea_height = $(this)[0].scrollHeight;
+                let scroll_height = textarea_height - $(this).innerHeight();
+                let scroll_top = $(this).scrollTop();
+                // alert(textarea_height)
+
+                if(scroll_top === scroll_height){
+                    $('#agree').removeAttr('disabled');
+                }
+                
+
+                // $('#feedback').text(`Currently at position ${scroll_pos}`);
+            });
+		});			
+	</script>
+</head>
+
+<body>
+    <textarea id="talk" cols="30" rows="10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora eum illo sunt mollitia rem delectus quos aliquam laboriosam, vel hic ab aspernatur quasi ipsa cupiditate doloribus. Sit ex vel eius labore praesentium? Necessitatibus similique laboriosam error dolor quis pariatur eveniet, ad quibusdam natus ipsam, id eaque voluptatum incidunt. Explicabo neque cumque architecto suscipit expedita dolorum reiciendis nisi cupiditate dolore itaque illum vero, ullam maxime? Eos maiores nisi exercitationem! Animi labore nihil aliquam iusto tempora quam ipsa architecto corporis incidunt eum numquam nemo dolorem porro id sapiente, blanditiis magni deserunt? Eligendi alias aspernatur accusantium, minus aliquam necessitatibus soluta. Repellendus ea debitis libero ipsa, incidunt sapiente laborum sint, ipsum beatae in vero doloribus. Nam ullam aliquid quibusdam labore eveniet maxime. Quia commodi sint perspiciatis dicta reiciendis perferendis soluta sequi facere consequuntur praesentium delectus expedita ea excepturi, natus vel sunt quisquam eligendi. Harum est deleniti, illo itaque perferendis quas sed illum! Hic, aliquid.</textarea>
+    <p>
+        <input type="checkbox" id="agree">
+        I agree the terms and conditions.
+    </p>
+    <p id="feedback"></p>
+</body>
+</html>

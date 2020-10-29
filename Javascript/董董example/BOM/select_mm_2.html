@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+</head>
+<body>
+
+
+起始月份
+<select  id="mmStart">
+</select>  
+<br>
+終止月份
+<select  id="mmEnd">
+</select>  
+
+<script>
+window.addEventListener("load", function(){
+	//-----------------動態產生月份選單的內容
+	let mmEnd = document.getElementById("mmEnd");
+	let option, text, value;
+
+	for(let i=1; i<=12; i++){
+		text = i+"月";
+		value = i;
+		option = new Option(text, value);  //<option value="1">1月</option>
+		mmEnd.add(option);		
+	}
+
+})	
+
+
+</script>  
+</body>
+</html>

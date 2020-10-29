@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>js作業</title>
+    <meta charset="utf-8" />
+    <style>
+      div.main {
+        border: 1px solid black;
+        width: 300px;
+        height: 400px;
+      }
+      div.main > form > input {
+        margin: 5px;
+        padding: 5px;
+      }
+      div.main > form > button {
+        margin-top: 10px;
+      }
+      div.main > form {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <form action="#" method="#" enctype="multipart/form-data">
+        <label>身高:</label>
+        <input id="height" type="text" placeholder="請輸入身高" value="" /> m
+        <br />
+        <label>體重:</label>
+        <input id="weight" type="text" placeholder="請輸入體重" value="" /> kg
+        <br />
+        <label>BMI:</label>
+        <input type="text" id="bmi">
+        <div class="button">
+          <button id="confirm" type="submit">確定</button>
+          <button id="cancel" type="submit">取消</button>
+        </div>
+        <div>
+          <h1 id="fat"></h1>
+        </div>
+      </form>
+    </div>
+    <script>
+      var bmi = document.getElementById("bmi");
+      var height = document.getElementById('height') 
+      var weight = document.getElementById('weight')
+      var confirm = document.getElementById('confirm')
+      confirm.addEventListener('click', calcBMI)
+      
+      var cancel = document.getElementById('cancel')
+      cancel.addEventListener('click', clear)
+
+      function clear() {
+        height.value = "";
+        weight.value = "";
+        bmi.value = "";
+        document.getElementById("fat").innerText ="";
+      }
+
+      function calcBMI(){
+        let thisbmi = weight.value / Math.pow(height.value,2)
+        thisbmi = thisbmi.toFixed(2)
+        bmi.value = thisbmi;
+        
+        if (thisbmi>=35){
+          level ="重度肥胖"
+        }
+        else if (thisbmi >= 30 && thisbmi < 35){
+          level ="中度肥胖"
+        }
+        else if (thisbmi >= 27 && thisbmi < 30){
+          level ="輕度肥胖"
+        }
+        else if (thisbmi >= 24 && thisbmi < 27){
+          level ="過重"
+        }
+        else if (thisbmi >= 18 && thisbmi < 24){
+          level ="正常範圍"
+        }
+        else {
+          level ="體重過輕"
+        }
+        document.getElementById("fat").innerText = level;
+      }
+   
+    </script>
+  </body>
+</html>

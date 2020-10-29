@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>jQuery</title>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script> -->
+    <script>
+        $(document).ready(function(){
+            $('table').attr('border',1);
+            $('table tr:nth-child(odd)').addClass('highlight');            
+        });
+    </script>
+</head>
+<body>
+    <table>
+        <tr><td>first</td></tr>
+        <tr><td>second</td></tr>
+        <tr><td>third</td></tr>
+        <tr><td>fourth</td></tr>
+        <tr><td>fifth</td></tr>
+    </table>
+</body>
+</html>

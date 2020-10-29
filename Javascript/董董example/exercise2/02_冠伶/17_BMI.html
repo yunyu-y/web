@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<form>
+		<label for="height">身高 :</label>
+		<input type="text" id="height" name="height">cm
+
+		<br>
+
+		<label for="weight">體重:</label>
+		<input type="text" id="weight" name="weight">kg
+
+		<br>
+		<input type="button" name="" id="calc" value="計算">
+		<input type="reset" name="" id="calc" value="清除">
+		
+		
+
+		<br>
+
+		BMI結果: <input type="text" id="result" name="result">
+		建議: <input type="text" id="suggest" name="suggest">
+
+	</form>
+
+
+
+
+	<script>
+		function init(){
+
+			var calc = document.getElementById("calc"); 
+
+
+			calc.addEventListener("click" , getBMI);
+
+
+			function getBMI(){
+				var height = document.getElementById("height").value/100;
+				var weight = document.getElementById("weight").value;
+				var calc = Math.floor(weight/(height*height));
+
+				document.getElementById("result").value = calc;
+				if( calc >= 35 ){
+					document.getElementById("suggest").value = "重度肥胖";
+				}else if( calc >= 30 && calc < 35 ){
+					document.getElementById("suggest").value = "中度肥胖";
+				}else if( calc >= 27 && calc < 30 ){
+					document.getElementById("suggest").value = "輕度肥胖";
+				}else if( calc < 27 ){
+					document.getElementById("suggest").value = "過輕";
+				}
+			
+			}
+
+        }
+		
+		window.addEventListener("load", init, false);
+
+		
+	</script>
+	
+</body>
+</html>

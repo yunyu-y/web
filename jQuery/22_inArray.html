@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>jQuery</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <style>
+            span {
+                text-transform: capitalize;
+                color: red;
+                font-size: 18px;
+            }
+        </style>
+        <script src="./js/jquery-3.5.1.js"></script>
+        <script>
+            $(document).ready(function () {
+                let breads = ['bagel', 'rolls', 'pretzel', 'pita', 'croissant'];
+
+                $('#checkButton').click(function () {
+                    let bread = $('#bread').val();
+                    // alert($.inArray(bread, breads)); //找出回傳為-1 or 非-1
+                    if ($.inArray(bread, breads) != -1) {
+                        $('#feedback').html(`<span>${bread}</span> is in the bread array`);
+                    } else {
+                        $('#feedback').html(`<span>${bread}</span> is NOT in the bread array`);
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        Bread: <input type="text" id="bread" />
+        <button id="checkButton">Check bread</button>
+
+        <p id="feedback"></p>
+    </body>
+</html>

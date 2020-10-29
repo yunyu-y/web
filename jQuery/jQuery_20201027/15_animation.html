@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="./js/jquery-3.5.1.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			// $('#imgBoard').mouseenter().mouseleave();
+			// $('#imgBoard').hover();
+			// $('#imgBoard').hover(function(){},function(){});
+			$('#imgBoard').hover(function(){
+				$(this).stop(true).animate({
+					left: '0px',
+				},1000,'easeInSine');
+			},function(){
+				$(this).animate({
+					left: '-130px',
+				},2000,'easeOutBounce');
+			});
+		});			
+	</script>
+</head>
+
+<body style="margin: 0px;">
+	<h2>Mouseover the gray stripe on the left edge.</h2>
+	<div id="imgBoard">
+		<img src="../images/Shinnosuke/Shinnosuke1.jpg" class="myPhoto">
+		<img src="../images/Shinnosuke/Shinnosuke2.jpg" class="myPhoto">
+		<img src="../images/Shinnosuke/Shinnosuke3.png" class="myPhoto">
+		<img src="../images/Shinnosuke/Shinnosuke4.png" class="myPhoto">
+		<img src="../images/Shinnosuke/Shinnosuke5.webp" class="myPhoto">
+		<img src="../images/Shinnosuke/Shinnosuke6.png" class="myPhoto">
+		<img src="../images/Shinnosuke/Shinnosuke7.png" class="myPhoto">
+		<img src="../images/Shinnosuke/Shinnosuke8.png" class="myPhoto">
+	</div>
+</body>
+
+</html>

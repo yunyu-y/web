@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>作業17:(函式練習,事件)</title>
+  </head>
+  <body>
+  	<p>作業17:(函式練習,事件)</p>
+
+    <section class="calculator">
+      <section class="fields">
+        <h1>BMI 計算機</h1>
+       
+        <div class="bmi_calcu">
+          <label for="bodyHeight">身高 :</label>
+          <input type="number" class="bodyHeight" min="0">cm
+        
+          <label for="bodyWeight">體重:</label>
+          <input type="number" class="bodyWeight" min="0">kg
+        </div>
+
+        <div class="btn_block">
+          <input type="submit" value="計算"  class="calcualteBMI"> 
+          <input type="submit" value="清除重算"  class="reset"> 
+        </div>
+      </section>
+
+      <section class="result">
+        <h2 class="result_txt">你的BMI：</h2> 
+        <p id="bmiText"></p>
+        <p id="resultText">0</p>
+      </section>
+
+    </section>
+
+  	<script>
+      // 宣告 DOM
+      let bmiText =document.querySelector('#bmiText');
+      bmiText.style.display="none";
+      
+      //事件點擊按鈕 
+      let btn =document.querySelector('.calcualteBMI');
+      let reset =document.querySelector('.reset');
+
+ 
+
+      //把 input 取出值，做一個 function calculateBMI()
+      function calculateBMI(){
+        let bodyWeight =document.querySelector('.bodyWeight').value;
+        //體重值
+        let bodyHeight =document.querySelector('.bodyHeight').value;
+         //身高值
+        let resultText =document.querySelector('#resultText');
+         //計算出BMI值
+        let bmiText =document.querySelector('#bmiText');
+        //  印出BMI標準
+
+        resultText.innerHTML = bmi(bodyWeight,bodyHeight);
+        bmiText.innerHTML =  checkBMI(bmi(bodyWeight,bodyHeight));
+      }
+
+      
+
+      //計算BMI
+      function bmi(weight,height){
+       let w = parseInt(weight);
+       let h = parseInt(height)/100;//因為公分要轉公尺所以除以100
+       let bmi = (w/(h*h)).toFixed(2);//toFixed讓小數點4捨5入只有2位
+       return bmi; //回傳結果
+      }
+
+      //判斷BMI標準
+      function checkBMI(bmi){
+        if( bmi < 18.5){
+        return "體重過輕"
+        }else if( bmi >=18.5 &&  bmi < 24){
+        return "正常範圍"
+        }else if( bmi >=24 &&  bmi < 27){
+        return "過重"
+        }else if( bmi >=27 &&  bmi < 30){
+        return "輕度肥胖"
+        }else if( bmi >=30 &&  bmi < 35){
+        return "中度肥胖"
+        }else if( bmi  >=35){
+        return "重度肥胖"
+        }      
+      }
+
+      //清空值
+      function undo(e){
+        document.querySelector('.bodyWeight').value ='';
+        document.querySelector('.bodyHeight').value ='';
+        bmiText.style.display="none";
+        resultText.innerHTML = 0;
+        return
+      }
+      
+
+      //事件監聽
+      btn.addEventListener('click',calculateBMI);
+      reset.addEventListener('click',undo);
+
+  	</script>
+  </body>
+</html>

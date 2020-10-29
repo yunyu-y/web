@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this</title>
+</head>
+<body>
+    <script>
+        Q: 函數的this代表甚麼意思?
+        A: 由函數的情境(context)決定
+
+        ex.
+        let name = 'Peter';
+        let sayMyName = function(){
+            console.log(this.name);
+        };
+
+        sayMyName();  =====> Peter
+        ==========
+        let teacher = {
+            name: 'Sally',
+            age: 25,
+            gender: 'female',
+        };
+        teacher.sayMyName = sayMyName;
+        呼叫 teacher.sayMyName();  =====> Sally
+        呼叫 sayMyName();          =====> Peter   
+
+        ex
+        .html
+            <button id="nameButton" name="Silvia">click me</button>
+        
+        .js
+            let nameButton = document.getElementById('nameButton');
+            nameButton.addEventListener('click',sayMyName);    ====> Silvia
+    </script>
+</body>
+</html>

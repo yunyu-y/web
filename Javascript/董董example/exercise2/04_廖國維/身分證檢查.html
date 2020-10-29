@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        身分證檢查:
+        <input type="text" id="idin" />
+        <input type="submit" value="檢查" id="checkid" />
+        <script>
+            function isID() {
+                let id = document.querySelector("#idin");
+                let check = document.querySelector("#checkid");
+                let abc = "ABCDEFGHJKLMNPQRSTUVXYWZIO";
+                let num = "0123456789";
+                function checkID() {
+                    if (id.value.length !== 10) {
+                        alert("身分證長度錯誤");
+                        return;
+                    }
+                    // if (abc.indexOf(id.value[0]) !== -1)
+                    if (id.value.charCodeAt(0) < 65 || id.value.charCodeAt(0) > 90) {
+                        alert("身分證第一碼錯誤");
+                        return;
+                    }
+                    if (id.value[1] !== "1" && id.value[1] !== "2") {
+                        alert("身分證第二碼錯誤");
+                        return;
+                    }
+                    let count = 0;
+                    let f = String(abc.indexOf(id.value[0]) + 10);
+                    let f1 = f[0] * 1;
+                    let f2 = f[1] * 9;
+                    count += f1;
+                    count += f2;
+                    for (let i = 1; i < 9; i++) {
+                        count += id.value[i] * (9 - i);
+                    }
+                    // count += id.value[1] * 8;
+                    // count += id.value[2] * 7;
+                    // count += id.value[3] * 6;
+                    // count += id.value[4] * 5;
+                    // count += id.value[5] * 4;
+                    // count += id.value[6] * 3;
+                    // count += id.value[7] * 2;
+                    // count += id.value[8] * 1;
+                    if (id.value[9] == 10 - (count % 10)) {
+                        alert("身分證正確");
+                    } else {
+                        alert("身分證錯誤");
+                    }
+                }
+
+                check.addEventListener("click", checkID);
+            }
+
+            window.addEventListener("load", isID);
+        </script>
+    </body>
+</html>
+<!-- A123456789 -->
+<!-- toString    
+substring(start,end-1)
+substr取得長度
+toUpperCase
+indexof(s,位置)   找字串裡面有無S
+charAt(n) 取第N
+charCodeAt(n)取得索引N內碼 -->

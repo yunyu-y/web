@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>RegExp</title>
+    </head>
+    <body>
+        <script>
+            var re = new RegExp('^A');
+            // 等同於 var re = /^A/ ;
+            var re = /^[A-Z][12][0-9]{8}$/i;
+            let idNo = 'd123456789';
+            // if( re.test(idNo) == true){
+            // 	document.write(  "Right<br>");
+            // }else{
+            // 	document.write(  "Error<br>");
+            // }
+
+            if (re.test(idNo)) {
+                document.write('Right<br>');
+            } else {
+                document.write('Error<br>');
+            }
+        </script>
+    </body>
+</html>
+<!DOCTYPE html>

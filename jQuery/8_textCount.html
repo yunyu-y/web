@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>jQuery</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <script src="./js/jquery-3.5.1.js"></script>
+        <script>
+            $(document).ready(function () {
+                let textMax = $('#talk').attr('maxlength');
+
+                $('#feedback').html(`<span style="color:maroon;">${textMax}</span> Characters remaining`);
+
+                $('#talk').keyup(function () {
+                    let textLength = $(this).val().length;
+                    $('#feedback').html(
+                        `<span style="color:maroon;">${textMax - textLength}</span> Characters remaining`
+                    );
+
+                    let theContent = $(this).val();
+                    $('#content')
+                        .css({
+                            whiteSpace: 'pre',
+                            font: '13.3px Courier New',
+                        })
+                        .text(theContent);
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <form>
+            <textarea id="talk" rows="5" cols="25" maxlength="70"></textarea>
+            <!-- Courier New | 13.3px ,teatarea預設字體及大小-->
+            <p id="feedback"></p>
+            <p id="content"></p>
+        </form>
+    </body>
+</html>

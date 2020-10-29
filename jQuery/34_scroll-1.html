@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>jQuery</title>
+        <link rel="stylesheet" href="./28_main.css" />
+        <script src="./js/jquery-3.5.1.js"></script>
+        <style>
+            #talk {
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+        <script>
+            $(document).ready(function () {
+                $('#agree').attr('disabled', true);
+                $('#talk').scroll(function () {
+                    //捲動即可勾選
+                    // $('#agree').removeAttr('disabled');
+                    //捲到到底才可勾選
+                    let textarea_height = $(this)[0].scrollHeight;
+                    let scroll_height = textarea_height - $(this).innerHeight();
+                    let scroll_top = $(this).scrollTop;
+                    // alert(textarea_height);
+                    if (scroll_top == scroll_height) {
+                        $('#agree').removeAttr('disabled');
+                    }
+
+                    // $('#feedback').text(`You have scrolled, and are at position ${scroll_pos}`);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <textarea id="talk" cols="30" rows="10">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque exercitationem quia fugiat, ipsum
+          expedita facere molestias tempore alias dolores atque earum maxime, iste ex? Optio, praesentium? Cum, saepe.
+          Veniam voluptates qui facilis, accusamus reprehenderit ea dolorem quas repudiandae modi! Necessitatibus,
+          sunt soluta perferendis ea quaerat deserunt alias autem nostrum nesciunt repellat iure at. Exercitationem
+          nesciunt quia soluta velit. Officiis facere a similique minus excepturi rem molestias reprehenderit quaerat.
+          Eius officiis eligendi itaque labore ut rerum, dolorem, sapiente numquam error expedita quae. Laborum
+          veritatis dolorum ipsa debitis eaque? Est dicta tempora labore nulla facere eum magni quibusdam aliquid sed?
+          Quasi architecto autem earum asperiores ea beatae, ab labore debitis inventore repellat nisi atque molestiae
+          neque eius fugiat qui! Ex error quisquam provident iure consectetur, reprehenderit ratione molestiae nisi
+          minus blanditiis voluptatem esse tempora veritatis earum illo magnam delectus illum dolores modi ipsa,
+          sapiente vel! Voluptatibus sint velit quasi quibusdam veritatis nam iure commodi esse aperiam, perferendis
+          natus quod accusamus minima quaerat et neque a consectetur omnis assumenda voluptatum quia, perspiciatis
+          fuga? Consequatur sit nobis repudiandae, odit vel fugiat voluptates velit atque. Non excepturi rerum
+          molestias? Dolores a impedit eos excepturi esse ducimus enim ratione iste, nobis odit deserunt possimus
+          odio!
+        </textarea>
+        <p>
+            <input type="checkbox" id="agree" />
+            I agree the terms and conditions.
+        </p>
+        <p id="feedback"></p>
+    </body>
+</html>

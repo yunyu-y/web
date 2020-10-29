@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TE AMO</title>
+        <!-- css -->
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/index.css" />
+        <link rel="stylesheet" href="./venders/aos/css/aos.css" />
+        <!-- font -->
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
+        <!-- fontawsome -->
+        <link rel="stylesheet" href="./venders/fontawesome-free-5.15.1-web/css/all.css" />
+        <!-- JS -->
+        <script src="./venders/jquery/jquery-3.4.1.min.js"></script>
+        <script src="./venders/aos/js/aos.js"></script>
+        <script src="./js/TweenLite.min.js"></script>
+        <!-- scroll Magic -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <!-- 電腦版 -->
+            <div class="nav">
+                <div class="logo">
+                    <a href="#">
+                        <img src="./images/logo.png" alt="" srcset="" />
+                    </a>
+                </div>
+                <div class="menu">
+                    <button type="button" class="hamburger_icon">
+                        <span class="-hr -top"></span>
+                        <span class="-hr -middle"></span>
+                        <span class="-hr -bottom"></span>
+                    </button>
+                </div>
+                <div class="min_nav">
+                    <ul>
+                        <li class="line">
+                            <a href="#">RESERVATION</a>
+                        </li>
+                        <li class="line">
+                            <a href="#">SERVICE</a>
+                        </li>
+                        <li class="line">
+                            <a href="#">DESIGNERS</a>
+                        </li>
+                        <li class="line">
+                            <a href="#">PORTFOLIO</a>
+                        </li>
+                        <li class="line">
+                            <a href="#">BLOG</a>
+                        </li>
+                        <li class="line">
+                            <a href="#">ABOUT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- 手機版 -->
+        <div class="nav_mobile">
+            <div class="nav_content">
+                <div class="nav_list">
+                    <ul>
+                        <li>
+                            <a href="#">RESERVATION</a>
+                        </li>
+                        <li>
+                            <a href="#">SERVICE</a>
+                        </li>
+                        <li>
+                            <a href="#">DESIGNERS</a>
+                        </li>
+                        <li>
+                            <a href="#">PORTFOLIO</a>
+                        </li>
+                        <li>
+                            <a href="#">BLOG</a>
+                        </li>
+                        <li>
+                            <a href="#">ABOUT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- banner -->
+        <div class="banner">
+            <div class="bannerbg"></div>
+        </div>
+        <div class="area1">
+            <div class="slogan">
+                <div class="slogan_L">
+                    <div class="slogan_Ltop">TE AMO PHOTOGRAPHER</div>
+                    <div class="slogan_Lmid">X</div>
+                    <div class="slogan_Lbottom">Embedded with Light & Silence</div>
+                </div>
+                <div class="slogan_R">
+                    <div class="slogan_Rcontent">
+                        Our goal is to create the perfect harmony between your story and the beauty of the city of
+                        love.<br />
+                        We love to capture your natural moments, your real emotions,<br />
+                        and for the pictures to be true to who you are.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="area2">
+            <div class="area2_introbg">
+                <div class="area2_intro">OUR DESIGNERS</div>
+                <div class="area2_introdeco">
+                    <img src="./images/index_deco1.png" alt="" srcset="" />
+                </div>
+            </div>
+            <div class="designers">
+                <div class="designers_MK">
+                    <a href="#">
+                        <div class="des_img" data-aos="fade-right" data-aos-duration="2000">
+                            <img src="./images/index_MK.png" alt="" srcset="" />
+                        </div>
+                        <div class="des_name">MAK TUMAN</div>
+                    </a>
+                </div>
+                <div class="designers_LW">
+                    <a href="#">
+                        <div class="des_img" data-aos="fade-up" data-aos-duration="3000">
+                            <img src="./images/index_LW.png" alt="" srcset="" />
+                        </div>
+                        <div class="des_name">LINWEI</div>
+                    </a>
+                </div>
+                <div class="designers_VW">
+                    <a href="#">
+                        <div class="des_img" data-aos="fade-left" data-aos-duration="2000">
+                            <img src="./images/index_VW.png" alt="" srcset="" />
+                        </div>
+                        <div class="des_name">VERA WANG</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="area3" data-aos="fade-up" data-aos-duration="3000">
+            <div class="area3_introbg">
+                <div class="area3_intro">DESIGNERS WORKS</div>
+                <div class="area3_introdeco">
+                    <img src="./images/index_deco1.png" alt="" srcset="" />
+                </div>
+            </div>
+            <div class="work">
+                <div class="work_designer">
+                    <div id="work_MK" class="work_name">MAK TUMANG</div>
+                    <div id="work_LW" class="work_name work-on">LINWEI</div>
+                    <div id="work_VW" class="work_name">VERA WANG</div>
+                </div>
+                <div class="work_listOut">
+                    <div class="work_list" id="list_MK">
+                        <a href="#">
+                            <img src="./images/index_workMT02.jpg" alt="" />
+                            <div class="work_title"><h2>KRISHA</h2></div>
+                        </a>
+                        <a href="#">
+                            <img src="./images/index_workMT01.jpg" alt="" />
+                            <div class="work_title"><h2>JEANETTE</h2></div>
+                        </a>
+                        <a href="#">
+                            <img src="./images/index_workMT03.jpg" alt="" />
+                            <div class="work_title"><h2>BYANCHA</h2></div>
+                        </a>
+                    </div>
+
+                    <div class="work_list work_list-on" id="list_LW">
+                        <a href="#">
+                            <img src="./images/index_workLW02.jpg" alt="" />
+                            <div class="work_title"><h2>DIORV</h2></div>
+                        </a>
+                        <a href="#">
+                            <img src="./images/index_workLW01.jpg" alt="" />
+                            <div class="work_title"><h2>PRONOVIAS</h2></div>
+                        </a>
+                        <a href="#">
+                            <img src="./images/index_workLW03.jpg" alt="" />
+                            <div class="work_title"><h2>ELIE</h2></div>
+                        </a>
+                    </div>
+
+                    <div class="work_list" id="list_VW">
+                        <a href="#">
+                            <img src="./images/index_workVW03.jpg" alt="" />
+                            <div class="work_title"><h2>HERRERA</h2></div>
+                        </a>
+                        <a href="#">
+                            <img src="./images/index_workVW02.jpg" alt="" />
+                            <div class="work_title"><h2>NARCES</h2></div>
+                        </a>
+                        <a href="#">
+                            <img src="./images/index_workVW01.jpg" alt="" />
+                            <div class="work_title"><h2>GALIA</h2></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="area4">
+            <div class="area4_introbg">
+                <div class="area4_intro">PORTFOLIO</div>
+                <div class="area4_introdeco">
+                    <img src="./images/index_deco1.png" alt="" srcset="" />
+                </div>
+            </div>
+            <div class="portfolio">
+                <a href="">
+                    <div class="portfoliobg">
+                        <div class="portfolio_L">
+                            <div class="pf_LTop">
+                                <div class="pf_LTop01"><img src="./images/index_pfL02.jpg" alt="" /></div>
+                                <div class="pf_LTop02"><img src="./images/index_pfL03.jpg" alt="" /></div>
+                            </div>
+                            <div class="pf_LBottom"><img src="./images/index_pfL01.jpg" alt="" /></div>
+                        </div>
+                        <div class="portfolio_R">
+                            <div class="pf_RTop"><img src="./images/index_pfR01.jpg" alt="" /></div>
+                            <div class="pf_RBottom">
+                                <div class="pf_RBottom01"><img src="./images/index_pfR02.jpg" alt="" /></div>
+                                <div class="pf_RBottom02"><img src="./images/index_pfR03.jpg" alt="" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href=""><div class="pf_more">more</div></a>
+            </div>
+        </div>
+
+        <div class="area5">
+            <div class="area5_Out">
+                <div class="area5_res">Are you ready <br />to take the perfect pre-wedding photo?</div>
+                <a href="#"><div class="area5_resBtn">RESERVATION</div></a>
+            </div>
+        </div>
+        <!-- 好評人數跑馬燈 -->
+        <section class="area6">
+            <div class="area6_out">
+                <div class="recommend">
+                    <div id="recom01">
+                        <div id="recom01_num"></div>
+                    </div>
+                    Various wedding and wedding photography experiences
+                </div>
+                <div class="recommend recommend_mid">
+                    <div id="recom02">
+                        <div id="recom02_num"></div>
+                    </div>
+                    Couples' favorite photography brands and recommend
+                </div>
+                <div class="recommend">
+                    <div id="recom03">
+                        <div id="recom03_num"></div>
+                    </div>
+                    Recommended by PTT, extraordinary weddings,and bloggers
+                </div>
+            </div>
+        </section>
+
+        <section class="area7">
+            <div class="area7_introbg">
+                <div class="area7_intro">CLIENTS SAY</div>
+                <div class="area7_introdeco">
+                    <img src="./images/index_deco1.png" alt="" srcset="" />
+                </div>
+            </div>
+            <div class="indexArea07">
+                <div class="blog_bgimg">
+                    <div class="blog_bigcontent">
+                        <div class="blog_Limg">
+                            <img src="./images/indexblog_Limg01.jpg" alt="" />
+                        </div>
+                        <div class="blog_Rarea">
+                            <div class="blog_name">Emma x Peter</div>
+                            <div class="blog_content">
+                                <div>
+                                    We deeply understand that my wedding can have a different perspective to witness
+                                    every important moment, and replace my eyes to see and share these oys,It couldn't
+                                    be more happy! And when everything was almost perfect, TEAMO fulfilled my wish of
+                                    taking wedding dresses by the sea.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">
+                    <div class="blog_more">read more</div>
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer">
+                <div class="info">
+                    <div>TEL:02-6615 0285</div>
+                    <div>FAX:02-6615-0288</div>
+                    <div>ADDRESS:No. 46, Fuxing Rd., Zhongli Dist., Taoyuan City 320, Taiwan (R.O.C.)</div>
+                    <div>COPYRIGHT ©TEAMO. ALL RIGHTSRESERVED</div>
+                </div>
+                <div class="socialmed">
+                    <a href=""><i class="fab fa-facebook-square fa-3x" style="color: #362e2bc9"></i></a>
+                    <a href=""><i class="fab fa-line fa-3x" style="color: #362e2bc9"></i></a>
+                    <a href=""><i class="fab fa-instagram-square fa-3x" style="color: #362e2bc9"></i></a>
+                    <a href=""><i class="fab fa-facebook-messenger fa-3x" style="color: #362e2bc9"></i></a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- 好評人數跑馬燈開始 -->
+        <script>
+            // ------------左邊--------------
+            var recom01 = { score: 0 },
+                recom01_num = document.getElementById('recom01_num');
+
+            //創建一個介於3秒內改變數字
+            var tween = TweenLite.to(recom01, 3, {
+                score: 1000,
+                onUpdate: showScore01,
+            });
+
+            function showScore01() {
+                recom01_num.innerHTML = parseInt(recom01.score.toFixed(2));
+            }
+
+            // ------------中間--------------
+            var recom02 = { score: 0 },
+                recom02_num = document.getElementById('recom02_num');
+
+            //創建一個介於3秒內改變數字
+            var tween = TweenLite.to(recom02, 3, {
+                score: 10000,
+                onUpdate: showScore02,
+            });
+
+            //在tween update時通過這個功能輸出。
+            function showScore02() {
+                recom02_num.innerHTML = parseInt(recom02.score.toFixed(2));
+            }
+
+            // ------------右邊--------------
+            var recom03 = { score: 0 },
+                recom03_num = document.getElementById('recom03_num');
+
+            //創建一個介於3秒內改變數字
+            var tween = TweenLite.to(recom03, 3, {
+                score: 5000,
+                onUpdate: showScore03,
+            });
+
+            //在tween update時通過這個功能輸出。
+            function showScore03() {
+                recom03_num.innerHTML = parseInt(recom03.score.toFixed(2));
+            }
+        </script>
+        <!-- 好評人數跑馬燈結束 -->
+        <script>
+            AOS.init();
+        </script>
+        <script>
+            $(function () {
+                // 按鈕狀態的切換
+                $('button.hamburger_icon').on('click', function () {
+                    $(this).toggleClass('-on');
+                });
+
+                // 點擊按鈕，選單縮放
+                $('button.hamburger_icon').on('click', function () {
+                    $('.nav_content').slideToggle();
+                });
+
+                $('#work_MK').on('click', function () {
+                    $('.work_list').css('display', 'none');
+                    $('#list_MK').css('display', 'flex');
+                });
+                $('#work_LW').on('click', function () {
+                    $('.work_list').css('display', 'none');
+                    $('#list_LW').css('display', 'flex');
+                });
+                $('#work_VW').on('click', function () {
+                    $('.work_list').css('display', 'none');
+                    $('#list_VW').css('display', 'flex');
+                });
+
+                AOS.init();
+            });
+
+            $(document).ready(function () {
+                $('.work_name').click(function () {
+                    $('.work_name').removeClass('work-on');
+                    $(this).addClass('work-on');
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -8,6 +8,43 @@
 </style>
 </head>
 <body>
+
+<script>
+var x = true;
+
+
+if(x == true){
+	document.write(  "正確<br>");
+}else{
+	document.write(  "錯誤<br>");
+}	
+
+if(x ){
+	document.write(  "正確<br>");
+}else{
+	document.write(  "錯誤<br>");
+}	
+</script>
+
+<h2>============</h2>
+<script>
+var y = true;
+
+
+if(y == false){  // true == false -->false
+	document.write( "錯誤<br>" );
+}else{
+	document.write( "正確<br>"); //<-----
+}	
+
+if( ! y ){  // ! true -->false
+	document.write(  "錯誤<br>");
+}else{
+	document.write(  "正確<br>"); //<-----
+}	
+</script>
+
+
 <h2>if...1</h2>
 <script>
 var avg = 88;
@@ -96,5 +133,7 @@ if( lowType == 1 ){//-----------
 
 document.write("補助款 : ", amount, "元<br>");	
 </script>
+
+
 </body>
 </html>

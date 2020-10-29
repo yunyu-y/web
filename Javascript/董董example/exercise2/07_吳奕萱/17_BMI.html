@@ -1,0 +1,87 @@
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <title>BMI</title>
+    <style>
+      label{
+        display: inline-flex;
+        margin: 5px 0;
+      }
+      label.bmi, .type{
+        margin-left: 20px;
+      }
+      input{
+        width: 70px;
+        margin-right: 3px;
+      }
+      button{
+        margin: 0 5px;
+        
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>BMI值計算公式</h2>
+    <!-- <p>BMI=體重(kg)/身高^2(m)</p> -->
+
+    <form>
+      <label>
+        身高：
+        <input type="text" value="" id="height">
+        公尺
+      </label>
+      <label class="bmi">
+        / BMI：
+        <input type="text" value="" id="calc_bmi">
+      </label>
+      <br>
+      <label>
+        體重：
+        <input type="text" value="" id="weight">
+        公斤
+      </label>
+      <label class="type">
+        / 分級：
+        <input type="text" value="" id="grade">
+      </label>
+      <br><br>
+      <button type="button" name="calc" id="calc">送出計算</button>
+      <button type="button" name="reset" id="reset">清除重算</button>
+    </form>
+
+    <script>
+      //新增button的事件處理器，賦予其執行事件的能力  //物件.addEventListener("要執行的事件", 事件執行時要觸發的函式);
+      //一樣要先將元素轉為物件
+      var calc = document.getElementById("calc");
+      calc.addEventListener("click", getBMI, false);
+
+      //定義一個函式，給名稱/參數/以及所需公式
+      function getBMI(height, weight){
+        //在寫公式前，先把html元素抓進來(宣告+轉為物件)，並將其轉為值的型式
+        var height = document.getElementById("height").value;
+        var weight = document.getElementById("weight").value;
+        var bmi = weight / (height ** 2); // x ** y為 x的y平方
+        // console.log(bmi);
+        
+        document.getElementById("calc_bmi").value = bmi.toFixed(0);
+
+        if(bmi >= 35){
+          document.getElementById("grade").value = "重度肥胖";
+        }else if(bmi >= 30){
+          document.getElementById("grade").value = "中度肥胖"
+        }else if(bmi >= 27){
+          document.getElementById("grade").value = "輕度肥胖"
+        }else if(bmi >= 24){
+          document.getElementById("grade").value = "體重過重"
+        }else if(bmi >= 18.5){
+          document.getElementById("grade").value = "正常範圍"
+        }else if(bmi < 18.5){
+          document.getElementById("grade").value = "體重過輕"
+        }
+      }
+      
+
+    </script>
+  </body>
+</html>

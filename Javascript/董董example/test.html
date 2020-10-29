@@ -5,28 +5,40 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title>Examples</title>
 
-
-
 </head>
 <body>
-<form ">	
-身　高: <input type="text" id="height">  cm　  <br>
+<input type="text" class="name"><br>
 
-體　重: <input type="text" id="weight">  kg..  <br>
- 
-<input type="reset" value="清除">
-<input type="button" value="計算BMI">
-</form>
 <script>
-var num = Math.random();
+// var datas = [
+// {Title:"aa", price:100, aRating:1},
+// {Title:"bb", price:200, aRating:2},
+// {Title:"cc", price:300, aRating:3},
+// {Title:"dd", price:400, aRating:4}
+// ];
+
+// var datas_2 = datas.map(function(data){
+// 	return {title:data.Title,rating:data.aRating};
+// })
+// console.log(datas_2);
+
+// var emp = {empno : "7389",
+//            ename : "King",
+//            salary: 88888};
+// ({empno, ename} = emp);
+// console.log(empno)           
 
 
-function rand(min, max){
-	//......
+// function(){
 
+// }
+
+var arr = [11, 22];
+for(let i=0; i<arr.length;i++){
+	document.write( arr[i], "<br>");
 }
-
-num = rand(60, 100)
+document.write(  "<hr>");
+arr.forEach((data)=>{document.write( data, "<br>");})
 </script>  
 
 </body>

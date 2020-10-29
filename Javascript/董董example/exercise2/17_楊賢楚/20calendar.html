@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .month {
+            text-align: center;
+            font-weight: 700;
+            color: firebrick;
+            font-size: 25px;
+        }
+
+        table {
+            text-align: center;
+        }
+
+        td {
+            width: 30px;
+            padding: 10px 5px;
+        }
+
+        .today {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var date = new Date;
+        // 計算是否為閏年 二月有幾天
+        var feb;
+        if (date.getFullYear() % 400 == 0) {
+            feb = 29;
+        }
+        else if (date.getFullYear() % 100 == 0) {
+            feb = 28;
+        }
+        else if (date.getFullYear() % 4 == 0) {
+            feb = 29;
+        }
+        else if (date.getFullYear() % 4 != 0) {
+            feb = 28;
+        }
+
+        //將月份天數陣列化
+        var allMonth = [31, feb, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        var month = ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"]
+        //本月有幾天
+        var days = allMonth[date.getMonth()];
+        //今天星期幾
+        var week = date.getDay();
+        //現在幾月
+        month = month[date.getMonth()];
+        //本月第一天
+        var firstday = new Date(date.getFullYear(), date.getMonth(), 1);
+        //計算出要印出的column數
+        var str_nums = Math.ceil(days / 7);
+        //印出表頭
+        document.write("<table cellspacing='0' ><tr><td colspan='7' class='month' >", month, "</td></tr><tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr>");
+        //印出column
+        console.log(firstday.getDay())
+        for (i = 0; i < str_nums; i++) {
+            document.write('<tr>');
+            //印出row
+            let firstday_week = firstday.getDay()
+            for (k = 0; k < 7; k++) {
+                var day = 7 * i + k - firstday_week + 1;
+                let today = date.getDate();
+                if (day < 1 || day > allMonth[date.getMonth()]) {
+                    document.write('<td>', "  ", '</td>')
+                }
+                else if (day == today) {
+                    document.write('<td class="today">', day, '</td>')
+                }
+                else {
+                    document.write('<td>', day, '</td>')
+                }
+            }
+            document.write('</tr>');
+        }
+        document.write('</table>');
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .itemPanel{
+            position:relative;
+            width: 1245px;
+            height:330px;
+            margin: auto;
+            background-color: #bfbfef;
+            overflow:hidden;
+        }
+        .wrap{
+            position:absolute;
+            margin-left:5px;
+            top:5px;
+            left:5px;
+            width:3000px;
+            transition:left 1s;
+        }
+        .item{
+            margin: 5px;
+            width:300px;
+            height:310px;
+            background-color: yellow;
+            text-align: center;
+            float:left;
+        }
+        .item>img{
+            width: 100%;
+        }
+
+        #btnLeft, #btnRight{
+            color:deeppink;
+            font-size:30px;
+            font-weight:bold;
+        }
+
+        #btnLeft[disabled], #btnRight[disabled]{
+            color:pink;
+            font-size:30px;
+            font-weight:bold;
+        }        
+    </style>
+    <title>Document</title>
+</head>
+<body>
+<div class="itemPanel">    
+    <div class="wrap">
+        <div class="item">
+            <img src="big_01.jpg">
+            <p>Hello Room 000</p>
+        </div>
+        <div class="item">
+            <img src="big_02.jpg">
+            <p>Hello Room 111</p>
+        </div>
+        <div class="item">
+            <img src="big_03.jpg">
+            <p>Hello Room 222</p>
+        </div>
+        <div class="item">
+            <img src="big_01.jpg">
+            <p>Hello Room 333</p>
+        </div>
+        <div class="item">
+            <img src="big_02.jpg">
+            <p>Hello Room 444</p>
+        </div>
+        <div class="item">
+            <img src="big_03.jpg">
+            <p>Hello Room 555</p>
+        </div>        
+        <div class="item">
+            <img src="big_01.jpg">
+            <p>Hello Room 666</p>
+        </div>
+        <div class="item">
+            <img src="big_02.jpg">
+            <p>Hello Room 777</p>
+        </div>
+        <div class="item">
+            <img src="big_03.jpg">
+            <p>Hello Room 888</p>
+        </div>
+    </div>
+</div>
+<div id="leftRightPanel" style="text-align:center;padding-top:10px;">
+    <input type="button" id="btnLeft" value="<<"  disabled>
+    <input type="button" id="btnRight" value=">>" >
+</div>
+<script type="text/javascript">
+function $id(id){
+    return document.getElementById(id);
+}
+
+let curIndex = 0;
+let itemsWrapper;
+
+window.addEventListener("load", function(){
+    //--------------------取得包著items的那一個元素
+    itemsWrapper = document.querySelector(".wrap");
+    //--------------------註冊btnRight.onclick
+    $id("btnRight").onclick = function(){
+        curIndex++;
+        itemsWrapper.style.left = -310 * curIndex + "px";
+        $id("btnLeft").disabled = false;
+        if(curIndex == 5){
+            $id("btnRight").disabled = true;
+        }
+    }
+    //--------------------註冊btnLeft.onclick
+    $id("btnLeft").onclick = function (){
+        curIndex--;
+        itemsWrapper.style.left = -310 * curIndex + "px";
+        $id("btnRight").disabled = false;
+        if(curIndex == 0){
+            $id("btnLeft").disabled = true;
+        }
+    }
+})
+</script>    
+</body>
+</html>

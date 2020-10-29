@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <span>身分證檢查:</span>
+            <input type="text" />
+            <button>檢查</button>
+        </div>
+
+        <script>
+            var input;
+            // charCodeAt是內碼
+            function isIdNo() {
+                var letter = input.value.charCodeAt(0);
+                // 判斷是不是10碼
+                if (input.value.length != 10) {
+                    return false;
+                }
+                // 判斷是不是 A~Z
+                if (letter < 65 || letter > 90) {
+                    return false;
+                }
+                // 判斷是不是男或女
+                if (input.value.charAt(1) != 1 && input.value.charAt(1) != 2) {
+                    return false;
+                }
+
+                switch (letter) {
+                    // I 等等
+                    case 73:
+                        letter = 34;
+                        break;
+                    case 79:
+                        letter = 35;
+                        break;
+                    case 87:
+                        letter = 32;
+                        break;
+                    case 90:
+                        letter = 33;
+                        break;
+
+                    default:
+                        // A~H
+                        if (letter <= 72) {
+                            letter -= 55;
+                            // letter = letter-55
+                        } else if (letter <= 78) {
+                            letter -= 56;
+                        } else if (letter <= 86) {
+                            letter -= 57;
+                        } else {
+                            letter -= 58;
+                        }
+                        break;
+                }
+
+                var letter_num = (letter % 10) * 9 + Math.floor(letter / 10);
+                var no_num = 0;
+                var j = 8;
+
+                for (let i = 1; i <= 8; i++) {
+                    no_num = no_num + input.value.charAt(i) * j;
+                    j--;
+                }
+                var check_num = 10 - ((letter_num + no_num) % 10);
+                if (check_num == 10) {
+                    check_num = 0;
+                }
+                console.log(check_num);
+
+                if (input.value.charAt(9) != check_num) {
+                    return false;
+                }
+                return true;
+            }
+
+            function check() {
+                if (isIdNo() == false) {
+                    window.alert("錯錯錯");
+                } else {
+                    window.alert("可可可");
+                }
+            }
+
+            // 初始動作 [0]是取陣列第一個值
+            function init() {
+                input = document.getElementsByTagName("input")[0];
+                document.getElementsByTagName("button")[0].onclick = isIdNo;
+                document.getElementsByTagName("button")[0].onclick = check;
+            }
+            window.onload = init;
+        </script>
+    </body>
+</html>

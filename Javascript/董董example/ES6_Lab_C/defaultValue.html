@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>defaultValue</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+//從前...
+function sayHello(name, word){
+	if(name === undefined){
+		name = "Somebody";
+	}
+
+	if(word === undefined){
+		word = "Hello~";
+	}
+
+	// name = name || "Somebody";
+	// word = word || "Hello";
+	document.write( name , "說 : ", word, "<br>" );
+}
+sayHello("", "");
+sayHello("政育", "Hi~~~");
+
+</script>
+
+<h2>參數給預設值(ES6)</h2>
+<script>
+function showMsg(msg="大家好~"){
+	document.write( msg,  "<br>");
+}	
+
+showMsg("倫瑋, 好久不見~");
+showMsg();
+</script>
+</body>
+</html>

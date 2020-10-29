@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>身分證驗證</title>
+</head>
+<body>
+    <div>身分證檢查:
+        <input type="text" id="input_ID">
+        <input type="submit" id="check" value="檢查">
+    </div>
+    
+    <script>
+        function isIdNo(){
+         
+          //檢查長度
+          var idCheck = input_ID.value.charCodeAt(0);
+          if (input_ID.value.length != 10){
+            console.log("長度")
+            return false;
+
+          //檢查第一碼 a..z,A..Z
+          }else if(idCheck < 65 || idCheck > 90){
+            console.log("第一")
+            return false;
+          }
+        
+        // //檢查第二碼 1,2
+          else if(input_ID.value.charAt(1) != 1 && input_ID.value.charAt(1) != 2){
+            console.log("第二")
+            return false;
+          }
+                   
+        //   //算出檢查碼
+        switch(idCheck){
+          case 73:
+            idCheck = 34;
+            break;
+          case 79:
+            idCheck = 35;
+            break;
+          case 87:
+            idCheck = 32;
+            break;
+          case 90:
+            idCheck = 33;
+            break;
+          default:
+            if (idCheck <= 72) {
+              idCheck = idCheck - 55;
+            }else if (idCheck <= 78) {
+              idCheck = idCheck - 56;
+            }else if (idCheck <= 86) {
+              idCheck = idCheck - 57;
+            }else{
+            idCheck = idCheck - 58;
+          }
+          break;
+        }
+
+        var idCheck_num = (idCheck % 10) * 9 + parseInt(idCheck / 10);
+        var idCheck_total = 0 ;
+        var j = 8;
+        for (let i = 1; i<= 8; i++){
+          idCheck_total = idCheck_total + input_ID.value.charAt(i) * j;
+          j--;
+        }
+
+        var check_num = 10 - ((idCheck_num + idCheck_total) % 10);
+        if (check_num == 10){
+          check_num = 0;
+        }
+        //   //比對	算出 的檢查碼是否和輸入的檢查碼一樣
+        //   if(...){
+        //       return true;
+        if(input_ID.value.charAt(9) == check_num){
+          console.log("五對")
+          window.alert("OK");
+          return true;
+        }else{
+          console.log("錯")
+          window.alert("Error!!");
+          return false;
+        }
+              
+        }
+        // var reu = isIdNo()
+        
+        // if( reu == "true" ){
+        //  console.log("對對對對")
+        // }else{			  
+        //   console.log("錯錯錯錯")
+        //  }
+
+        function init(){
+            let input_ID=document.getElementById("input_ID");
+            document.getElementById("check").onclick=isIdNo;
+        }
+
+        window.addEventListener("load",init,false);
+    </script>
+</body>
+</html>
