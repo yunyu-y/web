@@ -42,7 +42,7 @@ div.footer {
         justify-content: space-around;
     }
     .info {
-        font-size: 14px;
+        font-size: 0.8rem;
         line-height: 1rem;
     }
 }
