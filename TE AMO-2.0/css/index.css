@@ -18,11 +18,8 @@ div.bannerbg {
 .area1 {
     width: 100%;
     background-color: #c0a290;
-
-    /* border: 1px solid red; */
 }
 .slogan {
-    /* border: 1px solid blue; */
     width: 100%;
     height: 250px;
     display: flex;
@@ -286,7 +283,7 @@ div.bannerbg {
     /* border: 1px solid green; */
     background-color: #e9e6ee5e;
     width: 80%;
-    margin: 0 auto 2rem auto;
+    margin: 0 auto;
     padding: 2rem 0;
 }
 .work_list {
@@ -438,7 +435,9 @@ div.bannerbg {
     }
 }
 .area4 {
-    margin-top: 5rem;
+    background-image: url(../images/bgtree.jpg);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 .area4_intro {
     font-size: 2.5rem;
@@ -545,7 +544,6 @@ div.bannerbg {
 
 .area5 {
     width: 100%;
-    margin-top: 4rem;
     background-image: url(../images/reservation_bg.png);
     background-size: cover;
     background-attachment: fixed;

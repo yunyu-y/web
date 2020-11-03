@@ -1,6 +1,6 @@
-@import "./common/all.css";
-@import "./common/header.css";
-@import "./common/footer.css";
+@import './common/all.css';
+@import './common/header.css';
+@import './common/footer.css';
 body {
     background-color: #e2d9ce;
 }
@@ -51,7 +51,7 @@ body {
 }
 .blogContentL_imgCB1 {
     /* border: 1px solid black; */
-    font-family: "Book Antiqua";
+    font-family: 'Book Antiqua';
     font-style: italic;
     font-size: 50px;
     text-shadow: 0 0 5px white;
@@ -62,7 +62,7 @@ body {
 }
 .blogContentL_imgC01 {
     /* border: 1px solid orange; */
-    font-family: "Book Antiqua";
+    font-family: 'Book Antiqua';
     font-style: italic;
     font-size: 25px;
     margin-top: 16.3rem;
@@ -97,7 +97,7 @@ body {
     z-index: 1;
 }
 .blogContentL_imgCB3 {
-    font-family: "Book Antiqua";
+    font-family: 'Book Antiqua';
     font-style: italic;
     font-size: 50px;
     text-shadow: 0 0 5px white;
@@ -108,7 +108,7 @@ body {
     z-index: 2;
 }
 .blogContentL_imgC03 {
-    font-family: "Book Antiqua";
+    font-family: 'Book Antiqua';
     font-style: italic;
     font-size: 25px;
     margin-top: 16.3rem;
@@ -141,7 +141,7 @@ body {
 }
 .blogContentL_imgCB5 {
     /* border: 1px solid black; */
-    font-family: "Book Antiqua";
+    font-family: 'Book Antiqua';
     font-style: italic;
     font-size: 50px;
     text-shadow: 0 0 5px gray;
@@ -152,7 +152,7 @@ body {
 }
 .blogContentL_imgC05 {
     /* border: 1px solid orange; */
-    font-family: "Book Antiqua";
+    font-family: 'Book Antiqua';
     font-style: italic;
     font-size: 25px;
     margin: 10rem -4rem 0 0;
@@ -192,7 +192,7 @@ body {
 }
 .blogContentR_imgCB2 {
     /* border: 1px solid black; */
-    font-family: "Book Antiqua";
+    font-family: 'Book Antiqua';
     font-style: italic;
     font-size: 50px;
     text-shadow: 0 0 5px white;
@@ -203,7 +203,7 @@ body {
 }
 .blogContentR_imgC02 {
     /* border: 1px solid orange; */
-    font-family: "Book Antiqua";
+    font-family: 'Book Antiqua';
     font-style: italic;
     font-size: 25px;
     margin-top: 10rem;
@@ -241,7 +241,7 @@ body {
     z-index: 1;
 }
 .blogContentR_imgCB4 {
-    font-family: "Book Antiqua";
+    font-family: 'Book Antiqua';
     font-style: italic;
     font-size: 50px;
     text-shadow: 0 0 5px white;
@@ -252,7 +252,7 @@ body {
     z-index: 2;
 }
 .blogContentR_imgC04 {
-    font-family: "Book Antiqua";
+    font-family: 'Book Antiqua';
     font-style: italic;
     font-size: 25px;
     margin-top: 16.3rem;

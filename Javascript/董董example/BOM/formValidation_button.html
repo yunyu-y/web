@@ -59,6 +59,22 @@ function checkForm(){
     memPsw.select();
     return;
   }
+  
+  //-------------------------------密碼必須有英文字和數字
+  let has123=false, hasABC=false;
+  let tempArr = memPsw.value.toUpperCase().split("");
+  for(let i=0; i<tempArr.length; i++){        //1. abcmn
+    if(tempArr[i]>="A" && tempArr[i]<="Z"){
+      hasABC = true;
+    }else if(tempArr[i]>="0" && tempArr[i]<="9"){
+      has123 = true;
+    }
+  }
+  if( has123 == false || hasABC == false){
+    alert("密碼必須有英文字和數字才行");
+    return;
+  }
+  //-------------------------------
 
   //檢查性別一定要選
   let genders = document.getElementsByName("gender");

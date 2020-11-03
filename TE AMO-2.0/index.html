@@ -26,36 +26,36 @@
             <!-- 電腦版 -->
             <div class="nav">
                 <div class="logo">
-                    <a href="#">
+                    <a href="index.html">
                         <img src="./images/logo.png" alt="" srcset="" />
                     </a>
                 </div>
                 <div class="menu">
-                    <button type="button" class="hamburger_icon">
-                        <span class="-hr -top"></span>
-                        <span class="-hr -middle"></span>
-                        <span class="-hr -bottom"></span>
-                    </button>
+                    <div id="hambuger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
                 <div class="min_nav">
                     <ul>
                         <li class="line">
-                            <a href="#">RESERVATION</a>
+                            <a href="reservation.html">RESERVATION</a>
                         </li>
                         <li class="line">
-                            <a href="#">SERVICE</a>
+                            <a href="service.html">SERVICE</a>
                         </li>
                         <li class="line">
-                            <a href="#">DESIGNERS</a>
+                            <a href="designers.html">DESIGNERS</a>
                         </li>
                         <li class="line">
-                            <a href="#">PORTFOLIO</a>
+                            <a href="portfolio.html">PORTFOLIO</a>
                         </li>
                         <li class="line">
-                            <a href="#">BLOG</a>
+                            <a href="blog.html">BLOG</a>
                         </li>
                         <li class="line">
-                            <a href="#">ABOUT</a>
+                            <a href="about.html">ABOUT</a>
                         </li>
                     </ul>
                 </div>
@@ -67,22 +67,22 @@
                 <div class="nav_list">
                     <ul>
                         <li>
-                            <a href="#">RESERVATION</a>
+                            <a href="reservation.html">RESERVATION</a>
                         </li>
                         <li>
-                            <a href="#">SERVICE</a>
+                            <a href="service.html">SERVICE</a>
                         </li>
                         <li>
-                            <a href="#">DESIGNERS</a>
+                            <a href="designers.html">DESIGNERS</a>
                         </li>
                         <li>
-                            <a href="#">PORTFOLIO</a>
+                            <a href="portfolio.html">PORTFOLIO</a>
                         </li>
                         <li>
-                            <a href="#">BLOG</a>
+                            <a href="blog.html">BLOG</a>
                         </li>
                         <li>
-                            <a href="#">ABOUT</a>
+                            <a href="about.html">ABOUT</a>
                         </li>
                     </ul>
                 </div>
@@ -160,45 +160,45 @@
                 </div>
                 <div class="work_listOut">
                     <div class="work_list" id="list_MK">
-                        <a href="#">
+                        <a href="designers_LW.html">
                             <img src="./images/index_workMT02.jpg" alt="" />
                             <div class="work_title"><h2>KRISHA</h2></div>
                         </a>
-                        <a href="#">
+                        <a href="designers_LW.html">
                             <img src="./images/index_workMT01.jpg" alt="" />
                             <div class="work_title"><h2>JEANETTE</h2></div>
                         </a>
-                        <a href="#">
+                        <a href="designers_LW.html">
                             <img src="./images/index_workMT03.jpg" alt="" />
                             <div class="work_title"><h2>BYANCHA</h2></div>
                         </a>
                     </div>
 
                     <div class="work_list work_list-on" id="list_LW">
-                        <a href="#">
+                        <a href="designers_LW.html">
                             <img src="./images/index_workLW02.jpg" alt="" />
                             <div class="work_title"><h2>DIORV</h2></div>
                         </a>
-                        <a href="#">
+                        <a href="designers_LW.html">
                             <img src="./images/index_workLW01.jpg" alt="" />
                             <div class="work_title"><h2>PRONOVIAS</h2></div>
                         </a>
-                        <a href="#">
+                        <a href="designers_LW.html">
                             <img src="./images/index_workLW03.jpg" alt="" />
                             <div class="work_title"><h2>ELIE</h2></div>
                         </a>
                     </div>
 
                     <div class="work_list" id="list_VW">
-                        <a href="#">
+                        <a href="designers_LW.html">
                             <img src="./images/index_workVW03.jpg" alt="" />
                             <div class="work_title"><h2>HERRERA</h2></div>
                         </a>
-                        <a href="#">
+                        <a href="designers_LW.html">
                             <img src="./images/index_workVW02.jpg" alt="" />
                             <div class="work_title"><h2>NARCES</h2></div>
                         </a>
-                        <a href="#">
+                        <a href="designers_LW.html">
                             <img src="./images/index_workVW01.jpg" alt="" />
                             <div class="work_title"><h2>GALIA</h2></div>
                         </a>
@@ -214,7 +214,7 @@
                 </div>
             </div>
             <div class="portfolio">
-                <a href="">
+                <a href="portfolioNext.html">
                     <div class="portfoliobg">
                         <div class="portfolio_L">
                             <div class="pf_LTop">
@@ -251,7 +251,7 @@
         <div class="area5">
             <div class="area5_Out">
                 <div class="area5_res">Are you ready <br />to take the perfect pre-wedding photo?</div>
-                <a href="#"><div class="area5_resBtn">RESERVATION</div></a>
+                <a href="reservation.html"><div class="area5_resBtn">RESERVATION</div></a>
             </div>
         </div>
         <!-- 好評人數跑馬燈 -->
@@ -307,7 +307,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#">
+                <a href="blog.html">
                     <div class="blog_more">read more</div>
                 </a>
             </div>
@@ -382,14 +382,21 @@
         </script>
         <script>
             $(function () {
-                // 按鈕狀態的切換
-                $('button.hamburger_icon').on('click', function () {
-                    $(this).toggleClass('-on');
+                window.addEventListener('scroll', function () {
+                    var header = document.querySelector('header');
+                    header.classList.toggle('sticky', window.scrollY > 600);
+                });
+
+                $(document).ready(function () {
+                    $('#hambuger-icon').click(function () {
+                        $(this).toggleClass('open');
+                    });
                 });
 
                 // 點擊按鈕，選單縮放
-                $('button.hamburger_icon').on('click', function () {
+                $('#hambuger-icon').on('click', function () {
                     $('.nav_content').slideToggle();
+                    $('header.sticky').removeClass('sticky');
                 });
 
                 $('#work_MK').on('click', function () {

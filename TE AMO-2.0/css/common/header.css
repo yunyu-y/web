@@ -7,20 +7,23 @@ header {
     left: 0;
     z-index: 100;
 }
+header.sticky {
+    background: #fff;
+}
 div.nav {
     /* border: 1px solid red; */
     border-bottom: 1px dotted rgba(0, 0, 0, 0.39);
     width: 90%;
-    margin: 10px auto 0 auto;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .logo {
     /* border: 1px solid blue; */
-    width: 90px;
-    height: 100px;
+    width: 80px;
     margin: 5px;
+    padding-top: 5px;
 }
 .menu {
     /* border: 1px solid black; */
@@ -75,61 +78,88 @@ div.nav {
     width: 100%;
     right: 0;
 }
-
 /* --------hambuger--------- */
-button.hamburger_icon {
-    border: none;
-    width: 80px;
-    height: 80px;
+#hambuger-icon {
+    width: 60px;
+    height: 45px;
     position: relative;
+    margin: 30px auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
     cursor: pointer;
-    outline: none;
-    background: none;
 }
 
-/* 每一條橫線的樣式 */
-button.hamburger_icon span.-hr {
-    height: 1px;
-    width: 80%;
-    background-color: #231815;
-    display: inline-block;
+#hambuger-icon span {
+    display: block;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    height: 5px;
+    width: 100%;
+    background: #231815;
+    border-radius: 5px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
 }
 
-/* 最上面那條線的樣式 */
-button.hamburger_icon span.-hr.-top {
-    top: 25%;
+#hambuger-icon span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
 }
 
-/* 最下面那條線的樣式 */
-button.hamburger_icon span.-hr.-bottom {
-    top: 75%;
+#hambuger-icon span:nth-child(2) {
+    top: 18px;
+    height: 4.5px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
 }
 
-/* -on 的狀態 */
-/* 上方的線 */
-button.hamburger_icon.-on span.-hr.-top {
-    transform-origin: top left;
-    top: 15px;
-    left: 6px;
-    width: 102%;
+#hambuger-icon span:nth-child(3) {
+    top: 36px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+
+#hambuger-icon.open span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
     transform: rotate(45deg);
+    top: -3px;
+    left: 8px;
 }
-/* 中間的線 */
-button.hamburger_icon.-on span.-hr.-middle {
+
+#hambuger-icon.open span:nth-child(2) {
+    width: 0%;
     opacity: 0;
 }
-/* 下方的線 */
-button.hamburger_icon.-on span.-hr.-bottom {
-    transform-origin: top left;
-    bottom: 5px;
-    left: 6px;
-    width: 102%;
+
+#hambuger-icon.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    top: auto;
+    top: 39px;
+    left: 8px;
 }
 
 .nav_mobile {
@@ -189,9 +219,6 @@ button.hamburger_icon.-on span.-hr.-bottom {
     div.menu {
         display: block;
     }
-    button.hamburger_icon {
-        display: inline-block;
-    }
 }
 
 @media (min-width: 1200px) {
@@ -199,7 +226,7 @@ button.hamburger_icon.-on span.-hr.-bottom {
         display: none !important;
     }
 }
-@media (max-width: 560px) {
+@media (max-width: 576px) {
     div.nav {
         margin: 0 auto;
     }
@@ -214,25 +241,8 @@ button.hamburger_icon.-on span.-hr.-bottom {
         width: 63px;
         height: 70px;
     }
-    button.hamburger_icon {
+    #hambuger-icon {
         width: 60px;
-        height: 60px;
-        margin-top: 20px;
-    }
-    /* 最上面那條線的樣式 */
-    /* button.hamburger_icon span.-hr.-top {
-        height: 1px;
-    } */
-
-    /* 最下面那條線的樣式 */
-    button.hamburger_icon span.-hr.-bottom {
-        height: 0.8px;
-    }
-
-    /* -on 的狀態 */
-    /* 上方的線 */
-    button.hamburger_icon.-on span.-hr.-top {
-        top: 9px;
-        left: 7px;
+        height: 37.5px;
     }
 }
