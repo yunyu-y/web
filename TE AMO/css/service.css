@@ -1,6 +1,6 @@
-@import "./common/all.css";
-@import "./common/header.css";
-@import "./common/footer.css";
+@import './common/all.css';
+@import './common/header.css';
+@import './common/footer.css';
 
 .nav_service {
     background-color: #d19c64;
@@ -70,7 +70,7 @@
     margin-left: 14px;
 }
 .serviceline ol li:not(:last-child)::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     left: calc(100% + 1px);
@@ -92,12 +92,9 @@
     flex-direction: column;
     justify-content: space-around;
 }
-/* .serviceTB_top {
-    border: 1px solid orange;
-} */
+
 .serviceTB_title {
     font-size: 32px;
-    /* text-shadow: 2px 2px 3px gray; */
 }
 .serviceTB_title_OF {
     font-size: 32px;
@@ -122,14 +119,4 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-}
-.serviceTB_belowL {
-    /* border: 1px solid brown; */
-    min-width: 446px;
-    height: 107.2px;
-}
-.serviceTB_belowR {
-    /* border: 1px solid orange; */
-    min-width: 446px;
-    height: 107.2px;
 }

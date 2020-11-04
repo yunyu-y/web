@@ -9,6 +9,12 @@ progress = document.getElementById('progress');
 barsize = parseInt(window.getComputedStyle(defaultBar).width);
 // alert(barsize);
 
+//全螢幕
+fullButton = document.getElementById('fullButton');
+fullButton.addEventListener('click',function(){
+  myMovie.webkitEnterFullScreen();  //webkitEnterFullScreen不支援所有瀏覽器
+})
+
 //再建事件聆聽功能
 playButton.addEventListener('click',playOrPause);
 defaultBar.addEventListener('click',clickedBar);
@@ -35,7 +41,12 @@ function update(){
   }
 }
 
-function clickedBar(){
+function clickedBar(e){
+  let mouseX = e.pageX - defaultBar.offsetLeft;
+  progress.style.width = `${mouseX}px`;
+
+  let newTime = mouseX / (barsize / myMovie.duration);
+    myMovie.currentTime = newTime;
 
 }
 

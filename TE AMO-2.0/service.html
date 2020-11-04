@@ -6,7 +6,7 @@
         <title>TE AMO</title>
         <!-- css -->
         <link rel="stylesheet" href="./css/reset.css" />
-        <link rel="stylesheet" href="./css/blog.css" />
+        <link rel="stylesheet" href="./css/service.css" />
         <link rel="stylesheet" href="./venders/aos/css/aos.css" />
         <!-- font -->
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
@@ -42,7 +42,7 @@
                         <li class="line">
                             <a href="reservation.html">RESERVATION</a>
                         </li>
-                        <li class="line">
+                        <li class="line service">
                             <a href="service.html">SERVICE</a>
                         </li>
                         <li class="line">
@@ -88,7 +88,96 @@
                 </div>
             </div>
         </div>
+        <!-- 導覽列結束 -->
 
+        <!-- PRE-WEDDING -->
+        <div class="serviceAll" data-aos="fade-up" data-aos-duration="2000">
+            <div class="servicearea">
+                <div class="choosebar">
+                    <ul>
+                        <li class="pre_wedding">PRE-WEDDING</li>
+                        <!-- <li class="circle"></li> -->
+                        <li class="wedding active">WEDDING</li>
+                        <!-- <li class="circle"></li> -->
+                        <li class="friends">FRIENDS</li>
+                    </ul>
+                </div>
+                <div class="servicetextbox">
+                    <div class="serviceTB_top">
+                        <div class="serviceTB_title">PRE-WEDDIND</div>
+                        <div class="serviceTB_price">NTD$ 25,000</div>
+                    </div>
+                    <div class="serviceTB_below">
+                        <div class="serviceTB_belowL">
+                            <div class="serviceTB_title service_include">INCLUDE</div>
+                            <div class="serviceTB_content">
+                                <div class="serviceTB_content1">◆ Shooting: a total of 8 hours</div>
+                                <div class="serviceTB_ps">A set of own clothing</div>
+                                <div class="serviceTB_content1">
+                                    ◆ Make-up and hair: a group (serviced by a co-stylist)
+                                </div>
+                                <div class="serviceTB_ps">
+                                    <div>-Accommodation, transportation, venues, admission tickets,</div>
+                                    <div>wedding dresses are all additional costs</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="serviceTB_belowR">
+                            <div class="serviceTB_title_OF">OFFERED</div>
+                            <div class="serviceTB_content1">
+                                <div>◆ 36 photos in total-Refined Collection</div>
+                                <div>◆ Full photo of the day</div>
+                                <div>◆ Cloud Album</div>
+                                <div>◆ USB Gift Box</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- WEDDING -->
+        <div class="serviceAll2" data-aos="fade-up" data-aos-duration="2000">
+            <div class="servicearea">
+                <div class="choosebar">
+                    <ul>
+                        <li class="pre_wedding">PRE-WEDDING</li>
+                        <li class="wedding active">WEDDING</li>
+                        <li class="friends">FRIENDS</li>
+                    </ul>
+                </div>
+                <div class="servicetextbox">
+                    <div class="serviceTB_top">
+                        <div class="serviceTB_title">WEDDIND</div>
+                        <div class="serviceTB_price">NTD$ 25,000</div>
+                    </div>
+                    <div class="serviceTB_below">
+                        <div class="serviceTB_belowL">
+                            <div class="serviceTB_title service_include">INCLUDE</div>
+                            <div class="serviceTB_content">
+                                <div class="serviceTB_content1">◆ Shooting: a total of 8 hours</div>
+                                <div class="serviceTB_ps">A set of own clothing</div>
+                                <div class="serviceTB_content1">
+                                    ◆ Make-up and hair: a group (serviced by a co-stylist)
+                                </div>
+                                <div class="serviceTB_ps">
+                                    <div>-Accommodation, transportation, venues, admission tickets,</div>
+                                    <div>wedding dresses are all additional costs</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="serviceTB_belowR">
+                            <div class="serviceTB_title_OF">OFFERED</div>
+                            <div class="serviceTB_content1">
+                                <div>◆ 36 photos in total-Refined Collection</div>
+                                <div>◆ Full photo of the day</div>
+                                <div>◆ Cloud Album</div>
+                                <div>◆ USB Gift Box</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <footer>
             <div class="footer">
                 <div class="info">
@@ -110,6 +199,12 @@
             AOS.init();
         </script>
         <script>
+            $(document).ready(function () {
+                $('.choosebar>ul>li').click(function () {
+                    $('.choosebar>ul>li').removeClass('active');
+                    $(this).addClass('active');
+                });
+            });
             $(function () {
                 window.addEventListener('scroll', function () {
                     var header = document.querySelector('header');

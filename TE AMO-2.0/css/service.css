@@ -1,0 +1,115 @@
+@import './common/all.css';
+@import './common/header.css';
+@import './common/footer.css';
+
+.min_nav > ul > li.service {
+    background: linear-gradient(360deg, rgba(255, 255, 255, 0), #e1d3b6);
+}
+.serviceAll {
+    width: 100%;
+    background-image: url(../images/service_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    /* display: none; */
+}
+.servicearea {
+    display: flex;
+    flex-direction: column;
+}
+.choosebar {
+    /* border: 1px solid red; */
+    width: 60%;
+    margin: 10rem auto 0 auto;
+    display: block;
+}
+.choosebar > ul {
+    display: flex;
+    justify-content: center;
+}
+.choosebar > ul > li {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    /* color: #00000080; */
+    background-color: #00000080;
+    /* border: 1px solid #00000080; */
+    height: 3px;
+    margin: 0;
+    width: 10em;
+    line-height: 4em;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.choosebar > ul > li.circle {
+    /* border: 1px solid red; */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #00000080;
+    position: relative;
+    margin-top: -3px;
+}
+.choosebar > ul > li.active:before {
+    content: '';
+    position: absolute;
+    top: -3.5px;
+    left: -3px;
+    width: 100%;
+    height: 3px;
+    border: 3.5px solid#e1d3b6;
+    border-radius: 1em;
+    z-index: 1;
+}
+.servicetextbox {
+    border: 1px solid green;
+    width: 80%;
+    margin: 10rem auto 0 auto;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.serviceTB_title {
+    font-size: 2rem;
+    color: #2318156e;
+}
+.serviceTB_title_OF {
+    font-size: 32px;
+    margin-top: 10rem;
+    color: #2318156e;
+}
+.serviceTB_kind {
+    font-size: 28px;
+}
+.serviceTB_price {
+    font-size: 24px;
+}
+.serviceTB_content1 {
+    font-size: 24px;
+    margin-left: 20px;
+}
+.serviceTB_ps {
+    font-size: 18px;
+    margin-left: 30px;
+}
+.serviceTB_below {
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.service_include {
+    margin-top: 10rem;
+}
+
+.serviceAll2 {
+    width: 100%;
+    background-image: url(../images/service_bg2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}

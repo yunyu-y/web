@@ -658,8 +658,8 @@ section.area6 {
 #recom01_num::after {
     /* border: 1px solid blue; */
     content: '+';
-    position: absolute;
-    left: 80px;
+    /*position: absolute;
+    left: 80px; */
 }
 #recom02 {
     position: relative;
@@ -670,8 +670,8 @@ section.area6 {
 
 #recom02_num::after {
     content: '+';
-    position: absolute;
-    left: 100px;
+    /* position: absolute;
+    left: 100px; */
 }
 
 #recom03 {
@@ -683,8 +683,8 @@ section.area6 {
 
 #recom03_num::after {
     content: '+';
-    position: absolute;
-    left: 100px;
+    /* position: absolute;
+    left: 100px; */
 }
 
 section.area7 {

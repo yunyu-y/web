@@ -259,19 +259,19 @@
             <div class="area6_out">
                 <div class="recommend">
                     <div id="recom01">
-                        <div id="recom01_num"></div>
+                        <div id="recom01_num">0</div>
                     </div>
                     Various wedding and wedding photography experiences
                 </div>
                 <div class="recommend recommend_mid">
                     <div id="recom02">
-                        <div id="recom02_num"></div>
+                        <div id="recom02_num">0</div>
                     </div>
                     Couples' favorite photography brands and recommend
                 </div>
                 <div class="recommend">
                     <div id="recom03">
-                        <div id="recom03_num"></div>
+                        <div id="recom03_num">0</div>
                     </div>
                     Recommended by PTT, extraordinary weddings,and bloggers
                 </div>
@@ -330,57 +330,11 @@
             </div>
         </footer>
 
-        <!-- 好評人數跑馬燈開始 -->
-        <script>
-            // ------------左邊--------------
-            var recom01 = { score: 0 },
-                recom01_num = document.getElementById('recom01_num');
-
-            //創建一個介於3秒內改變數字
-            var tween = TweenLite.to(recom01, 3, {
-                score: 1000,
-                onUpdate: showScore01,
-            });
-
-            function showScore01() {
-                recom01_num.innerHTML = parseInt(recom01.score.toFixed(2));
-            }
-
-            // ------------中間--------------
-            var recom02 = { score: 0 },
-                recom02_num = document.getElementById('recom02_num');
-
-            //創建一個介於3秒內改變數字
-            var tween = TweenLite.to(recom02, 3, {
-                score: 10000,
-                onUpdate: showScore02,
-            });
-
-            //在tween update時通過這個功能輸出。
-            function showScore02() {
-                recom02_num.innerHTML = parseInt(recom02.score.toFixed(2));
-            }
-
-            // ------------右邊--------------
-            var recom03 = { score: 0 },
-                recom03_num = document.getElementById('recom03_num');
-
-            //創建一個介於3秒內改變數字
-            var tween = TweenLite.to(recom03, 3, {
-                score: 5000,
-                onUpdate: showScore03,
-            });
-
-            //在tween update時通過這個功能輸出。
-            function showScore03() {
-                recom03_num.innerHTML = parseInt(recom03.score.toFixed(2));
-            }
-        </script>
-        <!-- 好評人數跑馬燈結束 -->
         <script>
             AOS.init();
         </script>
         <script>
+            // ---------導覽列--------
             $(function () {
                 window.addEventListener('scroll', function () {
                     var header = document.querySelector('header');
@@ -422,5 +376,6 @@
                 });
             });
         </script>
+        <script src="./js/index_score.js"></script>
     </body>
 </html>
