@@ -5,23 +5,14 @@
 .min_nav > ul > li.service {
     background: linear-gradient(360deg, rgba(255, 255, 255, 0), #e1d3b6);
 }
-.serviceAll {
-    width: 100%;
-    background-image: url(../images/service_bg.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-    /* display: none; */
-}
-.servicearea {
-    display: flex;
-    flex-direction: column;
-}
 .choosebar {
     /* border: 1px solid red; */
-    width: 60%;
-    margin: 10rem auto 0 auto;
-    display: block;
+    width: 100%;
+    margin: 0 auto;
+    top: 10rem;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
 }
 .choosebar > ul {
     display: flex;
@@ -31,26 +22,19 @@
     text-align: center;
     display: inline-block;
     position: relative;
-    /* color: #00000080; */
-    background-color: #00000080;
+    color: #00000080;
+    background-color: #e1d3b6;
+    /* background-color: #00000080; */
     /* border: 1px solid #00000080; */
     height: 3px;
-    margin: 0;
     width: 10em;
     line-height: 4em;
     cursor: pointer;
     transition: all 0.5s ease;
+    font-size: 1rem;
+    text-shadow: 3px 3px 5px white;
 }
 
-.choosebar > ul > li.circle {
-    /* border: 1px solid red; */
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #00000080;
-    position: relative;
-    margin-top: -3px;
-}
 .choosebar > ul > li.active:before {
     content: '';
     position: absolute;
@@ -58,14 +42,32 @@
     left: -3px;
     width: 100%;
     height: 3px;
-    border: 3.5px solid#e1d3b6;
+    border: 3.5px solid#90604c;
     border-radius: 1em;
     z-index: 1;
 }
+.choosebar > ul > li.active {
+    color: #90604c;
+    /* font-size: 1.2rem; */
+    /* text-shadow: 2px 2px #00000080; */
+}
+.serviceAll {
+    width: 100%;
+    background-image: url(../images/service_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 105vh;
+    display: none;
+}
+.servicearea {
+    display: flex;
+    flex-direction: column;
+}
+
 .servicetextbox {
-    border: 1px solid green;
-    width: 80%;
-    margin: 10rem auto 0 auto;
+    /* border: 1px solid green; */
+    width: 90%;
+    margin: 16rem auto 0 auto;
     vertical-align: middle;
     display: flex;
     flex-direction: column;
@@ -86,17 +88,20 @@
 }
 .serviceTB_price {
     font-size: 24px;
+    margin: 1.5rem auto 0 auto;
 }
 .serviceTB_content1 {
     font-size: 24px;
     margin-left: 20px;
+    line-height: 30px;
 }
 .serviceTB_ps {
     font-size: 18px;
     margin-left: 30px;
+    line-height: 20px;
 }
 .serviceTB_below {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -111,5 +116,84 @@
     background-image: url(../images/service_bg2.png);
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
+    height: 105vh;
+}
+.serviceAll3 {
+    width: 100%;
+    background-image: url(../images/service_bg3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 105vh;
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .serviceAll {
+        height: 110vh;
+    }
+    .serviceAll2 {
+        height: 110vh;
+    }
+
+    .serviceAll3 {
+        height: 110vh;
+    }
+    .serviceTB_below {
+        flex-direction: column;
+    }
+    .service_include {
+        margin-top: 3rem;
+    }
+    .serviceTB_belowR {
+        margin-top: -8rem;
+    }
+}
+@media (max-width: 768px) {
+    .choosebar > ul > li {
+        height: 3px;
+        width: 8em;
+        line-height: 4em;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        font-size: 1rem;
+        text-shadow: 3px 3px 5px white;
+    }
+    .serviceAll {
+        height: 105vh;
+    }
+    .serviceAll2 {
+        height: 105vh;
+    }
+
+    .serviceAll3 {
+        height: 105vh;
+    }
+    .serviceTB_title,
+    .serviceTB_title_OF {
+        font-size: 1.5rem;
+    }
+    .serviceTB_price,
+    .serviceTB_content1 {
+        font-size: 1.2rem;
+    }
+    .serviceTB_ps {
+        font-size: 14px;
+    }
+}
+@media (max-width: 576px) {
+    .choosebar > ul > li {
+        height: 3px;
+        width: 7.5em;
+        line-height: 3em;
+    }
+    .serviceAll {
+        height: 116vh;
+    }
+    .serviceAll2 {
+        height: 116vh;
+    }
+
+    .serviceAll3 {
+        height: 116vh;
+    }
 }

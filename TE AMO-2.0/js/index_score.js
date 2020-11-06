@@ -25,7 +25,7 @@ var recom01 = { score: 0 },
 //創建一個介於20秒內改變分數的屬性值從0到100。
 
 function enter() {
-    var tween = TweenLite.to(recom01, 2.5, {
+    var tween = TweenLite.to(recom01, 2, {
         score: 1000,
         onUpdate: showScore,
     });
@@ -44,7 +44,7 @@ var recom02 = { score: 0 },
 //創建一個介於20秒內改變分數的屬性值從0到100。
 
 function enter2() {
-  var tween2 = TweenLite.to(recom02, 2.5, {
+  var tween2 = TweenLite.to(recom02, 2, {
       score: 10000,
       onUpdate: showScore2,
   });
@@ -63,7 +63,7 @@ var recom03 = { score: 0 },
 //創建一個介於20秒內改變分數的屬性值從0到100。
 
 function enter3() {
-  var tween3 = TweenLite.to(recom03, 2.5, {
+  var tween3 = TweenLite.to(recom03, 2, {
       score: 5000,
       onUpdate: showScore3,
   });

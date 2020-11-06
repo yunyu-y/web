@@ -89,19 +89,18 @@
             </div>
         </div>
         <!-- 導覽列結束 -->
-
+        <div class="choosebar">
+            <ul>
+                <li class="pre_wedding">PRE-WEDDING</li>
+                <!-- <li class="circle"></li> -->
+                <li class="wedding active">WEDDING</li>
+                <!-- <li class="circle"></li> -->
+                <li class="friends">FRIENDS</li>
+            </ul>
+        </div>
         <!-- PRE-WEDDING -->
         <div class="serviceAll" data-aos="fade-up" data-aos-duration="2000">
             <div class="servicearea">
-                <div class="choosebar">
-                    <ul>
-                        <li class="pre_wedding">PRE-WEDDING</li>
-                        <!-- <li class="circle"></li> -->
-                        <li class="wedding active">WEDDING</li>
-                        <!-- <li class="circle"></li> -->
-                        <li class="friends">FRIENDS</li>
-                    </ul>
-                </div>
                 <div class="servicetextbox">
                     <div class="serviceTB_top">
                         <div class="serviceTB_title">PRE-WEDDIND</div>
@@ -138,13 +137,6 @@
         <!-- WEDDING -->
         <div class="serviceAll2" data-aos="fade-up" data-aos-duration="2000">
             <div class="servicearea">
-                <div class="choosebar">
-                    <ul>
-                        <li class="pre_wedding">PRE-WEDDING</li>
-                        <li class="wedding active">WEDDING</li>
-                        <li class="friends">FRIENDS</li>
-                    </ul>
-                </div>
                 <div class="servicetextbox">
                     <div class="serviceTB_top">
                         <div class="serviceTB_title">WEDDIND</div>
@@ -178,6 +170,43 @@
                 </div>
             </div>
         </div>
+        <!-- FRIENDS -->
+        <div class="serviceAll3" data-aos="fade-up" data-aos-duration="2000">
+            <div class="servicearea">
+                <div class="servicetextbox">
+                    <div class="serviceTB_top">
+                        <div class="serviceTB_title">FRIENDS</div>
+                        <div class="serviceTB_price">NTD$ 25,000</div>
+                    </div>
+                    <div class="serviceTB_below">
+                        <div class="serviceTB_belowL">
+                            <div class="serviceTB_title service_include">INCLUDE</div>
+                            <div class="serviceTB_content">
+                                <div class="serviceTB_content1">◆ Shooting: a total of 8 hours</div>
+                                <div class="serviceTB_ps">A set of own clothing</div>
+                                <div class="serviceTB_content1">
+                                    ◆ Make-up and hair: a group (serviced by a co-stylist)
+                                </div>
+                                <div class="serviceTB_ps">
+                                    <div>-Accommodation, transportation, venues, admission tickets,</div>
+                                    <div>wedding dresses are all additional costs</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="serviceTB_belowR">
+                            <div class="serviceTB_title_OF">OFFERED</div>
+                            <div class="serviceTB_content1">
+                                <div>◆ 36 photos in total-Refined Collection</div>
+                                <div>◆ Full photo of the day</div>
+                                <div>◆ Cloud Album</div>
+                                <div>◆ USB Gift Box</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <footer>
             <div class="footer">
                 <div class="info">
@@ -199,12 +228,32 @@
             AOS.init();
         </script>
         <script>
+            //方案上方選單
             $(document).ready(function () {
                 $('.choosebar>ul>li').click(function () {
                     $('.choosebar>ul>li').removeClass('active');
                     $(this).addClass('active');
                 });
             });
+
+            //方案整體改變
+            $('.pre_wedding').on('click', function () {
+                $('.serviceAll2').css('display', 'none');
+                $('.serviceAll3').css('display', 'none');
+                $('.serviceAll').css('display', 'block');
+            });
+            $('.wedding').on('click', function () {
+                $('.serviceAll').css('display', 'none');
+                $('.serviceAll3').css('display', 'none');
+                $('.serviceAll2').css('display', 'block');
+            });
+            $('.friends').on('click', function () {
+                $('.serviceAll').css('display', 'none');
+                $('.serviceAll2').css('display', 'none');
+                $('.serviceAll3').css('display', 'block');
+            });
+
+            //導覽列
             $(function () {
                 window.addEventListener('scroll', function () {
                     var header = document.querySelector('header');
