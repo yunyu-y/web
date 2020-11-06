@@ -8,7 +8,7 @@ var re01 = new ScrollMagic.Scene({
     //duration : '300%' //單位是px or %  動畫執行的範圍
     reverse: false, // 動畫執行返回
 })
-    .addIndicators()
+    // .addIndicators()
     .on('enter', function () {
         //執行functtion
         enter();

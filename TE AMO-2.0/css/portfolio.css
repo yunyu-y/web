@@ -127,19 +127,19 @@ div.bannerbg {
     margin: 10px;
     display: inline-block;
     font-size: 0;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 .container .box .imgBox {
     position: relative;
 }
 .container .box .imgBox img {
     max-width: 100%;
-    /* transition: 2s; */
+    transition: 2s;
     position: relative;
 }
-/* .container .box:hover .imgBox img {
+.container .box:hover .imgBox img {
     transform: scale(1.2);
-} */
+}
 .container .box .details {
     position: absolute;
     top: 10px;

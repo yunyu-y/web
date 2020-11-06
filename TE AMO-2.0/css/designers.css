@@ -173,5 +173,14 @@ div.bannerbg {
     box-shadow: 7px 7px 8px gray;
 }
 .des_textboxTit {
+    display: flex;
     font-size: 1.5rem;
+}
+.des_work {
+    width: 77%;
+    display: flex;
+    display: none;
+}
+.des_work img {
+    width: 30%;
 }
