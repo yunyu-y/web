@@ -1,0 +1,157 @@
+@import './common/all.css';
+@import './common/header.css';
+@import './common/footer.css';
+
+div.bannerbg {
+    /* border: 1px solid black; */
+    background-image: url(../images/pf01.jpg);
+    /* height: vh;影響導覽列位置 */
+    height: 90vh;
+    width: 90%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center left;
+    margin: 0 auto;
+}
+
+.pf_area1 {
+    width: 100%;
+}
+.pf_intro {
+    /* border: 1px solid red; */
+    width: 70%;
+    height: 200px;
+    margin: -5rem auto 0 auto;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.pf_introTitle {
+    margin: 0 auto;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+.pf_introTitle > img {
+    /* border: 1px solid red; */
+    width: 5rem;
+    height: 5rem;
+}
+
+@media (max-width: 1200px) {
+    .pf_introTitle {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 992px) {
+    div.bannerbg {
+        width: 100%;
+        height: 90vh;
+    }
+    .pf_intro {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .pf_intro {
+        height: 150px;
+    }
+    .pf_introTitle {
+        font-size: 1.1rem;
+    }
+    .pf_introTitle > img {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+.pf_area2 {
+    /* border: 1px solid blue; */
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.pf_introdeco {
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+}
+.pf_introdeco img {
+    /* border: 1px solid blue; */
+    width: 35px;
+    margin: 10px auto;
+}
+
+@media (max-width: 576px) {
+    .pf_area2 {
+        margin: 0 auto;
+    }
+}
+
+/* waterfall */
+
+.pfNext_Bottom {
+    width: 90%;
+    margin: 0 auto;
+}
+.name {
+    font-size: 20px;
+    margin-top: 2px;
+    /* align-content: center; */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* force scrollbar */
+html {
+    overflow-y: scroll;
+    /* background-color: #81501c31; */
+}
+
+/* ---- grid ---- */
+
+.grid {
+    margin-bottom: 3rem;
+    /* background: #ddd; */
+    /* width: 1500px; */
+    margin: 0 auto;
+}
+
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+    width: 33.3%;
+    padding: 10px;
+}
+
+.grid-item {
+    float: left;
+}
+
+.grid-item img {
+    display: block;
+    /* max-width: 100%; */
+    transform: scale(1, 1);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+.grid-item img:hover {
+    opacity: 0.7;
+    transform: scale(0.9, 0.9);
+}
+
+/* .pic img{transform:scale(1,1);transition: all 1s ease-out;}
+.pic img:hover{transform:scale(1.2,1.2);} */

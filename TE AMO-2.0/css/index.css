@@ -5,6 +5,7 @@
 div.banner {
     /* border: 1px solid blue; */
     width: 100%;
+    position: relative;
 }
 div.bannerbg {
     /* border: 1px solid black; */
@@ -13,11 +14,95 @@ div.bannerbg {
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
 }
+/* banner_btn start*/
+@keyframes rotation {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* *,
+*::before,
+*::after {
+    box-sizing: border-box;
+} */
+
+div.res_btn {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 335px;
+    height: 50px;
+    line-height: 55px;
+    color: #231815;
+
+    display: inline-block;
+    /* padding: 10px; */
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 1;
+
+    /* 以下這個註解起來，可以看出是什麼在旋轉 */
+    overflow: hidden;
+}
+
+/* 這個區塊做出四個背景色 */
+div.res_btn::before {
+    content: '';
+    display: inline-block;
+    width: 700%;
+    height: 700%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    /* border: 1px solid blue; */
+    z-index: -2;
+
+    background-image: linear-gradient(#231815, #231815), linear-gradient(rgba(0, 0, 255, 0), rgba(0, 0, 255, 0)),
+        linear-gradient(#231815, #231815), linear-gradient(rgba(0, 0, 255, 0), rgba(0, 0, 255, 0));
+    background-size: 50% 50%;
+    background-position: 0% 0%, 100% 0%, 100% 100%, 0% 100%;
+    background-repeat: no-repeat;
+
+    /* 套上動畫效果 */
+    animation-name: rotation;
+    animation-duration: 4.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+div.res_btn::after {
+    content: '';
+    display: block;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    background-color: #e1d3b6;
+    /*border: 1px solid brown;*/
+}
+div.res_btn:hover {
+    opacity: 0.8;
+}
+/* banner_btn end*/
 .area1 {
     width: 100%;
-    background-color: #c0a290;
+    /* background-color: #c0a290; */
+    background-image: url(../images/bgmarble.jpg);
+    background-position: center right;
+    background-size: contain;
+    /* background-repeat: repeat-x; */
 }
 .slogan {
     width: 100%;
@@ -28,6 +113,7 @@ div.bannerbg {
 }
 .slogan_L {
     /* border: 1px solid green; */
+    border-right: 1px dotted black;
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -56,7 +142,18 @@ div.bannerbg {
     text-align: center;
     line-height: 2;
 }
-@media (max-width: 1070px) {
+@media (max-width: 1200px) {
+    .slogan_Ltop {
+        font-size: 1.8rem;
+    }
+    .slogan_Lmid {
+        font-size: 1.8rem;
+    }
+    .slogan_Lbottom {
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 992px) {
     .slogan {
         height: 500px;
         flex-direction: column;
@@ -64,6 +161,7 @@ div.bannerbg {
     .slogan_L {
         width: 90%;
         margin-top: -3rem;
+        border-right: none;
     }
     .slogan_R {
         display: inline-block;
@@ -93,11 +191,20 @@ div.bannerbg {
     }
 }
 .area2 {
+    /* border: 1px solid red; */
     width: 100%;
     padding-top: 3rem;
     margin-bottom: 3rem;
-    background: linear-gradient(200deg, #c0a290 50%, white 50%);
+    background-image: url(../images/bgmarble.jpg);
+    background-position: right center;
+    background-size: contain;
+    background-repeat: repeat;
 }
+.area2_bg {
+    width: 100%;
+    background: linear-gradient(200deg, rgba(255, 255, 255, 0) 50%, white 50%);
+}
+
 .area2_introbg {
     margin: 0 auto;
     position: relative;
@@ -106,7 +213,8 @@ div.bannerbg {
 .area2_intro {
     /* border: 1px solid blue; */
     font-size: 2.5rem;
-    color: #90604c;
+    /* color: #90604c; */
+    color: #90604c9a;
     text-align: center;
     text-shadow: 3px 3px 10px ivory;
     margin: 0 auto;
@@ -131,9 +239,10 @@ div.bannerbg {
     flex-wrap: wrap;
 }
 .des_img {
-    border: 5px solid white;
+    border: 5px solid rgb(255, 255, 255);
     transform: scale(1, 1);
     transition: all 1s ease-out;
+    font-size: 0;
 }
 .des_img :hover {
     opacity: 0.9;
@@ -161,9 +270,14 @@ div.bannerbg {
     padding-top: 6rem;
 }
 
-@media (max-width: 1280px) {
-    .area2 {
+@media (max-width: 1200px) {
+    /* .area2 {
         background: linear-gradient(200deg, #c0a290 35%, white 35%);
+    } */
+    .area2 {
+        background-position: center right;
+        background-size: contain;
+        background-repeat: repeat;
     }
     .designers {
         padding-top: 1.5rem;
@@ -172,10 +286,10 @@ div.bannerbg {
         padding-top: 1rem;
     }
 }
-@media (max-width: 855px) {
-    .area2 {
+@media (max-width: 992px) {
+    /* .area2 {
         background: linear-gradient(200deg, #c0a290 25%, white 25%);
-    }
+    } */
     .designers_LW {
         padding-top: 1rem;
     }
@@ -622,11 +736,11 @@ section.area6 {
 }
 .area6_out {
     width: 80%;
-    height: 200px;
     display: flex;
     justify-content: space-around;
     margin: 3rem auto 0 auto;
     background-color: #f7f2e9;
+    padding: 30px;
 }
 .recommend {
     /* border: 1px solid red; */
@@ -670,8 +784,6 @@ section.area6 {
 
 #recom02_num::after {
     content: '+';
-    /* position: absolute;
-    left: 100px; */
 }
 
 #recom03 {
@@ -683,8 +795,44 @@ section.area6 {
 
 #recom03_num::after {
     content: '+';
-    /* position: absolute;
-    left: 100px; */
+}
+
+@media (max-width: 1200px) {
+    #recom01,
+    #recom02,
+    #recom03 {
+        font-size: 1.8rem;
+    }
+}
+@media (max-width: 992px) {
+    .area6_out {
+        width: 95%;
+    }
+}
+@media (max-width: 768px) {
+    .area6_out {
+        width: 90%;
+        flex-direction: column;
+    }
+    .recommend {
+        width: 100%;
+        padding: 30px;
+    }
+    .recommend_mid {
+        border-left: none;
+        border-right: none;
+        border-top: 1px dotted gray;
+        border-bottom: 1px dotted gray;
+        height: 70%;
+        width: 100%;
+        margin: auto 0;
+    }
+    #recom01 {
+        margin-top: -1rem;
+    }
+    .recom_text {
+        font-size: 0.9rem;
+    }
 }
 
 section.area7 {
