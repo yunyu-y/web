@@ -6,6 +6,7 @@ header {
     top: 0;
     left: 0;
     z-index: 100;
+    transform: translateZ(1000);
 }
 header.sticky {
     background: rgba(255, 255, 255, 0.7);

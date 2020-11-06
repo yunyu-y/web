@@ -186,4 +186,7 @@ div.bannerbg {
     .container .box .details .content {
         font-size: 1.2rem;
     }
+    .container .box {
+        width: 100%;
+    }
 }

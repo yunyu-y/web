@@ -122,14 +122,21 @@ div.bannerbg {
 
 .des_detail {
     border: 1px solid green;
-    margin: 10px auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: center; */
+}
+.des_left {
+    /* border: 1px solid black; */
+    width: 23%;
 }
 .des_left img {
+    /* border: 1px solid black; */
     -webkit-filter: grayscale(100%); /* Safari */
     filter: grayscale(100%);
     transition: 1s;
+    display: flex;
 }
 .des_left img:hover {
     -webkit-filter: grayscale(0%); /* Safari */
@@ -139,6 +146,7 @@ div.bannerbg {
     border: 1px solid orange;
     margin: 10px auto;
     display: flex;
+    justify-content: space-around;
     position: relative;
 }
 .des_desinger02 > .des_detail02 > .des_left02 > img {
@@ -155,9 +163,15 @@ div.bannerbg {
     filter: grayscale(0%);
 }
 .des_textbox {
-    margin-top: 50px;
-    box-shadow: 6px 6px 10px gray;
+    /* border: 1px solid red; */
+    width: 50%;
+    line-height: 1.5;
+    margin-top: 100px;
+    margin-left: -30px;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 7px 7px 8px gray;
 }
-.des_textboxtit {
+.des_textboxTit {
     font-size: 1.5rem;
 }
