@@ -48,7 +48,7 @@
 }
 .choosebar > ul > li.active {
     color: #90604c;
-    font-weight: 800;
+    font-weight: 550;
 }
 .serviceAll {
     width: 100%;
@@ -157,6 +157,7 @@
         height: 3px;
         width: 7.5em;
         line-height: 3em;
+        font-size: 0.8rem;
     }
     .serviceAll2 {
         background-attachment: fixed;
