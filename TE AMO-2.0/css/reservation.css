@@ -118,7 +118,6 @@ footer {
     color: #698396;
 }
 .step01 {
-    /* border: 5px solid #d69960; */
     /* border-radius: 0px 100% 100% 0px; */
     width: 20%;
     display: flex;
@@ -126,7 +125,6 @@ footer {
     justify-content: center;
 }
 .step02 {
-    /* border: 8px solid #16515b; */
     width: 20%;
     /* border-radius: 50%; */
     display: flex;
@@ -160,7 +158,6 @@ footer {
     text-align: center;
 }
 .fa-angle-double-right {
-    /* border: 1px solid blue; */
     color: #e1d3b6;
     margin: auto 0;
 }

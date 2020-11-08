@@ -964,7 +964,8 @@ section.area7 {
     }
     .blog_Limg img {
         width: 100%;
-        min-height: 520px;
+        min-width: 415px;
+        min-height: 550px;
     }
     .blog_Rarea {
         width: 95%;

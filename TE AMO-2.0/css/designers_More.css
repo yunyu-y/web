@@ -1,0 +1,98 @@
+@import './common/all.css';
+@import './common/header.css';
+@import './common/footer.css';
+
+.bgimg {
+    width: 100%;
+    /* height: 100vh; */
+    background-image: url(../images/desmbg.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.des_intro {
+    /* border: 1px solid red; */
+    padding-top: 7rem;
+    text-align: center;
+}
+.desName {
+    /* border: 1px solid black; */
+    color: ivory;
+    text-shadow: 0px 0px 5px black;
+    font-size: 48px;
+}
+.des_intro > h4 {
+    /* border: 1px solid blue; */
+    margin: 0 auto;
+    margin-top: -0.5rem;
+    padding-left: 20rem;
+    width: 60%;
+    font-family: 'Cormorant Upright', serif;
+    color: ivory;
+    text-shadow: 0px 0px 5px black;
+}
+.work {
+    border: 1px solid red;
+    margin-top: 3rem;
+    width: 100%;
+}
+.workOut {
+    border: 1px solid blue;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.WDress {
+    width: 30%;
+}
+
+.WDress_Box {
+    width: 90%;
+    position: relative;
+    margin: 1.5rem auto;
+}
+.WDress_Box img {
+    /* font-size: 0; */
+    display: flex;
+}
+.WDress_BoxCon {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 10%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    align-items: center;
+}
+.WDress_BoxConTit {
+    padding-top: 5px;
+    color: ivory;
+    text-shadow: 0px 0px 5px black;
+}
+button {
+    border: 1px solid ivory;
+    background: rgba(0, 0, 0, 0.3);
+    height: 90%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.page {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+.page > a {
+    padding-top: 5px;
+    width: 5%;
+}
+.fa-chevron-right {
+    cursor: pointer;
+}
