@@ -767,7 +767,6 @@ section.area6 {
 #recom01_num::after {
     /* border: 1px solid blue; */
     content: '+';
-  
 }
 #recom02 {
     position: relative;
@@ -965,7 +964,7 @@ section.area7 {
     }
     .blog_Limg img {
         width: 100%;
-        height: 520px;
+        min-height: 520px;
     }
     .blog_Rarea {
         width: 95%;
