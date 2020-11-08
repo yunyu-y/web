@@ -108,7 +108,6 @@ div.bannerbg {
 /* --------Blog---------- */
 .blog_main {
     background-image: url(../images/blogbg.jpg);
-    /* background-size: cover; */
     padding-top: 5rem;
     padding-bottom: 5rem;
     width: 100%;

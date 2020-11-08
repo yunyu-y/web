@@ -1,3 +1,333 @@
 @import './common/all.css';
 @import './common/header.css';
 @import './common/footer.css';
+
+header,
+.nav_mobile,
+.des_are1,
+.res_step,
+.res_form,
+footer {
+    font-family: 'Josefin Sans', sans-serif, '微軟正黑體';
+}
+.min_nav > ul > li.reservation {
+    background: linear-gradient(360deg, rgba(255, 255, 255, 0), #e1d3b6);
+}
+.res_videoOut {
+    /* border: 1px solid blue; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/* !!!video調整寬就好,調整高會影響寬!!! */
+.res_video {
+    /* border: 1px solid red; */
+    width: 90%;
+}
+.des_are1 {
+    width: 100%;
+}
+.des_intro {
+    width: 70%;
+    height: 220px;
+    margin: -5rem auto 0 auto;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.des_introTitle {
+    margin: 0 auto;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+.des_introTitle > img {
+    width: 5rem;
+    height: 5rem;
+}
+
+.des_introContent {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+@media (max-width: 992px) {
+    .des_introTitle {
+        font-size: 1.5rem;
+    }
+
+    .des_introTitle_1 {
+        font-size: 1.5rem;
+    }
+    .des_introContent {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 768px) {
+    div.bannerbg {
+        width: 100%;
+        height: 90vh;
+    }
+    .des_intro {
+        width: 100%;
+    }
+}
+@media (max-width: 576px) {
+    .des_intro {
+        height: 150px;
+    }
+    .des_introTitle {
+        font-size: 1.1rem;
+    }
+    .des_introTitle > img {
+        width: 3rem;
+        height: 3rem;
+    }
+    .des_introTitle_1 {
+        font-size: 1.1rem;
+    }
+    .des_introContent {
+        font-size: 0.9rem;
+    }
+}
+.des_area2 {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.des_introdeco {
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+}
+.des_introdeco img {
+    width: 35px;
+    margin: 10px auto;
+}
+.res_step {
+    width: 100%;
+}
+.res_stepOut {
+    /* border: 1px solid red; */
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    color: #698396;
+}
+.step01 {
+    /* border: 5px solid #d69960; */
+    /* border-radius: 0px 100% 100% 0px; */
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.step02 {
+    /* border: 8px solid #16515b; */
+    width: 20%;
+    /* border-radius: 50%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.step03 {
+    /* border: 8px solid #5b2a26; */
+    /* border-radius: 50%; */
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.step_top {
+    font-size: 1.5rem;
+    background-color: #e1d3b6;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 50%;
+}
+.step_bottomImg {
+    display: flex;
+    justify-content: center;
+}
+
+.step_bottomText {
+    /* border: 1px solid green; */
+    margin: 1.5rem auto;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.fa-angle-double-right {
+    /* border: 1px solid blue; */
+    color: #e1d3b6;
+    margin: auto 0;
+}
+
+@media (max-width: 1200px) {
+    .res_stepOut {
+        width: 100%;
+    }
+}
+@media (max-width: 992px) {
+    .step01,
+    .step02,
+    .step03 {
+        width: 30%;
+    }
+}
+@media (max-width: 768px) {
+    .res_stepOut {
+        flex-wrap: wrap;
+    }
+    .fa-angle-double-right {
+        display: none !important;
+    }
+    .step01,
+    .step02,
+    .step03 {
+        margin: 1rem 0;
+        width: 80%;
+    }
+}
+/* -------reservation-form START------ */
+.res_form {
+    /* 有這個boder margin才有效果 */
+    border: 1px solid rgba(255, 0, 0, 0);
+    width: 100%;
+    margin: 4rem auto 0 auto;
+    background-image: url(../images/bg_photography.jpg);
+}
+.res_formOut {
+    /* border: 1px solid blue; */
+    width: 90%;
+    margin: 3rem auto;
+    display: flex;
+    box-shadow: 2px 2px 10px 0px rgba(128, 128, 128, 0.8);
+}
+.res_formL {
+    width: 35%;
+    display: flex;
+    position: relative;
+}
+.res_formL img {
+    opacity: 0.8;
+    width: 100%;
+}
+.open {
+    /* border: 1px solid red; */
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+.res_formR {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.formCon {
+    /* border: 1px solid red; */
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+.formCon_Tit {
+    /* border: 1px solid blue; */
+    width: 33.3%;
+    text-align: center;
+}
+.formCon_Box {
+    width: 66.6%;
+}
+.btn_area {
+    display: flex;
+    justify-content: space-around;
+}
+button {
+    border: 1px solid #90604c;
+    font-size: 20px;
+    padding: 5px 60px;
+    background-color: #e1d3b6;
+    color: #90604c;
+    cursor: pointer;
+    margin: 0.5rem auto;
+}
+button:hover {
+    border: 1px solid #e1d3b6;
+    background-color: #90604c;
+    color: #e1d3b6;
+}
+.notice {
+    /* border: 1px solid red; */
+    width: 90%;
+    margin: 1rem auto;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.notice_tit {
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .res_formBigOut {
+        margin: 0 auto;
+        width: 90%;
+    }
+    .res_formOut {
+        border: 1px solid red;
+        width: 100%;
+        flex-direction: column;
+    }
+    .res_formL {
+        margin: 0 auto;
+        width: 60%;
+    }
+    .res_formR {
+        border: 1px solid red;
+        margin: 0 auto;
+    }
+    .formCon {
+        margin: 0.5rem auto;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 25px;
+    }
+    p,
+    button {
+        font-size: 16px;
+    }
+}
+@media (max-width: 768px) {
+    .res_formR {
+        width: 100%;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    p,
+    button {
+        font-size: 14px;
+    }
+}
+@media (max-width: 576px) {
+    .formCon_BoxDate {
+        width: 50%;
+    }
+    button {
+        padding: 5px 30px;
+
+        margin: 0.5rem auto;
+    }
+}

@@ -33,22 +33,18 @@ div.bannerbg {
 } */
 
 div.res_btn {
-    font-size: 1.5rem;
+    font-size: 24px;
     text-align: center;
     width: 335px;
     height: 50px;
     line-height: 55px;
     color: #231815;
-
     display: inline-block;
-    /* padding: 10px; */
-    /* border: 1px solid red; */
     position: absolute;
     top: 90%;
     left: 50%;
     transform: translate(-50%, -100%);
     z-index: 1;
-
     /* 以下這個註解起來，可以看出是什麼在旋轉 */
     overflow: hidden;
 }
@@ -120,17 +116,9 @@ div.res_btn:hover {
     flex-direction: column;
     align-items: center;
 }
-.slogan_Ltop {
-    font-size: 2rem;
-}
 .slogan_Lmid {
-    font-size: 2rem;
     margin: 0.5rem auto;
 }
-.slogan_Lbottom {
-    font-size: 1.5rem;
-}
-
 .slogan_R {
     /* border: 1px solid brown; */
     width: 50%;
@@ -138,20 +126,16 @@ div.res_btn:hover {
     justify-content: space-around;
     align-items: center;
 }
-
 .slogan_Rcontent {
     text-align: center;
     line-height: 2;
 }
 @media (max-width: 1200px) {
-    .slogan_Ltop {
-        font-size: 1.8rem;
+    h3 {
+        font-size: 28px;
     }
-    .slogan_Lmid {
-        font-size: 1.8rem;
-    }
-    .slogan_Lbottom {
-        font-size: 1.3rem;
+    h4 {
+        font-size: 20px;
     }
 }
 @media (max-width: 992px) {
@@ -213,8 +197,6 @@ div.res_btn:hover {
 }
 .area2_intro {
     /* border: 1px solid blue; */
-    font-size: 2.5rem;
-    /* color: #90604c; */
     color: #90604c9a;
     text-align: center;
     text-shadow: 3px 3px 10px ivory;
@@ -253,7 +235,6 @@ div.res_btn:hover {
 .des_name {
     /* border: 1px solid red; */
     margin: 16px auto;
-    font-size: 1.5rem;
     background: linear-gradient(10deg, #e1d3b6, white 75px);
     color: #90604c;
     text-align: center;
@@ -319,7 +300,6 @@ div.res_btn:hover {
 }
 .area3_intro {
     /* border: 1px solid blue; */
-    font-size: 2.5rem;
     color: #90604c9a;
     text-align: center;
     text-shadow: 3px 3px 10px ivory;
@@ -345,7 +325,7 @@ div.res_btn:hover {
 .work_designer {
     /* border: 1px solid red; */
     width: 70%;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     align-items: center;
     margin: 0 auto;
     display: flex;
@@ -430,9 +410,8 @@ div.res_btn:hover {
     transform: translate(-50%, -50%);
     color: ivory;
 }
-.work_title > h2 {
+.work_title > h3 {
     /* border: 1px solid purple; */
-    font-size: 2rem;
     text-align: center;
     position: absolute;
     margin: 0 auto;
@@ -489,7 +468,7 @@ div.res_btn:hover {
         max-width: 560px;
     }
 
-    .work_title > h2 {
+    .work_title > h3 {
         opacity: 1;
         position: static;
         display: inline;
@@ -518,7 +497,7 @@ div.res_btn:hover {
         background-color: #90604c;
         top: 40px;
     }
-    .work_title > h2 {
+    .work_title > h3 {
         font-size: 1.5rem;
     }
 }
@@ -545,7 +524,7 @@ div.res_btn:hover {
         background-color: #90604c;
         top: 40px;
     }
-    .work_title > h2 {
+    .work_title > h3 {
         font-size: 1.5rem;
     }
 }
@@ -588,15 +567,21 @@ div.res_btn:hover {
 .pf_LTop02,
 .pf_RBottom01,
 .pf_RBottom02 {
-    /* position: relative; */
     width: 49.5%;
     margin: 0 auto;
 }
 .portfoliobg_R {
-    /* position: absolute; */
     width: 50%;
     display: flex;
     flex-direction: column;
+}
+.pf_LTop01 > img,
+.pf_LTop02 > img,
+.pf_LBottom > img,
+.pf_RTop > img,
+.pf_RBottom01 > img,
+.pf_RBottom02 > img {
+    transition: 1s;
 }
 .pf_LTop01 > img:hover,
 .pf_LTop02 > img:hover,
@@ -605,8 +590,20 @@ div.res_btn:hover {
 .pf_RBottom01 > img:hover,
 .pf_RBottom02 > img:hover {
     opacity: 0.85;
-    transform: scale(1.1, 1.1);
-    transition-duration: 1s;
+    transform: scale(1.2, 1.2);
+}
+/* .pf_LTop01,
+.pf_LTop02,
+.pf_RTop {
+    padding-bottom: 10px;
+} */
+.pf_LTop01,
+.pf_LTop02,
+.pf_LBottom,
+.pf_RTop,
+.pf_RBottom01,
+.pf_RBottom02 {
+    overflow: hidden;
 }
 .pf_more {
     /* border: 1px solid blue; */
@@ -614,7 +611,6 @@ div.res_btn:hover {
     margin: 0.5rem auto;
     text-align: center;
     padding: 14px 0 10px 0;
-    font-size: 1.5rem;
     background-color: #e1d3b6;
     color: #90604c;
 }
@@ -653,7 +649,7 @@ div.res_btn:hover {
     .pf_more {
         margin: 0 auto;
         width: 65%;
-        font-size: 1rem;
+        font-size: 16px;
     }
 }
 
@@ -673,7 +669,6 @@ div.res_btn:hover {
 
 .area5_res {
     text-align: center;
-    font-size: 3rem;
     font-family: 'Cormorant Upright', serif;
     font-style: italic;
     color: white;
@@ -683,7 +678,6 @@ div.res_btn:hover {
 .area5_resBtn {
     width: 30%;
     text-align: center;
-    font-size: 2rem;
     margin: 40px auto 2rem auto;
     padding: 15px 10px 8px 10px;
     box-shadow: 1px 1px 10px 0px gray;
@@ -701,13 +695,13 @@ div.res_btn:hover {
         width: 95%;
     }
     .area5_res {
-        font-size: 2rem;
+        /* font-size: 2rem; */
         text-shadow: 5px 5px 10px black;
         margin-top: 30px;
     }
     .area5_resBtn {
         width: 30%;
-        font-size: 1.2rem;
+        /* font-size: 1.2rem; */
         margin: 1rem auto;
         padding: 15px 10px 8px 10px;
         box-shadow: 1px 1px 10px 0px gray;
@@ -719,13 +713,13 @@ div.res_btn:hover {
         width: 100%;
     }
     .area5_res {
-        font-size: 1.5rem;
+        /* font-size: 1.5rem; */
         text-shadow: 5px 5px 10px black;
         margin-top: 30px;
     }
     .area5_resBtn {
         width: 65%;
-        font-size: 1rem;
+        /* font-size: 1rem; */
         /* margin: 0 auto; */
         padding: 10px 0px 5px 0px;
         box-shadow: 1px 1px 10px 0px gray;
@@ -750,7 +744,7 @@ section.area6 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 20px;
     line-height: 1.3rem;
 }
 
@@ -768,19 +762,18 @@ section.area6 {
     width: 80px;
     position: relative;
     margin: 16px auto;
-    font-size: 2rem;
+    font-size: 32px;
 }
 #recom01_num::after {
     /* border: 1px solid blue; */
     content: '+';
-    /*position: absolute;
-    left: 80px; */
+  
 }
 #recom02 {
     position: relative;
     width: 100px;
     margin: 16px auto;
-    font-size: 2rem;
+    font-size: 32px;
 }
 
 #recom02_num::after {
@@ -791,7 +784,7 @@ section.area6 {
     position: relative;
     width: 100px;
     margin: 16px auto;
-    font-size: 2rem;
+    font-size: 32px;
 }
 
 #recom03_num::after {
@@ -802,7 +795,7 @@ section.area6 {
     #recom01,
     #recom02,
     #recom03 {
-        font-size: 1.8rem;
+        font-size: 28px;
     }
 }
 @media (max-width: 992px) {

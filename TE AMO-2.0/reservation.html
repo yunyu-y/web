@@ -20,7 +20,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-        <!-- video -->
+        <!-- Date -->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />
+        <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css" />
     </head>
     <body>
         <header>
@@ -40,7 +44,7 @@
                 </div>
                 <div class="min_nav">
                     <ul>
-                        <li class="line">
+                        <li class="line reservation">
                             <a href="reservation.html">RESERVATION</a>
                         </li>
                         <li class="line">
@@ -90,13 +94,157 @@
             </div>
         </div>
         <!-- 導覽列結束 -->
-        <video
-            src="./videos/res_video.mp4"
-            width="100%"
-            autoplay="true"
-            poster="./images/res_poster.jpg"
-            controls
-        ></video>
+        <section class="res_videoOut">
+            <video
+                src="./videos/res_video.mp4"
+                class="res_video"
+                autoplay="true"
+                muted="true"
+                poster="./images/res_poster.jpg"
+                controls
+            ></video>
+        </section>
+
+        <section class="des_are1" data-aos="fade-up" data-aos-duration="2000">
+            <div class="des_intro">
+                <div class="des_introTitle">RESERVATION<img src="./images/blog_leaf.png" alt="" /> <br /></div>
+                <!-- <div class="des_introTitle_1">There are three dress designers</div> -->
+                <div class="des_introContent">
+                    <div>If you have any service needs, questions or appointments,</div>
+                    <div>please fill in the form below and we will contact you as soon as possible</div>
+                </div>
+            </div>
+        </section>
+        <section class="des_area2">
+            <div class="des_introdeco">
+                <img src="./images/index_deco1.png" alt="" srcset="" />
+            </div>
+        </section>
+
+        <section class="res_step">
+            <div class="res_stepOut">
+                <div class="step01" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="step_top">STEP.1</div>
+                    <div class="step_bottom">
+                        <div class="step_bottomText">Think which you like</div>
+                        <div class="step_bottomImg">
+                            <i class="far fa-question-circle fa-6x"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <i class="fas fa-angle-double-right fa-3x"></i>
+
+                <div class="step02" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="step_top">STEP.2</div>
+                    <div class="step_bottom">
+                        <div class="step_bottomText">Feel the one you like</div>
+                        <div class="step_bottomImg">
+                            <i class="far fa-heart fa-6x"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <i class="fas fa-angle-double-right fa-3x"></i>
+
+                <div class="step03" data-aos="fade-up" data-aos-duration="3000">
+                    <div class="step_top">STEP.3</div>
+                    <div class="step_bottom">
+                        <div class="step_bottomText">Fill up the form</div>
+                        <div class="step_bottomImg">
+                            <i class="fas fa-edit fa-6x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="res_form">
+            <div class="res_formBigOut">
+                <div class="res_formOut">
+                    <div class="res_formL">
+                        <img src="./images/res_formL.jpg" alt="">
+                            <div class="open">
+                                <h2>-OPEN TIME-</h2>
+                                <div class="week">
+                                    <h3>Mon - Fri</h3>
+                                <p>11:00-20:00</p>
+                            </div>
+                           <div class="week">
+                                <h3>Sat & Sun</h3>
+                                <p>10:00-22:00</p>
+                            </div>
+                        </div>                    
+                    </div>
+                    <form class="res_formR" action="">
+                        <div class="formCon">
+                            <h3 class="formCon_Tit">*Name</h3>
+                            <input type="text" class="formCon_Box"></input>
+                        </div>
+                        <div class="formCon">
+                            <h3 class="formCon_Tit">*Tel/Mobile</h3>
+                            <input type="tel" class="formCon_Box"></input>
+                        </div>
+                        <div class="formCon">
+                            <h3 class="formCon_Tit">Line ID</h3>
+                            <input type="text" class="formCon_Box"></input>
+                        </div>
+                        <div class="formCon">
+                            <h3 class="formCon_Tit">E-mail</h3>
+                            <input type="email" class="formCon_Box"></input>
+                        </div>
+                        <div class="formCon">
+                            <h3 class="formCon_Tit">Designr</h3>
+                            <select class="formCon_Box" name="" id="">
+                                <option selected disabled value="">Wedding Dress Designr</option>
+                                <option value="">LINWEI</option>
+                                <option value="">MAK TUMANG</option>
+                                <option value="">VERA WANG</option>
+                                <option value="">Not specify</option>
+                            </select>
+                        </div>
+                        <div class="formCon">
+                            <h3 class="formCon_Tit">Date</h3>
+                            <input type="text" id="datepicker" class="formCon_BoxDate" >
+                            &emsp;   
+                            <i class="far fa-calendar-alt fa-2x"></i>                       
+                        </div>
+                        <div class="formCon">
+                            <h3 class="formCon_Tit">*Subject</h3>
+                            <select class="formCon_Box" name="" id="">
+                            <option selected disabled value="">Choose Subject</option>
+                            <option value="">Wedding photographer</option>
+                            <option value="">Wedding planner</option>
+                            <option value="">Friends</option>
+                            <option value="">Family</option>
+                            <option value="">Others</option>
+                        </select>
+                        </div>
+                        <div class="formCon">
+                            <h3 class="formCon_Tit">Content</h3>
+                            <textarea class="formCon_Box" placeholder="more detail" name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="btn_area">
+                            <button type="submit" class="submit">Submit</button>
+                            <button type="reset" class="reset">Reset</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="notice">
+                    <div class="notice_tit">
+                        <h3>-NOTICE-</h3></div>
+                    <div class="notice_Content">
+                        <p><i class="fas fa-exclamation-circle"></i>
+                        Please pay attention to business hours for appointment.<br></p>
+                        <p><i class="fas fa-exclamation-circle"></i>
+                        Please remember to press "Submit".<br></p>
+                        <p><i class="fas fa-exclamation-circle"></i>
+                        We will call you to confirm after receiving your form.<br></p>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <footer>
             <div class="footer">
@@ -119,6 +267,11 @@
             AOS.init();
         </script>
         <script>
+            //日期
+            $(function () {
+                $('#datepicker').datepicker();
+            });
+            //導覽列
             $(function () {
                 window.addEventListener('scroll', function () {
                     var header = document.querySelector('header');
