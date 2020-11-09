@@ -21,23 +21,47 @@
     text-shadow: 0px 0px 5px black;
     font-size: 48px;
 }
-.des_intro > h4 {
+.des_intro > .desTit {
     /* border: 1px solid blue; */
     margin: 0 auto;
     margin-top: -0.5rem;
     padding-left: 20rem;
     width: 60%;
     font-family: 'Cormorant Upright', serif;
-    color: ivory;
+    color: rgba(255, 255, 240, 0.8);
     text-shadow: 0px 0px 5px black;
 }
+@media (max-width: 1200px) {
+    .des_intro > .desTit {
+        margin-top: 0rem;
+        padding-left: 0rem;
+        width: 60%;
+    }
+}
+@media (max-width: 768px) {
+    .des_intro > .desTit {
+        margin-top: 0rem;
+        padding-left: 0rem;
+        width: 90%;
+    }
+}
+@media (max-width: 576px) {
+    .desName {
+        font-size: 30px;
+    }
+    .des_intro > .desTit {
+        font-size: 16px;
+    }
+}
+
 .work {
-    border: 1px solid red;
+    /* 要有這個border margin 才會在 */
+    border: 1px solid rgba(255, 0, 0, 0);
     margin-top: 3rem;
     width: 100%;
 }
 .workOut {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 90%;
     margin: 0 auto;
     padding: 1rem 0;
@@ -45,6 +69,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-bottom: 3rem;
 }
 .WDress {
     width: 30%;
@@ -56,7 +81,6 @@
     margin: 1.5rem auto;
 }
 .WDress_Box img {
-    /* font-size: 0; */
     display: flex;
 }
 .WDress_BoxCon {
@@ -95,4 +119,107 @@ button {
 }
 .fa-chevron-right {
     cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .WDress {
+        width: 50%;
+    }
+    .work05,
+    .work07 {
+        margin-top: -120px;
+    }
+    .work09 {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .WDress {
+        width: 100%;
+    }
+    .work05,
+    .work07 {
+        margin-top: 0px;
+    }
+    .work09 {
+        display: block;
+    }
+    .page {
+        justify-content: space-around;
+    }
+}
+
+.desm_deco {
+    width: 100%;
+    display: flex;
+    background-image: url(../images/bgtree.jpg);
+}
+.desm_deco img {
+    /* border: 1px solid blue; */
+    width: 15%;
+    margin: 2rem auto;
+}
+
+.desm_res {
+    width: 100%;
+    background-image: url(../images/desm_bg.png);
+    background-size: cover;
+    background-position: center center;
+}
+.desm_resOut {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.desm_resText {
+    font-size: 44px;
+    text-align: center;
+    font-family: 'Cormorant Upright', serif;
+    font-style: italic;
+    color: white;
+    text-shadow: 5px 5px 10px black;
+    margin-top: 30px;
+}
+.desm_resBtn {
+    width: 40%;
+    text-align: center;
+    margin: 40px auto 2rem auto;
+    padding: 15px 10px 8px 10px;
+    border: 2px solid ivory;
+    color: ivory;
+    text-shadow: 5px 5px 10px black;
+    box-shadow: 3px 3px 10px ivory;
+}
+
+.desm_resBtn:hover {
+    color: ivory;
+    background-color: #90604c;
+}
+
+@media (max-width: 992px) {
+    .desm_resOut {
+        width: 100%;
+    }
+    .desm_resBtn {
+        width: 50%;
+    }
+}
+@media (max-width: 768px) {
+    .desm_resText {
+        font-size: 30px;
+    }
+    .desm_resBtn {
+        font-size: 24px;
+    }
+    .desm_resBtn {
+        width: 50%;
+    }
+}
+@media (max-width: 576px) {
+    .desm_resBtn {
+        width: 70%;
+    }
 }

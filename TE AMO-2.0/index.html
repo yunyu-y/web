@@ -17,7 +17,8 @@
         <!-- fontawsome -->
         <link rel="stylesheet" href="./venders/fontawesome-free-5.15.1-web/css/all.css" />
         <!-- JS -->
-        <script src="./venders/jquery/jquery-3.4.1.min.js"></script>
+        <!-- <script src="./venders/jquery/jquery-3.4.1.min.js"></script> -->
+        <script src="./js/jquery-3.5.1.js"></script>
         <script src="./venders/aos/js/aos.js"></script>
         <script src="./js/TweenLite.min.js"></script>
         <!-- scroll Magic -->
@@ -90,6 +91,11 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+        </div>
+        <div class="top">
+            <div class="gototop_img">
+                <i class="fas fa-arrow-circle-up fa-3x" style="color: #90604ce0"></i>
             </div>
         </div>
         <!-- banner -->
@@ -168,45 +174,45 @@
                 </div>
                 <div class="work_listOut">
                     <div class="work_list" id="list_MK">
-                        <a href="designers_LW.html">
+                        <a href="designers_More.html">
                             <img src="./images/index_workMT02.jpg" alt="" />
                             <div class="work_title"><h3>KRISHA</h3></div>
                         </a>
-                        <a href="designers_LW.html">
+                        <a href="designers_More.html">
                             <img src="./images/index_workMT01.jpg" alt="" />
                             <div class="work_title"><h3>JEANETTE</h3></div>
                         </a>
-                        <a href="designers_LW.html">
+                        <a href="designers_More.html">
                             <img src="./images/index_workMT03.jpg" alt="" />
                             <div class="work_title"><h3>BYANCHA</h3></div>
                         </a>
                     </div>
 
                     <div class="work_list work_list-on" id="list_LW">
-                        <a href="designers_LW.html">
+                        <a href="designers_More.html">
                             <img src="./images/index_workLW02.jpg" alt="" />
                             <div class="work_title"><h3>DIORV</h3></div>
                         </a>
-                        <a href="designers_LW.html">
+                        <a href="designers_More.html">
                             <img src="./images/index_workLW01.jpg" alt="" />
                             <div class="work_title"><h3>PRONOVIAS</h3></div>
                         </a>
-                        <a href="designers_LW.html">
+                        <a href="designers_More.html">
                             <img src="./images/index_workLW03.jpg" alt="" />
                             <div class="work_title"><h3>ELIE</h3></div>
                         </a>
                     </div>
 
                     <div class="work_list" id="list_VW">
-                        <a href="designers_LW.html">
+                        <a href="designers_More.html">
                             <img src="./images/index_workVW03.jpg" alt="" />
                             <div class="work_title"><h3>HERRERA</h3></div>
                         </a>
-                        <a href="designers_LW.html">
+                        <a href="designers_More.html">
                             <img src="./images/index_workVW02.jpg" alt="" />
                             <div class="work_title"><h3>NARCES</h3></div>
                         </a>
-                        <a href="designers_LW.html">
+                        <a href="designers_More.html">
                             <img src="./images/index_workVW01.jpg" alt="" />
                             <div class="work_title"><h3>GALIA</h3></div>
                         </a>
@@ -256,7 +262,7 @@
 
         <div class="area5">
             <div class="area5_Out">
-                <h2 class="area5_res">Are you ready <br />to take the perfect pre-wedding photo?</h2>
+                <div class="area5_res">Are you ready <br />to take the perfect pre-wedding photo?</div>
                 <a href="reservation.html"><h3 class="area5_resBtn">RESERVATION</h3></a>
             </div>
         </div>
@@ -340,6 +346,18 @@
             AOS.init();
         </script>
         <script>
+            //----------GO TO TOP--------
+            $(document).ready(function () {
+                $('.top').click(function () {
+                    //整個頁面
+                    $('html,body').animate(
+                        {
+                            scrollTop: 0,
+                        },
+                        500
+                    );
+                });
+            });
             // ---------導覽列--------
             $(function () {
                 window.addEventListener('scroll', function () {

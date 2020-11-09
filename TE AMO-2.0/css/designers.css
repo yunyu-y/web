@@ -108,6 +108,7 @@ div.bannerbg {
 }
 .des_mainOut {
     /* border: 1px solid blue; */
+    overflow: hidden;
     width: 90%;
     margin: 0 auto;
     padding: 2rem 0;
