@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vue</title>
+        <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.js"></script> -->
+        <script src="../js/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <!-- HTM DOM template -->
+            <h1>what did you get in VueJS?</h1>
+            Your score: <input v-model="score" />
+            <p v-if="score >= 70">PASS!</p>
+            <p v-else>It's hard to pass.</p>
+        </div>
+
+        <script>
+            //vue instance
+            new Vue({
+                el: '#app', //el:document.getElementById('app'),
+                data: {
+                    //變數存放的地方
+                    message: 'Hello VueJS!',
+                    score: 0,
+                    loading: true,
+                },
+            });
+        </script>
+    </body>
+</html>

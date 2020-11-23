@@ -16,7 +16,10 @@ div.bannerbg {
     background-position: center left;
     margin: 0 auto;
 }
-
+.mobile_por {
+    color: #90604c;
+    font-weight: 700;
+}
 .pf_are1 {
     width: 100%;
 }

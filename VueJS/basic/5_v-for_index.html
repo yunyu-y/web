@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vue -- 將陣列轉為元素</title>
+        <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.js"></script> -->
+        <script src="../js/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <!-- HTM DOM template -->
+            <select name="月份">
+                <option v-for="(month,index) in months" :value="index+1">{{month}}</option>
+            </select>
+            <select name="月份">
+                <option v-for="month in 12">{{month}}</option>
+            </select>
+            <select name="日">
+                <option v-for="day in 31">{{day}}</option>
+            </select>
+        </div>
+
+        <script>
+            new Vue({
+                el: '#app', //el:document.getElementById('app'),
+                data: {
+                    //變數存放的地方
+                    message: 'Hello VueJS!',
+                    colors: ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'],
+                    classmate: [
+                        { name: 'Ann', age: 17 },
+                        { name: 'Bella', age: 18 },
+                        { name: 'Carl', age: 21 },
+                        { name: 'Diane', age: 15 },
+                    ],
+                    months: [
+                        'January',
+                        'February',
+                        'March',
+                        'April',
+                        'May',
+                        'June',
+                        'July',
+                        'August',
+                        'September',
+                        'October',
+                        'November',
+                        'December',
+                    ],
+                },
+            });
+
+            let today = new Date();
+            let month = today.getMonth() + 1; //月份從0~11
+
+            let febDay;
+            if (today.getFullYear() % 4 == 0) {
+                febDay = 29;
+            } else {
+                febDay = 28;
+            }
+
+            // switch (month) {
+            //     case 1:
+            //     case 3:
+            //     case 5:
+            //     case 7:
+            //     case 8:
+            //     case 10:
+            //     case 12:
+            //         day = 31;
+            //         break;
+            //     case 4:
+            //     case 6:
+            //     case 9:
+            //     case 11:
+            //         day = 30;
+            //         break;
+            //     default:
+            //         day = febDay;
+            // }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Storage Access</title>
+        <script src="new.js"></script>
+        <style>
+            label,
+            button {
+                text-transform: capitalize;
+                font: 20px Tahoma;
+            }
+            label {
+                width: 70px;
+                float: left;
+            }
+            input {
+                font: 20px Tahoma;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            <label>key: </label>
+            <input type="text" id="key" />
+        </p>
+
+        <p>
+            <label>value: </label>
+            <input type="text" id="value" />
+        </p>
+
+        <button onclick="access(1)">Set item</button>
+        <button onclick="access(2)">get item</button>
+        <button onclick="access(3)">remove item</button>
+        <button onclick="access(4)">clrer all</button>
+    </body>
+</html>

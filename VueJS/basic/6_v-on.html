@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Vue -- 將陣列轉為元素</title>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.js"></script> -->
+        <script src="../js/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <!--HTML DOM template-->
+            <select name="月份" @change="setMonth(month)">
+                <!-- <option v-for="(month,index) in months" v-bind:value="index">{{month}}</option> -->
+                <option v-for="(month,index) in months" :value="index+1">{{month}}</option>
+            </select>
+            <select>
+                <option v-for="month in 12">{{month}}</option>
+            </select>
+            <select name="日">
+                <option v-for="day in 31">{{day}}</option>
+            </select>
+            <h3>Classmate</h3>
+            <ol>
+                <!-- <li v-for="item in classmate" v-on:click="TED101(item.name)">{{item.name}}</li> -->
+                <li v-for="item in classmate" @click="TED101(item.name)">{{item.name}}</li>
+            </ol>
+        </div>
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    //變數存放的地方
+                    message: 'Hello VueJS!',
+                    colors: ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'],
+                    classmate: [
+                        { name: 'Anan', age: 17 },
+                        { name: 'Bella', age: 18 },
+                        { name: 'Carl', age: 21 },
+                        { name: 'Diane', age: 15 },
+                    ],
+                    months: [
+                        'January',
+                        'February',
+                        'March',
+                        'April',
+                        'May',
+                        'June',
+                        'July',
+                        'August',
+                        'September',
+                        'October',
+                        'November',
+                        'December',
+                    ],
+                },
+                methods: {
+                    //函數存放的地方
+                    TED101(name) {
+                        alert(`TED101 member: ${name}`);
+                    },
+                    setMonth(theMonth) {
+                        alert(`Month: ${theMonth}`);
+                    },
+                },
+            });
+        </script>
+    </body>
+</html>

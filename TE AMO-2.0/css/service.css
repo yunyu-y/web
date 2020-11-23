@@ -5,6 +5,10 @@
 .min_nav > ul > li.service {
     background: linear-gradient(360deg, rgba(255, 255, 255, 0), #e1d3b6);
 }
+.mobile_ser {
+    color: #90604c;
+    font-weight: 700;
+}
 .choosebar {
     /* border: 1px solid red; */
     width: 100%;

@@ -6,7 +6,6 @@ header {
     top: 0;
     left: 0;
     z-index: 100;
-    transform: translateZ(1000);
 }
 header.sticky {
     background: rgba(255, 255, 255, 0.9);
@@ -67,7 +66,7 @@ div.nav {
 .line::after {
     content: '';
     display: block;
-    height: 2px;
+    height: 1.5px;
     position: absolute;
     background: #231815;
     transition-duration: 1s;
@@ -184,7 +183,11 @@ div.nav {
     height: 100%;
     background-color: #e1d3b6;
     background-image: url(../../images/desm_brade01.png);
-    background-position: left left;
+    /* background-position: left left; */
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+
     position: absolute;
     top: 50%;
     left: 50%;
@@ -213,7 +216,7 @@ div.nav {
     width: 100%;
     text-align: center;
     display: block;
-    padding: 20px;
+    padding: 30px;
     font-size: 32px;
 }
 .nav_list > ul > li :hover {
@@ -221,7 +224,7 @@ div.nav {
     color: ivory;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
     div.min_nav {
         display: none;
     }
@@ -230,7 +233,7 @@ div.nav {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
     div.nav_mobile {
         display: none !important;
     }
@@ -247,8 +250,18 @@ div.nav {
         /* border: 1px solid blue; */
         width: 50px;
     }
+    .nav_content {
+        background-position: top;
+        background-image: url(../../images/desm_brade02.png);
+        background-size: inherit;
+    }
     #hambuger-icon {
         height: 40px;
         margin: 0 auto;
+    }
+}
+@media (max-width: 320px) {
+    .nav_content {
+        padding-top: 2rem;
     }
 }

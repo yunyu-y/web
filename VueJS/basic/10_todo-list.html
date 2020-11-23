@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Vue -- To-Do list</title>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.js"></script> -->
+        <script src="../js/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+
+        <style>
+            ol li {
+                font: 18px Calibri;
+                background: #abc;
+                margin: 5px 0px;
+                padding: 5px;
+                cursor: pointer;
+            }
+            ol li:hover {
+                background: #cba;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <!--HTML DOM template-->
+            Task: <input type="text" v-model="newTask" @keyup.13="addTask" />
+            <!-- @keyup.13 等於 @keyup.enter -->
+
+            <ol>
+                <!-- 1 -->
+                <!-- <li v-for="task in tasks" @click="removeTask(task)">{{task}}</li> -->
+
+                <!-- 2 -->
+                <li v-for="(task,index) in tasks" @click="removeTask(index)">{{task}}</li>
+            </ol>
+        </div>
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    //變數存放的地方
+                    tasks: [],
+                    newTask: '',
+                },
+                methods: {
+                    //函數放這裡
+                    addTask() {
+                        if ($.inArray(this.newTask, this.tasks) == -1) {
+                            this.tasks.push(this.newTask);
+                            this.newTask = '';
+                        }
+                    },
+                    // 1
+                    // removeTask(task){
+                    // 2
+                    removeTask(index) {
+                        // console.log(this.tasks.indexOf(task));
+                        // 語法: 某陣列.splice(index,刪除的筆數);  //刪除陣列的值
+                        // 語法: 某陣列.splice(index,刪除的筆數,100,200,300);  //也可以新增
+                        // 1
+                        // this.tasks.splice(this.tasks.indexOf(task),1);
+
+                        // 2
+                        this.tasks.splice(index, 1);
+                    },
+                },
+                computed: {
+                    //也是放函數，放在這裡的函數，不能傳參數，一定要有傳回值(return)
+                },
+            });
+        </script>
+    </body>
+</html>

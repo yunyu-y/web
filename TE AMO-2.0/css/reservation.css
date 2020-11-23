@@ -2,6 +2,10 @@
 @import './common/header.css';
 @import './common/footer.css';
 
+header {
+    position: sticky;
+}
+
 header,
 .nav_mobile,
 .des_are1,
@@ -12,6 +16,10 @@ footer {
 }
 .min_nav > ul > li.reservation {
     background: linear-gradient(360deg, rgba(255, 255, 255, 0), #e1d3b6);
+}
+.mobile_res {
+    color: #90604c;
+    font-weight: 700;
 }
 .res_videoOut {
     /* border: 1px solid blue; */
@@ -90,6 +98,11 @@ footer {
     }
     .des_introContent {
         font-size: 0.9rem;
+    }
+}
+@media (max-width: 320px) {
+    .des_introTitle {
+        margin-top: 3rem;
     }
 }
 .des_area2 {
@@ -245,6 +258,7 @@ footer {
 .btn_area {
     display: flex;
     justify-content: space-around;
+    margin: 0.5rem 0;
 }
 button {
     border: 1px solid #90604c;
@@ -277,16 +291,17 @@ button:hover {
         width: 90%;
     }
     .res_formOut {
-        border: 1px solid red;
+        /* border: 1px solid red; */
         width: 100%;
         flex-direction: column;
     }
     .res_formL {
-        margin: 0 auto;
+        margin: 1rem auto;
         width: 60%;
+        box-shadow: 2px 2px 5px gray;
     }
     .res_formR {
-        border: 1px solid red;
+        /* border: 1px solid red; */
         margin: 0 auto;
     }
     .formCon {
@@ -304,18 +319,18 @@ button:hover {
     }
 }
 @media (max-width: 768px) {
+    .res_formL {
+        width: 90%;
+    }
     .res_formR {
+        /* border: 1px solid red; */
         width: 100%;
     }
-    h2 {
-        font-size: 25px;
+    .formCon_Tit {
+        width: 25%;
     }
-    h3 {
+    .formCon > h3 {
         font-size: 18px;
-    }
-    p,
-    button {
-        font-size: 14px;
     }
 }
 @media (max-width: 576px) {
@@ -324,7 +339,32 @@ button:hover {
     }
     button {
         padding: 5px 30px;
-
         margin: 0.5rem auto;
+    }
+}
+@media (max-width: 414px) {
+    .res_formL img {
+        height: 501px;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 575px) {
+    .formCon {
+        justify-content: space-around;
+    }
+    .formCon_Box {
+        width: 50%;
+    }
+    .formCon_BoxDate {
+        width: 15%;
+    }
+}
+@media (max-width: 375px) {
+    .res_formL img {
+        height: 453px;
+    }
+}
+@media (max-width: 320px) {
+    .res_formL img {
+        height: 387px;
     }
 }

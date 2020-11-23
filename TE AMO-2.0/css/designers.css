@@ -14,7 +14,10 @@ div.bannerbg {
     background-position: center;
     margin: 0 auto;
 }
-
+.mobile_des {
+    color: #90604c;
+    font-weight: 700;
+}
 .des_are1 {
     width: 100%;
 }
@@ -169,7 +172,7 @@ div.bannerbg {
 }
 .des_work > img {
     /* position: absolute; */
-    border-radius: 10%;
+    border-radius: 10px;
 }
 .des_more {
     /* border: 1px solid red; */

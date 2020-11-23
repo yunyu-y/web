@@ -1,0 +1,27 @@
+﻿
+圖檔產生器
+https://free.com.tw/fake-images-please/
+
+https://api.fnkr.net/testimg/200x150/2F4F4F/FFF/?text=Hello+World!
+https://fakeimg.pl/200x150/2F4F4F/FFF/?text=World&font=lobster
+
+https://picsum.photos/
+https://loremflickr.com/
+
+Color Picker
+https://www.seo-alien.com/tips-and-tricks/online-html-hex-rgb-and-hsl-color-picker-tools/
+
+kuler
+https://color.adobe.com/
+
+coolers
+https://coolors.co/
+
+https://easings.net
+
+AJAX loading image:
+http://www.ajaxload.info/   (比較簡單的圖檔)
+https://loading.io/
+
+Vue 紀錄片
+https://www.youtube.com/watch?v=OrxmtDw4pVI

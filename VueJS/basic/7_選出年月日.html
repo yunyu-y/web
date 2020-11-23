@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Vue -- 將陣列轉為元素</title>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.js"></script> -->
+        <script src="../js/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <!--HTML DOM template-->
+            <select name="年" v-model="selectedYear">
+                <option v-for="year in years">{{year}}</option>
+            </select>
+            <select name="月" v-model="selectedMonth">
+                <option v-for="month in 12">{{month}}</option>
+            </select>
+            <select name="日" v-model="selectedDay">
+                <option v-for="day in 31">{{day}}</option>
+            </select>
+            <h3>Today is {{selectedYear}} 年 {{selectedMonth}} 月 {{selectedDay}} 日</h3>
+        </div>
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    //變數存放的地方
+                    years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+
+                    selectedYear: new Date().getFullYear(),
+                    selectedMonth: new Date().getMonth() + 1,
+                    selectedDay: new Date().getDate(),
+                },
+            });
+        </script>
+    </body>
+</html>
